@@ -11,7 +11,7 @@ import SwiftUI
 struct PartyGamesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CardsStack()
         }
     }
 }
