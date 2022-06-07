@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct CardsStack: View {
-    @State var deck: Deck = Deck()
+struct QuestionCardsStack: View {
+    @State var deck: QuestionDeck = QuestionDeck()
     
     var body: some View {
         ZStack {
             ForEach(deck.cards) { card in
-                CardView(card: card)
+                QuestionCardView(card: card)
                     .zIndex(self.deck.zIndex(of: card))
                     .shadow(radius: 2)
                     .offset(x: self.offset(for: card).width, y: self.offset(for: card).height)
@@ -52,13 +52,13 @@ struct CardsStack: View {
         }
     }
     
-    func offset(for card: Card) -> CGSize {
+    func offset(for card: QuestionCard) -> CGSize {
         if card != self.deck.activeCard {return .zero}
         
         return deck.topCardOffset
     }
     
-    func rotation(for card: Card) -> Angle {
+    func rotation(for card: QuestionCard) -> Angle {
         guard let activeCard = self.deck.activeCard
             else {return .degrees(0)}
         
@@ -70,6 +70,6 @@ struct CardsStack: View {
 
 struct CardsStack_Previews: PreviewProvider {
     static var previews: some View {
-        CardsStack()
+        QuestionCardsStack()
     }
 }

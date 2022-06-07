@@ -11,10 +11,16 @@
 		AB346738284F23FF006B312F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346737284F23FF006B312F /* ContentView.swift */; };
 		AB34673A284F2401006B312F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB346739284F2401006B312F /* Assets.xcassets */; };
 		AB34673D284F2401006B312F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB34673C284F2401006B312F /* Preview Assets.xcassets */; };
-		AB346744284F244C006B312F /* CardsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346743284F244C006B312F /* CardsStack.swift */; };
+		AB346744284F244C006B312F /* QuestionCardsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346743284F244C006B312F /* QuestionCardsStack.swift */; };
 		AB346746284F2D66006B312F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346745284F2D66006B312F /* Card.swift */; };
-		AB346748284F2DAF006B312F /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346747284F2DAF006B312F /* Deck.swift */; };
+		AB346748284F2DAF006B312F /* QuestionDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346747284F2DAF006B312F /* QuestionDeck.swift */; };
 		AB34674A284F2E10006B312F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346749284F2E10006B312F /* CardView.swift */; };
+		AB34674E284F365A006B312F /* PlayingCardsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34674D284F365A006B312F /* PlayingCardsStack.swift */; };
+		AB346750284F40DA006B312F /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34674F284F40DA006B312F /* Deck.swift */; };
+		AB346752284F410D006B312F /* QuestionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346751284F410D006B312F /* QuestionCard.swift */; };
+		AB346754284F491B006B312F /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346753284F491B006B312F /* QuestionCardView.swift */; };
+		AB346756284F6478006B312F /* SlapTheQueenCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346755284F6478006B312F /* SlapTheQueenCustomization.swift */; };
+		AB346758284F66DD006B312F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346757284F66DD006B312F /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +29,16 @@
 		AB346737284F23FF006B312F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AB346739284F2401006B312F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB34673C284F2401006B312F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AB346743284F244C006B312F /* CardsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsStack.swift; sourceTree = "<group>"; };
+		AB346743284F244C006B312F /* QuestionCardsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardsStack.swift; sourceTree = "<group>"; };
 		AB346745284F2D66006B312F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		AB346747284F2DAF006B312F /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		AB346747284F2DAF006B312F /* QuestionDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDeck.swift; sourceTree = "<group>"; };
 		AB346749284F2E10006B312F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		AB34674D284F365A006B312F /* PlayingCardsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardsStack.swift; sourceTree = "<group>"; };
+		AB34674F284F40DA006B312F /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		AB346751284F410D006B312F /* QuestionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCard.swift; sourceTree = "<group>"; };
+		AB346753284F491B006B312F /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
+		AB346755284F6478006B312F /* SlapTheQueenCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapTheQueenCustomization.swift; sourceTree = "<group>"; };
+		AB346757284F66DD006B312F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,10 +55,10 @@
 		AB346729284F23FF006B312F = {
 			isa = PBXGroup;
 			children = (
+				AB346757284F66DD006B312F /* Player.swift */,
+				AB34674F284F40DA006B312F /* Deck.swift */,
 				AB346749284F2E10006B312F /* CardView.swift */,
-				AB346747284F2DAF006B312F /* Deck.swift */,
 				AB346745284F2D66006B312F /* Card.swift */,
-				AB346743284F244C006B312F /* CardsStack.swift */,
 				AB346734284F23FF006B312F /* PartyGames */,
 				AB346733284F23FF006B312F /* Products */,
 			);
@@ -63,6 +75,8 @@
 		AB346734284F23FF006B312F /* PartyGames */ = {
 			isa = PBXGroup;
 			children = (
+				AB34674C284F35E2006B312F /* SlapTheQueen */,
+				AB34674B284F35B4006B312F /* KendDinPartner */,
 				AB346735284F23FF006B312F /* PartyGamesApp.swift */,
 				AB346737284F23FF006B312F /* ContentView.swift */,
 				AB346739284F2401006B312F /* Assets.xcassets */,
@@ -77,6 +91,26 @@
 				AB34673C284F2401006B312F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AB34674B284F35B4006B312F /* KendDinPartner */ = {
+			isa = PBXGroup;
+			children = (
+				AB346747284F2DAF006B312F /* QuestionDeck.swift */,
+				AB346743284F244C006B312F /* QuestionCardsStack.swift */,
+				AB346751284F410D006B312F /* QuestionCard.swift */,
+				AB346753284F491B006B312F /* QuestionCardView.swift */,
+			);
+			path = KendDinPartner;
+			sourceTree = "<group>";
+		};
+		AB34674C284F35E2006B312F /* SlapTheQueen */ = {
+			isa = PBXGroup;
+			children = (
+				AB34674D284F365A006B312F /* PlayingCardsStack.swift */,
+				AB346755284F6478006B312F /* SlapTheQueenCustomization.swift */,
+			);
+			path = SlapTheQueen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,10 +183,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB346744284F244C006B312F /* CardsStack.swift in Sources */,
+				AB346744284F244C006B312F /* QuestionCardsStack.swift in Sources */,
 				AB346738284F23FF006B312F /* ContentView.swift in Sources */,
-				AB346748284F2DAF006B312F /* Deck.swift in Sources */,
+				AB346748284F2DAF006B312F /* QuestionDeck.swift in Sources */,
 				AB346736284F23FF006B312F /* PartyGamesApp.swift in Sources */,
+				AB346758284F66DD006B312F /* Player.swift in Sources */,
+				AB346754284F491B006B312F /* QuestionCardView.swift in Sources */,
+				AB346752284F410D006B312F /* QuestionCard.swift in Sources */,
+				AB346750284F40DA006B312F /* Deck.swift in Sources */,
+				AB346756284F6478006B312F /* SlapTheQueenCustomization.swift in Sources */,
+				AB34674E284F365A006B312F /* PlayingCardsStack.swift in Sources */,
 				AB34674A284F2E10006B312F /* CardView.swift in Sources */,
 				AB346746284F2D66006B312F /* Card.swift in Sources */,
 			);

@@ -9,20 +9,24 @@ import Foundation
 import SwiftUI
 
 struct Deck {
-    
     var topCardOffset: CGSize = .zero
     var activeCard: Card? = nil
     
-    var cards = [
-        Card(question: "The tallest building in the world is located in which city?", color: .purple),
-        Card(question: "Which year was the original Toy Story film released?", color: .red),
-        Card(question: "Which film was the first to be recognised as part of the Marvel Cinematic Universe?", color: .green),
-        Card(question: "Name the longest river in the UK.", color: .blue),
-        Card(question: "In which year was the popular video game Fortnite first released?", color: .orange)
-    ]
+    var cards = [Card]()
+    
+    init() {
+        for suite in Suite.allCases {
+            for card in CardTypes.allCases {
+                cards.append(Card(suite: suite, cardType: card))
+            }
+        }
+    }
     
     var topCard: Card {
         return cards[0]
+    }
+    var bottomCard: Card {
+        return cards[cards.count - 1]
     }
     
     var count: Int {
@@ -36,12 +40,13 @@ struct Deck {
     func scale(of card: Card) -> CGFloat {
         let deckPosition = position(of: card)
         let scale = CGFloat(deckPosition) * 0.02
+
         return CGFloat(1 - scale)
     }
     
     func deckOffset(of card: Card) -> CGFloat {
         let deckPosition = position(of: card)
-        let offset = deckPosition * -10
+        let offset = deckPosition * -6
         return CGFloat(offset)
     }
     
