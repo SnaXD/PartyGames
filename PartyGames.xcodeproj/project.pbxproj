@@ -19,8 +19,12 @@
 		AB346750284F40DA006B312F /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34674F284F40DA006B312F /* Deck.swift */; };
 		AB346752284F410D006B312F /* QuestionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346751284F410D006B312F /* QuestionCard.swift */; };
 		AB346754284F491B006B312F /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346753284F491B006B312F /* QuestionCardView.swift */; };
-		AB346756284F6478006B312F /* SlapTheQueenCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346755284F6478006B312F /* SlapTheQueenCustomization.swift */; };
+		AB346756284F6478006B312F /* StandardCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346755284F6478006B312F /* StandardCustomization.swift */; };
 		AB346758284F66DD006B312F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346757284F66DD006B312F /* Player.swift */; };
+		AB34675C284F7065006B312F /* SlapTheQueenGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34675B284F7065006B312F /* SlapTheQueenGame.swift */; };
+		AB34675E284F8462006B312F /* SlapTheQueenRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34675D284F8462006B312F /* SlapTheQueenRules.swift */; };
+		AB346760284F8BAF006B312F /* SmallNumberAndType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34675F284F8BAF006B312F /* SmallNumberAndType.swift */; };
+		AB34676228507D3C006B312F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34676128507D3C006B312F /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +41,12 @@
 		AB34674F284F40DA006B312F /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		AB346751284F410D006B312F /* QuestionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCard.swift; sourceTree = "<group>"; };
 		AB346753284F491B006B312F /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
-		AB346755284F6478006B312F /* SlapTheQueenCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapTheQueenCustomization.swift; sourceTree = "<group>"; };
+		AB346755284F6478006B312F /* StandardCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCustomization.swift; sourceTree = "<group>"; };
 		AB346757284F66DD006B312F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		AB34675B284F7065006B312F /* SlapTheQueenGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapTheQueenGame.swift; sourceTree = "<group>"; };
+		AB34675D284F8462006B312F /* SlapTheQueenRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapTheQueenRules.swift; sourceTree = "<group>"; };
+		AB34675F284F8BAF006B312F /* SmallNumberAndType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallNumberAndType.swift; sourceTree = "<group>"; };
+		AB34676128507D3C006B312F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +63,6 @@
 		AB346729284F23FF006B312F = {
 			isa = PBXGroup;
 			children = (
-				AB346757284F66DD006B312F /* Player.swift */,
-				AB34674F284F40DA006B312F /* Deck.swift */,
-				AB346749284F2E10006B312F /* CardView.swift */,
-				AB346745284F2D66006B312F /* Card.swift */,
 				AB346734284F23FF006B312F /* PartyGames */,
 				AB346733284F23FF006B312F /* Products */,
 			);
@@ -75,6 +79,8 @@
 		AB346734284F23FF006B312F /* PartyGames */ = {
 			isa = PBXGroup;
 			children = (
+				AB34675A284F6F3B006B312F /* New Group */,
+				AB346759284F6F29006B312F /* Shared */,
 				AB34674C284F35E2006B312F /* SlapTheQueen */,
 				AB34674B284F35B4006B312F /* KendDinPartner */,
 				AB346735284F23FF006B312F /* PartyGamesApp.swift */,
@@ -107,10 +113,32 @@
 		AB34674C284F35E2006B312F /* SlapTheQueen */ = {
 			isa = PBXGroup;
 			children = (
+				AB34675D284F8462006B312F /* SlapTheQueenRules.swift */,
 				AB34674D284F365A006B312F /* PlayingCardsStack.swift */,
-				AB346755284F6478006B312F /* SlapTheQueenCustomization.swift */,
+				AB34675B284F7065006B312F /* SlapTheQueenGame.swift */,
+				AB34675F284F8BAF006B312F /* SmallNumberAndType.swift */,
 			);
 			path = SlapTheQueen;
+			sourceTree = "<group>";
+		};
+		AB346759284F6F29006B312F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AB346755284F6478006B312F /* StandardCustomization.swift */,
+				AB346757284F66DD006B312F /* Player.swift */,
+				AB34674F284F40DA006B312F /* Deck.swift */,
+				AB346749284F2E10006B312F /* CardView.swift */,
+				AB346745284F2D66006B312F /* Card.swift */,
+				AB34676128507D3C006B312F /* SettingsView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AB34675A284F6F3B006B312F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,15 +211,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB34675E284F8462006B312F /* SlapTheQueenRules.swift in Sources */,
 				AB346744284F244C006B312F /* QuestionCardsStack.swift in Sources */,
 				AB346738284F23FF006B312F /* ContentView.swift in Sources */,
 				AB346748284F2DAF006B312F /* QuestionDeck.swift in Sources */,
+				AB34675C284F7065006B312F /* SlapTheQueenGame.swift in Sources */,
 				AB346736284F23FF006B312F /* PartyGamesApp.swift in Sources */,
 				AB346758284F66DD006B312F /* Player.swift in Sources */,
 				AB346754284F491B006B312F /* QuestionCardView.swift in Sources */,
 				AB346752284F410D006B312F /* QuestionCard.swift in Sources */,
+				AB34676228507D3C006B312F /* SettingsView.swift in Sources */,
 				AB346750284F40DA006B312F /* Deck.swift in Sources */,
-				AB346756284F6478006B312F /* SlapTheQueenCustomization.swift in Sources */,
+				AB346756284F6478006B312F /* StandardCustomization.swift in Sources */,
+				AB346760284F8BAF006B312F /* SmallNumberAndType.swift in Sources */,
 				AB34674E284F365A006B312F /* PlayingCardsStack.swift in Sources */,
 				AB34674A284F2E10006B312F /* CardView.swift in Sources */,
 				AB346746284F2D66006B312F /* Card.swift in Sources */,

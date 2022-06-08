@@ -8,34 +8,28 @@
 import SwiftUI
 
 struct CardView: View {
-    @State var card: Card
+    var card: Card
     
     var body: some View {
         VStack {
-            if $card.wrappedValue.revealContent {
+            if card.revealContent {
                 VStack {
-                    HStack{
-                        Image(systemName: card.suite.rawValue)
-                            .foregroundColor(Color.white)
-                        Text(card.cardType.rawValue)
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .bold()
-                    }
-                    Divider()
+                    SmallNumberAndType(card: card)
                     Spacer()
                     
                     HStack(spacing: 0){
                         Image(systemName: card.suite.rawValue)
                             .foregroundColor(Color.white)
-                            .font(.system(size: 40))
+                            .font(.system(size: 60))
                         Text(card.cardType.rawValue)
-                            .font(.system(size: 40))
+                            .font(.system(size: 60))
                             .foregroundColor(.white)
                             .bold()
                             .multilineTextAlignment(.leading)
                     }
                     Spacer()
+                    SmallNumberAndType(card: card)
+                        .rotationEffect(.degrees(180))
                 }
             }
         }

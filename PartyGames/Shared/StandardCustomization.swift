@@ -7,8 +7,8 @@
 
 import Foundation
 
-class SlapTheQueenCustomization{
-    let shared = SlapTheQueenCustomization()
+let StandardCustomizationShared = StandardCustomization()
+class StandardCustomization{
     
     var amountOfDecks = 1
     var includeJoker = false
@@ -17,5 +17,11 @@ class SlapTheQueenCustomization{
     
     func addPlayer(name: String){
         players.append(Player(name: name, points: 0))
+    }
+    
+    func removePlayer(who player: Player){
+        players.removeAll { elements in
+            elements.id == player.id
+        }
     }
 }
