@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct PlayingCardsStack: View {
+    @State var game = SlapTheQueenGame()
     @State var deck: Deck = Deck()
     @State var openRules: Bool = false
     @State var openSettings: Bool = false
     @State var settings = StandardCustomization()
+    
     var body: some View {
         VStack{
             HStack{
@@ -33,43 +35,44 @@ struct PlayingCardsStack: View {
             }
             Spacer()
             ZStack {
-                ForEach(deck.cards) { card in
+                ForEach(game.displayed) { card in
                     CardView(card: card)
-                        .zIndex(self.deck.zIndex(of: card))
+                        .zIndex(game.zIndex(of: card))
                         .shadow(radius: 1)
-                        .offset(x: self.offset(for: card).width, y: self.offset(for: card).height)
-                        .offset(y: self.deck.deckOffset(of: card))
-                        .scaleEffect(x: self.deck.scale(of: card), y: self.deck.scale(of: card))
-                        .rotationEffect(self.rotation(for: card))
+                        .offset(y: game.deckOffset(of: card))
+                        .scaleEffect(x: game.scale(of: card), y: game.scale(of: card))
                 }
-            }.onTapGesture {
-                openSettings.toggle()
             }
+            
             Spacer()
             HStack{
                 Button {
-                    deck.cards[0].revealContent = false
-                    withAnimation {
-                        self.deck.moveToBack(deck.topCard)
-                    }
-                    deck.cards[0].revealContent = true
+                    game.displayed[0].revealContent = false
+//                    withAnimation {
+                        game.getNewCard()
+//                    }
+                    game.displayed[0].revealContent = true
                 } label: {
                     Text("New card")
                 }
                 .padding(.horizontal, 32)
-                
-                Button {
-                    deck.cards[0].revealContent = false
-                    withAnimation {
-                        self.deck.moveToFront(deck.bottomCard)
+                if game.customizedSettings.infinityCards {
+                    Button {
+                        game.displayed[0].revealContent = false
+    //                    withAnimation {
+                        game.getLastCard()
+    //                    }
+                        game.displayed[0].revealContent = true
+                    } label: {
+                        Image(systemName: "arrowshape.turn.up.right.fill")
                     }
-                    deck.cards[0].revealContent = true
-                } label: {
-                    Image(systemName: "arrowshape.turn.up.right.fill")
                 }
             }
             Spacer()
-        }.sheet(isPresented: $openSettings) {
+        }.onAppear(perform: {
+            game.SetupGame()
+        })
+        .sheet(isPresented: $openSettings) {
             SettingsView(settings: $settings)
         }
         .sheet(isPresented: $openRules) {
@@ -92,6 +95,8 @@ struct PlayingCardsStack: View {
         return deck.rotation(for: activeCard, offset: deck.topCardOffset)
     }
 }
+
+
 
 struct PlayingCardsStack_Previews: PreviewProvider {
     static var previews: some View {

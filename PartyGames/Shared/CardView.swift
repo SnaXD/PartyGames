@@ -9,28 +9,42 @@ import SwiftUI
 
 struct CardView: View {
     var card: Card
-    
+    @State var t = 180.0
+    @State var showFrontPage = false
     var body: some View {
         VStack {
             if card.revealContent {
-                VStack {
-                    SmallNumberAndType(card: card)
-                    Spacer()
-                    
-                    HStack(spacing: 0){
-                        Image(systemName: card.suite.rawValue)
-                            .foregroundColor(Color.white)
-                            .font(.system(size: 60))
-                        Text(card.cardType.rawValue)
-                            .font(.system(size: 60))
-                            .foregroundColor(.white)
-                            .bold()
-                            .multilineTextAlignment(.leading)
+                Group {
+                    if showFrontPage {
+                        VStack {
+                            SmallNumberAndType(card: card)
+                            Spacer()
+                            
+                            HStack(spacing: 0){
+                                Image(systemName: card.suite.rawValue)
+                                    .foregroundColor(Color.white)
+                                    .font(.system(size: 60))
+                                Text(card.cardType.rawValue)
+                                    .font(.system(size: 60))
+                                    .foregroundColor(.white)
+                                    .bold()
+                                    .multilineTextAlignment(.leading)
+                            }
+                            Spacer()
+                            SmallNumberAndType(card: card)
+                                .rotationEffect(.degrees(180))
+                        }
+                    } else {
+                        VStack{
+                            Spacer()
+                            HStack{
+                                Spacer()
+                            }
+                        }
                     }
-                    Spacer()
-                    SmallNumberAndType(card: card)
-                        .rotationEffect(.degrees(180))
-                }
+                }.onAppear(perform: {
+                    flipAnimation()
+                })
             }
         }
         
@@ -39,6 +53,19 @@ struct CardView: View {
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(Color.gray)
         )
+        .rotation3DEffect(.degrees(t), axis: (x: 0, y: 1, z: 0))
+    }
+    
+    func flipAnimation() {
+        let animationTime = 0.5
+        t = 180.0
+        withAnimation(Animation.linear(duration: animationTime))  {
+            t += 180
+        }
+        
+        withAnimation(Animation.linear(duration: 0.001).delay(animationTime / 2)) {
+            showFrontPage.toggle()
+        }
     }
 }
 struct CardView_Previews: PreviewProvider {
