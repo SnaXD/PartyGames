@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PlayingCardsStack: View {
     @State var game = SlapTheQueenGame()
-    @State var deck: Deck = Deck()
     @State var openRules: Bool = false
     @State var openSettings: Bool = false
     @State var gameOver: Bool = false
@@ -59,15 +58,13 @@ struct PlayingCardsStack: View {
                         
                     }
                 } label: {
-                    Text("New card")
+                    Text("New_card")
                 }
                 .padding(.horizontal, 32)
                 if game.customizedSettings.infinityCards {
                     Button {
                         game.displayed[0].revealContent = false
-    //                    withAnimation {
                         game.getLastCard()
-    //                    }
                         game.displayed[0].revealContent = true
                     } label: {
                         Image(systemName: "arrowshape.turn.up.right.fill")
@@ -79,33 +76,16 @@ struct PlayingCardsStack: View {
             game.SetupGame()
         })
         .sheet(isPresented: $openSettings) {
-            SettingsView(settings: $game.customizedSettings)
+            SettingsView(settings: game.customizedSettings)
         }
         .sheet(isPresented: $openRules) {
             SlapTheQueenRules()
         }
         .sheet(isPresented: $gameOver) {
-            SlapTheQueenGameOver(game: game)
+            SlapTheQueenGameOver(game: $game)
         }
     }
-    
-    func offset(for card: Card) -> CGSize {
-        if card != self.deck.activeCard {return .zero}
-        
-        return deck.topCardOffset
-    }
-    
-    func rotation(for card: Card) -> Angle {
-        guard let activeCard = self.deck.activeCard
-        else {return .degrees(0)}
-        
-        if card != activeCard {return .degrees(0)}
-        
-        return deck.rotation(for: activeCard, offset: deck.topCardOffset)
-    }
 }
-
-
 
 struct PlayingCardsStack_Previews: PreviewProvider {
     static var previews: some View {

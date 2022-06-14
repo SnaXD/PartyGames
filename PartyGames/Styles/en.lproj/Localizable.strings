@@ -1,0 +1,20 @@
+//
+//  Localizable.strings
+//  PartyGames
+//
+//  Created by Jonathan T. Nielsen on 14/06/2022.
+//
+
+"GAME_OVER" = "GAME OVER";
+"HIGH_SCORES" = "HIGH SCORES";
+"Insert_Coin" = "INSERT COIN TO TRY AGAIN";
+"Play_again" = "PLAY AGAIN";
+"Main_Menu" = "MAIN MENU";
+"Settings" = "Settings";
+"No_names_needed" = "No names needed";
+"Player_name" = "Player name";
+"Add" = "Add";
+"Animationtime" = "Animationtime";
+"New_card" = "New card";
+"Infinity_cards" = "Infinity cards";
+"Amount_of_decks" = "Amount of decks in play";

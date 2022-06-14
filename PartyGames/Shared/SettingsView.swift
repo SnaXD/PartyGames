@@ -8,21 +8,32 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @Binding var settings: StandardCustomization
+    @ObservedObject var settings: StandardCustomization
     @State var name = ""
     var body: some View {
         ScrollView{
             LazyVStack{
                 HStack{
-                    Text("No names needed")
+                    Text("Settings")
+                        .font(.system(size: 36))
+                        .fontWeight(.semibold)
+                        .padding(.top, 32)
+                    Spacer()
+                }
+                .padding(.bottom, 16)
+                HStack{
+                    Text("No_names_needed")
                         .font(.system(size: 10))
                         .italic()
                     Spacer()
                 }
                 HStack{
-                    TextField("Player name", text: $name)
+                    TextField("Player_name", text: $name)
                     Button {
-                        settings.addPlayer(name: name)
+                        if name != "" {
+                            settings.addPlayer(name: name)
+                            name = ""
+                        }
                     } label: {
                         Text("Add")
                     }
@@ -38,7 +49,7 @@ struct SettingsView: View {
                             .padding(.trailing)
                             Text(player.name)
                         }
-
+                        .padding(.vertical, 4)
                     }
                 }
                 Divider()
@@ -51,9 +62,45 @@ struct SettingsView: View {
                     Spacer()
                     Text("2")
                 }.font(.system(size: 10))
-                    
+                Divider()
+                    .padding(.vertical, 8)
+                VStack{
+                    HStack{
+                        Text("Infinity_cards")
+                            .font(.system(size: 14))
+                            .fontWeight(.semibold)
+                            .italic()
+                        Spacer()
+                    }
+                    .padding(.top, 12)
+                    Picker("Infinity_cards", selection: $settings.infinityCards) {
+                        Text("Yes").tag(true)
+                        Text("No").tag(false)
+                    }
+                    .pickerStyle(.segmented)
+                    if $settings.infinityCards.wrappedValue == false {
+                        HStack{
+                            Text("Amount_of_decks")
+                                .font(.system(size: 14))
+                                .fontWeight(.semibold)
+                                .italic()
+                            Spacer()
+                            TextField("Input", text: $settings.amountOfDecks)
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.decimalPad)
+                                .frame(width: 100, height: 32, alignment: .center)
+                                .background(.white)
+                                .cornerRadius(8)
+                        }
+                        .padding(.top, 24)
+                        
+                        
+                    }
+                }
+                
+                
             }.padding(.horizontal)
-        }
+        }.background(Color(UIColor.systemGray6))
     }
 }
 
@@ -66,7 +113,7 @@ struct SettingsView_Previews: PreviewProvider {
 struct SettingsView_PreviewsWithBinding: View {
     @State var settings = StandardCustomization()
     var body: some View {
-        SettingsView(settings: $settings)
+        SettingsView(settings: settings)
     }
 }
 

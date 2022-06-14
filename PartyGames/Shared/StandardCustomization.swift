@@ -9,13 +9,13 @@ import Foundation
 import SwiftUI
 
 let StandardCustomizationShared = StandardCustomization()
-class StandardCustomization{
+class StandardCustomization: ObservableObject{
     
-    var amountOfDecks = 1
-    var includeJoker = false
-    var infinityCards = false
-    var players = [Player]()
-    var animationTime = 1.0 
+    @Published var amountOfDecks: String = "1"
+    @Published var includeJoker = false
+    @Published var infinityCards = false
+    @Published var players = [Player]()
+    @Published var animationTime = 1.0
     
     func addPlayer(name: String){
         players.append(Player(name: name, points: 0))
