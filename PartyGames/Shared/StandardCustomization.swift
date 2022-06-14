@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 let StandardCustomizationShared = StandardCustomization()
 class StandardCustomization{
@@ -14,6 +15,7 @@ class StandardCustomization{
     var includeJoker = false
     var infinityCards = false
     var players = [Player]()
+    var animationTime = 1.0 
     
     func addPlayer(name: String){
         players.append(Player(name: name, points: 0))

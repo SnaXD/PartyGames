@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     var card: Card
+    @Binding var animationTime: Double
     @State var t = 180.0
     @State var showFrontPage = false
     var body: some View {
@@ -57,7 +58,6 @@ struct CardView: View {
     }
     
     func flipAnimation() {
-        let animationTime = 0.5
         t = 180.0
         withAnimation(Animation.linear(duration: animationTime))  {
             t += 180
@@ -70,6 +70,13 @@ struct CardView: View {
 }
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: Card(suite: .clubs, cardType: .eight))
+        CardView_PreviewsWithBinding()
+    }
+}
+
+struct CardView_PreviewsWithBinding: View {
+    @State var animationTime = 1.0
+    var body: some View {
+        CardView(card: Card(suite: .clubs, cardType: .eight), animationTime: $animationTime)
     }
 }

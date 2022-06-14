@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct SlapTheQueenGame{
-    let customizedSettings = StandardCustomizationShared
+    @State var customizedSettings = StandardCustomizationShared
     var oneDeck = Deck().cards
     var usedDecks = [Card]()
     var displayed = [Card]() //Indholder kun 5 kort

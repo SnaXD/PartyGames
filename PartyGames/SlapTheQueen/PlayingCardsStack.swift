@@ -12,7 +12,7 @@ struct PlayingCardsStack: View {
     @State var deck: Deck = Deck()
     @State var openRules: Bool = false
     @State var openSettings: Bool = false
-    @State var settings = StandardCustomization()
+    @State var gameOver: Bool = false
     
     var body: some View {
         VStack{
@@ -36,7 +36,7 @@ struct PlayingCardsStack: View {
             Spacer()
             ZStack {
                 ForEach(game.displayed) { card in
-                    CardView(card: card)
+                    CardView(card: card, animationTime: $game.customizedSettings.animationTime)
                         .zIndex(game.zIndex(of: card))
                         .shadow(radius: 1)
                         .offset(y: game.deckOffset(of: card))
@@ -51,7 +51,13 @@ struct PlayingCardsStack: View {
 //                    withAnimation {
                         game.getNewCard()
 //                    }
-                    game.displayed[0].revealContent = true
+                    if !game.displayed.isEmpty {
+                        game.displayed[0].revealContent = true
+                    } else {
+                        //If every card has been played
+                        gameOver.toggle()
+                        
+                    }
                 } label: {
                     Text("New card")
                 }
@@ -73,10 +79,13 @@ struct PlayingCardsStack: View {
             game.SetupGame()
         })
         .sheet(isPresented: $openSettings) {
-            SettingsView(settings: $settings)
+            SettingsView(settings: $game.customizedSettings)
         }
         .sheet(isPresented: $openRules) {
             SlapTheQueenRules()
+        }
+        .sheet(isPresented: $gameOver) {
+            SlapTheQueenGameOver(game: game)
         }
     }
     

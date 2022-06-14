@@ -15,8 +15,12 @@ struct SettingsView: View {
             LazyVStack{
                 HStack{
                     Text("No names needed")
-                        .font(.system(size: 8))
-                    TextField("Player name:", text: $name)
+                        .font(.system(size: 10))
+                        .italic()
+                    Spacer()
+                }
+                HStack{
+                    TextField("Player name", text: $name)
                     Button {
                         settings.addPlayer(name: name)
                     } label: {
@@ -37,7 +41,18 @@ struct SettingsView: View {
 
                     }
                 }
-            }
+                Divider()
+                    .padding(.vertical, 8)
+                Slider(value: $settings.animationTime, in: Double(0.0)...2, step: 0.1)
+                HStack(alignment: .top){
+                    Text("0")
+                    Spacer()
+                    Text("Animationtime")
+                    Spacer()
+                    Text("2")
+                }.font(.system(size: 10))
+                    
+            }.padding(.horizontal)
         }
     }
 }
