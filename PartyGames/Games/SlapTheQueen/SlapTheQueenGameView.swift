@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PlayingCardsStack: View {
+struct SlapTheQueenGameView: View {
     @State var game = SlapTheQueenGame()
     @State var openRules: Bool = false
     @State var openSettings: Bool = false
@@ -89,6 +89,6 @@ struct PlayingCardsStack: View {
 
 struct PlayingCardsStack_Previews: PreviewProvider {
     static var previews: some View {
-        PlayingCardsStack()
+        SlapTheQueenGameView()
     }
 }

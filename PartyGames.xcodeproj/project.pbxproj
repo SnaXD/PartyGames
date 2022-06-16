@@ -15,7 +15,7 @@
 		AB346746284F2D66006B312F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346745284F2D66006B312F /* Card.swift */; };
 		AB346748284F2DAF006B312F /* QuestionDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346747284F2DAF006B312F /* QuestionDeck.swift */; };
 		AB34674A284F2E10006B312F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346749284F2E10006B312F /* CardView.swift */; };
-		AB34674E284F365A006B312F /* PlayingCardsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34674D284F365A006B312F /* PlayingCardsStack.swift */; };
+		AB34674E284F365A006B312F /* SlapTheQueenGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34674D284F365A006B312F /* SlapTheQueenGameView.swift */; };
 		AB346750284F40DA006B312F /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34674F284F40DA006B312F /* Deck.swift */; };
 		AB346752284F410D006B312F /* QuestionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346751284F410D006B312F /* QuestionCard.swift */; };
 		AB346754284F491B006B312F /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346753284F491B006B312F /* QuestionCardView.swift */; };
@@ -29,6 +29,9 @@
 		AB9DCC8B28586EF00091185F /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB9DCC8A28586EF00091185F /* PressStart2P-Regular.ttf */; };
 		AB9DCC92285878270091185F /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC94285878270091185F /* Localizable.strings */; };
 		AB9DCC982858A0C30091185F /* Filled.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC972858A0C30091185F /* Filled.swift */; };
+		AB9DCC9B2859BAA00091185F /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC9A2859BAA00091185F /* MainMenu.swift */; };
+		AB9DCC9D2859BD140091185F /* GameItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC9C2859BD140091185F /* GameItem.swift */; };
+		AB9DCC9F2859C4100091185F /* Inconsolata.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB9DCC9E2859C4100091185F /* Inconsolata.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +44,7 @@
 		AB346745284F2D66006B312F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AB346747284F2DAF006B312F /* QuestionDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDeck.swift; sourceTree = "<group>"; };
 		AB346749284F2E10006B312F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		AB34674D284F365A006B312F /* PlayingCardsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardsStack.swift; sourceTree = "<group>"; };
+		AB34674D284F365A006B312F /* SlapTheQueenGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapTheQueenGameView.swift; sourceTree = "<group>"; };
 		AB34674F284F40DA006B312F /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		AB346751284F410D006B312F /* QuestionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCard.swift; sourceTree = "<group>"; };
 		AB346753284F491B006B312F /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
@@ -57,6 +60,9 @@
 		AB9DCC93285878270091185F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB9DCC952858789F0091185F /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB9DCC972858A0C30091185F /* Filled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filled.swift; sourceTree = "<group>"; };
+		AB9DCC9A2859BAA00091185F /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		AB9DCC9C2859BD140091185F /* GameItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameItem.swift; sourceTree = "<group>"; };
+		AB9DCC9E2859C4100091185F /* Inconsolata.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Inconsolata.ttf; path = ../../../../../Downloads/Inconsolata/Inconsolata.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				AB9DCC8C2858716F0091185F /* Info.plist */,
+				AB9DCC992859BA7E0091185F /* MainMenu */,
 				AB34675A284F6F3B006B312F /* Games */,
 				AB346759284F6F29006B312F /* Shared */,
 				AB346735284F23FF006B312F /* PartyGamesApp.swift */,
@@ -125,7 +132,7 @@
 			children = (
 				AB9DCC8D285875900091185F /* GameOverScene */,
 				AB34675D284F8462006B312F /* SlapTheQueenRules.swift */,
-				AB34674D284F365A006B312F /* PlayingCardsStack.swift */,
+				AB34674D284F365A006B312F /* SlapTheQueenGameView.swift */,
 				AB34675B284F7065006B312F /* SlapTheQueenGame.swift */,
 				AB34675F284F8BAF006B312F /* SmallNumberAndType.swift */,
 			);
@@ -167,6 +174,7 @@
 			children = (
 				AB9DCC962858A0B30091185F /* ButtonStyles */,
 				AB9DCC8A28586EF00091185F /* PressStart2P-Regular.ttf */,
+				AB9DCC9E2859C4100091185F /* Inconsolata.ttf */,
 				AB9DCC94285878270091185F /* Localizable.strings */,
 			);
 			path = Styles;
@@ -186,6 +194,15 @@
 				AB9DCC972858A0C30091185F /* Filled.swift */,
 			);
 			path = ButtonStyles;
+			sourceTree = "<group>";
+		};
+		AB9DCC992859BA7E0091185F /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				AB9DCC9A2859BAA00091185F /* MainMenu.swift */,
+				AB9DCC9C2859BD140091185F /* GameItem.swift */,
+			);
+			path = MainMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +267,7 @@
 				AB9DCC8B28586EF00091185F /* PressStart2P-Regular.ttf in Resources */,
 				AB34673D284F2401006B312F /* Preview Assets.xcassets in Resources */,
 				AB34673A284F2401006B312F /* Assets.xcassets in Resources */,
+				AB9DCC9F2859C4100091185F /* Inconsolata.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,12 +289,14 @@
 				AB346754284F491B006B312F /* QuestionCardView.swift in Sources */,
 				AB346752284F410D006B312F /* QuestionCard.swift in Sources */,
 				AB34676228507D3C006B312F /* SettingsView.swift in Sources */,
+				AB9DCC9D2859BD140091185F /* GameItem.swift in Sources */,
 				AB346750284F40DA006B312F /* Deck.swift in Sources */,
 				AB9DCC92285878270091185F /* Localizable.strings in Sources */,
 				AB346756284F6478006B312F /* StandardCustomization.swift in Sources */,
 				AB9DCC982858A0C30091185F /* Filled.swift in Sources */,
+				AB9DCC9B2859BAA00091185F /* MainMenu.swift in Sources */,
 				AB346760284F8BAF006B312F /* SmallNumberAndType.swift in Sources */,
-				AB34674E284F365A006B312F /* PlayingCardsStack.swift in Sources */,
+				AB34674E284F365A006B312F /* SlapTheQueenGameView.swift in Sources */,
 				AB34674A284F2E10006B312F /* CardView.swift in Sources */,
 				AB346746284F2D66006B312F /* Card.swift in Sources */,
 			);

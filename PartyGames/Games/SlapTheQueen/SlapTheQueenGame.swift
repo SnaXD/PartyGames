@@ -12,7 +12,7 @@ struct SlapTheQueenGame{
     @ObservedObject var customizedSettings = StandardCustomizationShared
     var oneDeck = Deck().cards
     var usedDecks = [Card]()
-    var displayed = [Card]() //Indholder kun 5 kort
+    @State var displayed = [Card]() //Indholder kun 5 kort
     
     mutating func SetupGame(){
         //Remove Jokers if requested
@@ -104,6 +104,17 @@ extension SlapTheQueenGame {
             displayed.insert(usedDecks.last!, at: 0)
             usedDecks.remove(at: usedDecks.count - 1)
         }
+    }
+    
+   
+    
+    mutating func automaticGame(){
+            
+            getNewCard()
+            //TODO: Autoflip cards until found Jack, Queen or King
+            
+        
+        
     }
 }
 

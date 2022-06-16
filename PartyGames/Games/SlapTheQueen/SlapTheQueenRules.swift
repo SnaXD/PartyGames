@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SlapTheQueenRules: View {
     var body: some View {
+        //TODO: List rules
         Text("Hello, World!")
     }
 }
