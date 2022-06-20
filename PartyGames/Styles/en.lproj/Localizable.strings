@@ -20,3 +20,17 @@
 "Amount_of_decks" = "Amount of decks in play";
 "SlapTheQueen" = "Slap the queen";
 "Games" = "Games";
+"quesionsGame" = "Quesions Game";
+
+//Questions
+"Q1" = "Who got the longest hair";
+"Q2" = "Who had the most drinks";
+"Q3" = "Who is the oldest";
+"Q4" = "Who lives most far away";
+"Q5" = "Who has been in the most contrys";
+"Q6" = "Who got the best taste in music";
+"Q7" = "Who is going to get hungover";
+"Q8" = "Who is most likely to not sleep home tonight";
+"Q9" = "Who is the most likely to have a flirt in this game";
+"Q10" = "Who are dressed the best";
+"Q11" = "Whos most likely to spend their money stupidly";

@@ -8,8 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct QuestionCard: Identifiable, Equatable {
+struct QuestionCard: Identifiable, Equatable, Hashable {
     let id = UUID()
     let question: String
-    let color: Color
 }

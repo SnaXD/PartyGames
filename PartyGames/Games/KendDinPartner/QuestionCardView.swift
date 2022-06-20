@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct QuestionCardView: View {
-    let card: QuestionCard
+    let randomColor: [Color] = [.green, .blue, .red, .brown, .gray, .cyan, .indigo, .orange, .purple, .pink, .mint]
+    let card: String
     
     var body: some View {
         VStack {
             VStack {
-                Text("QUIZ NIGHT")
+                Text("quesionsGame")
                     .font(.title)
                     .foregroundColor(.white)
                     .bold()
                 Divider()
                 Spacer()
-                Text(card.question)
+                Text(card)
                     .font(.system(size: 20))
                     .foregroundColor(.white)
                     .bold()
@@ -32,12 +33,12 @@ struct QuestionCardView: View {
         .frame(width: 300, height: 400)
         .background(
             RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(Color.black)
+                .foregroundColor(randomColor.randomElement())
         )
     }
 }
 struct QuestionCardView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionCardView(card: QuestionCard(question: "tttt", color: .green))
+        QuestionCardView(card: "A - b - e - c - d- fuck det - abekattemissekattekatestrofalkatastrofe")
     }
 }

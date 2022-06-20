@@ -1,30 +1,25 @@
 //
-//  Deck.swift
+//  CardstackExtention.swift
 //  PartyGames
 //
-//  Created by Jonathan T. Nielsen on 07/06/2022.
+//  Created by Jonathan T. Nielsen on 20/06/2022.
 //
 
-import Foundation
 import SwiftUI
 
-struct QuestionDeck {
-    var topCardOffset: CGSize = .zero
-    var activeCard: QuestionCard? = nil
+protocol QuestionCardStack {
+    var topCardOffset: CGSize {get set}
+    var activeCard: QuestionCard? {get set}
     
-    var cards = [
-        QuestionCard(question: "The tallest building in the world is located in which city?"),
-        QuestionCard(question: "Which year was the original Toy Story film released?"),
-        QuestionCard(question: "Which film was the first to be recognised as part of the Marvel Cinematic Universe?"),
-        QuestionCard(question: "Name the longest river in the UK."),
-        QuestionCard(question: "In which year was the popular video game Fortnite first released?")
-    ]
+    var cards: [QuestionCard] {get set}
+    var customizedSettings: StandardCustomization {get set}
+}
+
+extension QuestionCardStack {
+    
     
     var topCard: QuestionCard {
         return cards[0]
-    }
-    var bottomCard: QuestionCard {
-        return cards[cards.count - 1]
     }
     
     var count: Int {
@@ -64,16 +59,14 @@ struct QuestionDeck {
         let topCard = cards.remove(at: position(of: state))
         cards.insert(topCard, at: 0)
     }
-}
-
-extension QuestionDeck {
     
-    func getQuestion() -> String {
-        let localizedQuestionFrontLetter = "Q"
-        ///Update when adding new questions
-        let AmountOfQuestions = 10
-        let pickRandomQuestionNumber = Int.random(in: 1...AmountOfQuestions)
-       
-        return String(localized: "\(localizedQuestionFrontLetter)\(pickRandomQuestionNumber)")
+    func offset(for card: QuestionCard) -> CGSize {
+        if card != activeCard {return .zero}
+        
+        return topCardOffset
     }
 }
+
+
+
+

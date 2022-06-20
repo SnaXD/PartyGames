@@ -18,8 +18,9 @@ struct MainMenu: View {
                     .foregroundColor(.white)
                     .font(.custom("Inconsolata", size: 32))
                 
-                GameItem(gameName: "SlapTheQueen", game: AnyView(SlapTheQueenGameView()), rules: AnyView(SlapTheQueenRules()))
+                GameItem(gameName: String(localized: "SlapTheQueen"), game: AnyView(SlapTheQueenGameView()), rules: AnyView(SlapTheQueenRules()))
                     .padding(.bottom)
+                GameItem(gameName: String(localized: "quesionsGame"), game: AnyView(QuestionCardsStackView()), rules: AnyView(QuestionGameRules()))
                 Spacer()
                 Spacer()
                 HStack{

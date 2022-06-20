@@ -8,8 +8,10 @@
 import Foundation
 import SwiftUI
 
-let StandardCustomizationShared = StandardCustomization()
+
 class StandardCustomization: ObservableObject{
+    
+    static let Shared = StandardCustomization()
     
     @Published var amountOfDecks: String = "1"
     @Published var includeJoker = false
