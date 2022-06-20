@@ -18,7 +18,14 @@ struct QuestionGame: QuestionCardStack {
     @State var displayed = [QuestionCard]() //List is always max 5 Questions
     
     
-    func Setup(){
+    mutating func Setup(){
+        let amountOfQuestions = 10
+        let localizedShortedQuestionsKeyword = "q"
         
+        for questionNumber in 1...amountOfQuestions {
+            let localizedQuestionTitle = "\(localizedShortedQuestionsKeyword) \(questionNumber)"
+            cards.append(QuestionCard(question: localizedQuestionTitle))
+        }
+        cards.shuffle()
     }
 }
