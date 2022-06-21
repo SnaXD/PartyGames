@@ -12,20 +12,21 @@ struct QuestionGame: QuestionCardStack {
     var topCardOffset: CGSize = .zero
     var activeCard: QuestionCard? = nil
     var cards: [QuestionCard] = [QuestionCard]()
-    
     @ObservedObject var customizedSettings: StandardCustomization = StandardCustomization.Shared
-    var usedDecks = [QuestionCard]()
-    @State var displayed = [QuestionCard]() //List is always max 5 Questions
-    
+    var displayed = [QuestionCard]() //List is always max 5 Questions
     
     mutating func Setup(){
-        let amountOfQuestions = 10
-        let localizedShortedQuestionsKeyword = "q"
+        let amountOfQuestions = 200
+        let localizedShortedQuestionsKeyword = "Q"
         
         for questionNumber in 1...amountOfQuestions {
-            let localizedQuestionTitle = "\(localizedShortedQuestionsKeyword) \(questionNumber)"
+            let localizedQuestionTitle = "\(localizedShortedQuestionsKeyword)\(questionNumber)"
             cards.append(QuestionCard(question: localizedQuestionTitle))
         }
         cards.shuffle()
+        for _ in 0...4{
+            displayed.append(cards[0])
+            cards.remove(at: 0)
+        }
     }
 }

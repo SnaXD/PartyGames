@@ -10,7 +10,7 @@ import SwiftUI
 protocol QuestionCardStack {
     var topCardOffset: CGSize {get set}
     var activeCard: QuestionCard? {get set}
-    
+    var displayed: [QuestionCard] {get set}
     var cards: [QuestionCard] {get set}
     var customizedSettings: StandardCustomization {get set}
 }
@@ -19,15 +19,15 @@ extension QuestionCardStack {
     
     
     var topCard: QuestionCard {
-        return cards[0]
+        return displayed[0]
     }
     
     var count: Int {
-        return cards.count
+        return cards.count + displayed.count
     }
     
     func position(of card: QuestionCard) -> Int {
-        return cards.firstIndex(of: card) ?? 0
+        return displayed.firstIndex(of: card) ?? 0
     }
     
     func scale(of card: QuestionCard) -> CGFloat {
@@ -50,14 +50,22 @@ extension QuestionCardStack {
         return .degrees(Double(offset.width) / 20.0)
     }
     
-    mutating func moveToBack(_ state: QuestionCard) {
-        let topCard = cards.remove(at: position(of: state))
-        cards.append(topCard)
+    mutating func moveToBack(card: QuestionCard) {
+        let topCard = displayed.remove(at: position(of: card))
+        displayed.append(topCard)
     }
     
-    mutating func moveToFront(_ state: QuestionCard) {
-        let topCard = cards.remove(at: position(of: state))
-        cards.insert(topCard, at: 0)
+    mutating func moveToFront(card: QuestionCard) {
+        let topCard = displayed.remove(at: position(of: card))
+        displayed.insert(topCard, at: 0)
+    }
+    
+    mutating func changeLastCard(){
+        cards.append(displayed[displayed.count - 1])
+        displayed.remove(at: displayed.count - 1)
+        displayed.append(cards[0])
+        cards.remove(at: 0)
+        
     }
     
     func offset(for card: QuestionCard) -> CGSize {

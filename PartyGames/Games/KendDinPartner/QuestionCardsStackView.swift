@@ -25,7 +25,7 @@ struct QuestionCardsStackView: View {
             }
             Spacer()
             ZStack {
-                ForEach(game.cards) { card in
+                ForEach(game.displayed) { card in
                     QuestionCardView(card: card.question)
                         .zIndex(self.game.zIndex(of: card))
                         .shadow(radius: 2)
@@ -48,9 +48,9 @@ struct QuestionCardsStackView: View {
                                                 drag.translation.width > 200 ||
                                                 drag.translation.height < -250 ||
                                                 drag.translation.height > 250 {
-                                            self.game.moveToBack(card)
+                                            self.game.moveToBack(card: card)
                                         } else {
-                                            self.game.moveToFront(card)
+                                            self.game.moveToFront(card: card)
                                         }
                                     }
                                 })
@@ -58,14 +58,16 @@ struct QuestionCardsStackView: View {
                                     withAnimation(.spring()) {
                                         self.game.activeCard = nil
                                         self.game.topCardOffset = .zero
+                                        game.changeLastCard()
                                     }
+                                    
                                 })
                     )
                 }
             }
             Spacer()
         }.onAppear(perform: {
-            
+            game.Setup()
         })
         .sheet(isPresented: $openRules) {
             SlapTheQueenRules()
