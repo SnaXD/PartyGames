@@ -21,9 +21,9 @@ struct QuestionCardsStackView: View {
                     Image(systemName: "info.circle.fill")
                         .foregroundColor(.blue)
                         .padding()
+                        .padding(.bottom, 56)
                 }
             }
-            Spacer()
             ZStack {
                 ForEach(game.displayed) { card in
                     QuestionCardView(card: card.question)

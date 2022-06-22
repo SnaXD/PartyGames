@@ -20,7 +20,7 @@ struct QuestionCardView: View {
                     .bold()
                 Divider()
                 Spacer()
-                Text("\(card)")
+                Text(LocalizedStringKey(card))
                     .font(.system(size: 20))
                     .foregroundColor(.white)
                     .bold()

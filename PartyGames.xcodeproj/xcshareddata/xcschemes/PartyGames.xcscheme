@@ -28,6 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AB3B97742862FD0500216EA2"
+               BuildableName = "PartyGamesTests.xctest"
+               BlueprintName = "PartyGamesTests"
+               ReferencedContainer = "container:PartyGames.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ABACFE812863081C008207F7"
+               BuildableName = "PartyGamesTests2.xctest"
+               BlueprintName = "PartyGamesTests2"
+               ReferencedContainer = "container:PartyGames.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AB463F1F2863295500C8056E"
+               BuildableName = "QuestionGameTests.xctest"
+               BlueprintName = "QuestionGameTests"
+               ReferencedContainer = "container:PartyGames.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
