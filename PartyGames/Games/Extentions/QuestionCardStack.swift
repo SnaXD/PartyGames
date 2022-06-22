@@ -12,7 +12,6 @@ protocol QuestionCardStack {
     var activeCard: QuestionCard? {get set}
     var displayed: [QuestionCard] {get set}
     var cards: [QuestionCard] {get set}
-    var customizedSettings: StandardCustomization {get set}
 }
 
 extension QuestionCardStack {

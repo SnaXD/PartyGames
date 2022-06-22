@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct SlapTheQueenGame: PlayingCardStack{
-    @ObservedObject var customizedSettings = StandardCustomization.Shared
+    @ObservedObject var customizedSettings = StandardCustomization()
     var usedDecks: [Card] = []
     var displayed: [Card] = [] //Indholder kun 5 kort
     @State var runningAutomatic = false //TODO: Implement auto run

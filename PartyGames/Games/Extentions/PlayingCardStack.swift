@@ -55,6 +55,7 @@ extension PlayingCardStack {
             usedDecks.append(displayed.first!)
             displayed.remove(at: 0)
             displayed.append(usedDecks.first!)
+            usedDecks.remove(at: 0)
         } else {
             displayed.remove(at: 0)
             if let moreCards = usedDecks.first {

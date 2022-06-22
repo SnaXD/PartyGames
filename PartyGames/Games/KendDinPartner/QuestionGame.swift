@@ -12,7 +12,6 @@ struct QuestionGame: QuestionCardStack {
     var topCardOffset: CGSize = .zero
     var activeCard: QuestionCard? = nil
     var cards: [QuestionCard] = [QuestionCard]()
-    @ObservedObject var customizedSettings: StandardCustomization = StandardCustomization.Shared
     var displayed = [QuestionCard]() //List is always max 5 Questions
     
     mutating func Setup(){

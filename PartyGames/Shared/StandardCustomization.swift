@@ -11,8 +11,6 @@ import SwiftUI
 
 class StandardCustomization: ObservableObject{
     
-    static let Shared = StandardCustomization()
-    
     @Published var amountOfDecks: String = "1"
     @Published var includeJoker = false
     @Published var infinityCards = false
