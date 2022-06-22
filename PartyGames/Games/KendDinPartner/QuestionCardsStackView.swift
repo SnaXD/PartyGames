@@ -40,7 +40,7 @@ struct QuestionCardsStackView: View {
                                         self.game.activeCard = card
                                     }
                                     if card != self.game.activeCard {return}
-
+                                    
                                     withAnimation(.spring()) {
                                         self.game.topCardOffset = drag.translation
                                         if
@@ -62,7 +62,7 @@ struct QuestionCardsStackView: View {
                                     }
                                     
                                 })
-                    )
+                        )
                 }
             }
             Spacer()
@@ -74,67 +74,6 @@ struct QuestionCardsStackView: View {
         }
     }
 }
-
-//struct QuestionCardsStack: View {
-//    @State var game: QuestionDeck = QuestionDeck()
-//
-//    var body: some View {
-//        ZStack {
-//            ForEach(game.cards) { card in
-//                QuestionCardView(card: card)
-//                    .zIndex(self.game.zIndex(of: card))
-//                    .shadow(radius: 2)
-//                    .offset(x: self.offset(for: card).width, y: self.offset(for: card).height)
-//                    .offset(y: self.game.deckOffset(of: card))
-//                    .scaleEffect(x: self.game.scale(of: card), y: self.game.scale(of: card))
-//                    .rotationEffect(self.rotation(for: card))
-//                    .gesture(
-//                        DragGesture()
-//                            .onChanged({ (drag) in
-//                                if self.game.activeCard == nil {
-//                                    self.game.activeCard = card
-//                                }
-//                                if card != self.game.activeCard {return}
-//
-//                                withAnimation(.spring()) {
-//                                    self.game.topCardOffset = drag.translation
-//                                    if
-//                                        drag.translation.width < -200 ||
-//                                            drag.translation.width > 200 ||
-//                                            drag.translation.height < -250 ||
-//                                            drag.translation.height > 250 {
-//                                        self.game.moveToBack(card)
-//                                    } else {
-//                                        self.game.moveToFront(card)
-//                                    }
-//                                }
-//                            })
-//                            .onEnded({ (drag) in
-//                                withAnimation(.spring()) {
-//                                    self.game.activeCard = nil
-//                                    self.game.topCardOffset = .zero
-//                                }
-//                            })
-//                )
-//            }
-//        }
-//    }
-//
-//    func offset(for card: QuestionCard) -> CGSize {
-//        if card != self.game.activeCard {return .zero}
-//
-//        return game.topCardOffset
-//    }
-//
-//    func rotation(for card: QuestionCard) -> Angle {
-//        guard let activeCard = self.game.activeCard
-//            else {return .degrees(0)}
-//
-//        if card != activeCard {return .degrees(0)}
-//
-//        return game.rotation(for: activeCard, offset: game.topCardOffset)
-//    }
-//}
 
 struct CardsStack_Previews: PreviewProvider {
     static var previews: some View {
