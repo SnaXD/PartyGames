@@ -30,7 +30,7 @@ struct QuestionCardView: View {
             }
         }
         .padding()
-        .frame(width: 300, height: 400)
+        .frame(width: 380, height: 480)
         .background(
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(randomColor.randomElement())

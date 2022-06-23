@@ -42,20 +42,16 @@ struct SlapTheQueenGameView: View {
                         .scaleEffect(x: game.scale(of: card), y: game.scale(of: card))
                 }
             }
-            
             Spacer()
             HStack{
                 Button {
                     game.displayed[0].revealContent = false
-//                    withAnimation {
                         game.getNewCard()
-//                    }
                     if !game.displayed.isEmpty {
                         game.displayed[0].revealContent = true
                     } else {
                         //If every card has been played
                         gameOver.toggle()
-                        
                     }
                 } label: {
                     Text("New_card")

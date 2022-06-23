@@ -164,7 +164,6 @@
 		AB34674C284F35E2006B312F /* SlapTheQueen */ = {
 			isa = PBXGroup;
 			children = (
-				AB3B97702862F8E900216EA2 /* Tests */,
 				AB9DCC8D285875900091185F /* GameOverScene */,
 				AB34675D284F8462006B312F /* SlapTheQueenRules.swift */,
 				AB34674D284F365A006B312F /* SlapTheQueenGameView.swift */,
@@ -195,13 +194,6 @@
 				AB34674B284F35B4006B312F /* KendDinPartner */,
 			);
 			path = Games;
-			sourceTree = "<group>";
-		};
-		AB3B97702862F8E900216EA2 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		AB3B97762862FD0500216EA2 /* PartyGamesTests */ = {
