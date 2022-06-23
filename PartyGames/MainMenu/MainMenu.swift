@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainMenu: View {
+    @State var openShopSheet: Bool = false
     var body: some View {
         NavigationView{
             VStack(spacing: 0){
@@ -21,12 +22,21 @@ struct MainMenu: View {
                 GameItem(gameName: String(localized: "SlapTheQueen"), game: AnyView(SlapTheQueenGameView()), rules: AnyView(SlapTheQueenRules()))
                     .padding(.bottom)
                 GameItem(gameName: String(localized: "quesionsGame"), game: AnyView(QuestionCardsStackView()), rules: AnyView(QuestionGameRules()))
+                GameItem(gameName: "Waterfall", game: AnyView(WaterfallGameView()), rules: AnyView(WaterfallRules()))
+                Button {
+                    openShopSheet.toggle()
+                } label: {
+                    Image(systemName: "bag.fill")
+                }
                 Spacer()
                 Spacer()
                 HStack{
                     Spacer()
                 }
             }.background(.black)
+        }
+        .sheet(isPresented: $openShopSheet) {
+            ShopView()
         }
     }
 }

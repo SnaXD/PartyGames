@@ -30,6 +30,9 @@
 		AB463F2D28644C2700C8056E /* WaterfallGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F2C28644C2700C8056E /* WaterfallGame.swift */; };
 		AB463F2F28644CE200C8056E /* WaterfallCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F2E28644CE200C8056E /* WaterfallCustomization.swift */; };
 		AB463F31286450AE00C8056E /* AddPlayerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F30286450AE00C8056E /* AddPlayerScene.swift */; };
+		AB463F3328649E0700C8056E /* WaterfallGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3228649E0700C8056E /* WaterfallGameView.swift */; };
+		AB463F3528649E2400C8056E /* WaterfallRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3428649E2400C8056E /* WaterfallRules.swift */; };
+		AB463F3728649F3500C8056E /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3628649F3500C8056E /* ShopView.swift */; };
 		AB9DCC8528585C2D0091185F /* SlapTheQueenGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC8428585C2C0091185F /* SlapTheQueenGameOver.swift */; };
 		AB9DCC8B28586EF00091185F /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB9DCC8A28586EF00091185F /* PressStart2P-Regular.ttf */; };
 		AB9DCC92285878270091185F /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC94285878270091185F /* Localizable.strings */; };
@@ -79,6 +82,9 @@
 		AB463F2C28644C2700C8056E /* WaterfallGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGame.swift; sourceTree = "<group>"; };
 		AB463F2E28644CE200C8056E /* WaterfallCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCustomization.swift; sourceTree = "<group>"; };
 		AB463F30286450AE00C8056E /* AddPlayerScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerScene.swift; sourceTree = "<group>"; };
+		AB463F3228649E0700C8056E /* WaterfallGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGameView.swift; sourceTree = "<group>"; };
+		AB463F3428649E2400C8056E /* WaterfallRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallRules.swift; sourceTree = "<group>"; };
+		AB463F3628649F3500C8056E /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		AB9DCC8428585C2C0091185F /* SlapTheQueenGameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapTheQueenGameOver.swift; sourceTree = "<group>"; };
 		AB9DCC8A28586EF00091185F /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PressStart2P-Regular.ttf"; path = "../../../../../Downloads/Press_Start_2P/PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
 		AB9DCC8C2858716F0091185F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -218,6 +224,8 @@
 				AB463F2C28644C2700C8056E /* WaterfallGame.swift */,
 				AB463F2E28644CE200C8056E /* WaterfallCustomization.swift */,
 				AB463F30286450AE00C8056E /* AddPlayerScene.swift */,
+				AB463F3228649E0700C8056E /* WaterfallGameView.swift */,
+				AB463F3428649E2400C8056E /* WaterfallRules.swift */,
 			);
 			path = Waterfall;
 			sourceTree = "<group>";
@@ -254,6 +262,7 @@
 			children = (
 				AB9DCC9A2859BAA00091185F /* MainMenu.swift */,
 				AB9DCC9C2859BD140091185F /* GameItem.swift */,
+				AB463F3628649F3500C8056E /* ShopView.swift */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
@@ -395,8 +404,11 @@
 				AB9DCC9B2859BAA00091185F /* MainMenu.swift in Sources */,
 				AB346760284F8BAF006B312F /* SmallNumberAndType.swift in Sources */,
 				AB34674E284F365A006B312F /* SlapTheQueenGameView.swift in Sources */,
+				AB463F3728649F3500C8056E /* ShopView.swift in Sources */,
+				AB463F3328649E0700C8056E /* WaterfallGameView.swift in Sources */,
 				AB34674A284F2E10006B312F /* CardView.swift in Sources */,
 				AB346746284F2D66006B312F /* Card.swift in Sources */,
+				AB463F3528649E2400C8056E /* WaterfallRules.swift in Sources */,
 				AB463F31286450AE00C8056E /* AddPlayerScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
