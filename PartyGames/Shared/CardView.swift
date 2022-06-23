@@ -46,9 +46,14 @@ struct CardView: View {
                 }.onAppear(perform: {
                     flipAnimation()
                 })
+                .onDisappear {
+                    t = 0
+                    withAnimation(Animation.linear(duration: 0.001).delay(animationTime / 2)) {
+                        showFrontPage.toggle()
+                    }
+                }
             }
         }
-        
         .frame(width: 300, height: 400)
         .background(
             RoundedRectangle(cornerRadius: 10)
@@ -56,13 +61,11 @@ struct CardView: View {
         )
         .rotation3DEffect(.degrees(t), axis: (x: 0, y: 1, z: 0))
     }
-    
     func flipAnimation() {
         t = 180.0
         withAnimation(Animation.linear(duration: animationTime))  {
             t += 180
         }
-        
         withAnimation(Animation.linear(duration: 0.001).delay(animationTime / 2)) {
             showFrontPage.toggle()
         }

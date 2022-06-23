@@ -76,7 +76,7 @@ extension PlayingCardStack {
     }
     mutating func getLastCardGeneric<T: StandardCustomization>(settings: T){
         if settings.infinityCards {
-            usedDecks.insert(displayed.last ?? displayed[0], at: 0)
+            usedDecks.insert(displayed.last ?? displayed[displayed.count - 1], at: 0)
             displayed.remove(at: displayed.count - 1)
             displayed.insert(usedDecks.last!, at: 0)
             usedDecks.remove(at: usedDecks.count - 1)
