@@ -18,9 +18,8 @@ class StandardCustomization: ObservableObject{
     @Published var animationTime = 1.0
     
     func addPlayer(name: String){
-        players.append(Player(name: name, points: 0))
+        players.append(Player(name: name, points: 0, cardsOnHand: []))
     }
-    
     func removePlayer(who player: Player){
         players.removeAll { elements in
             elements.id == player.id

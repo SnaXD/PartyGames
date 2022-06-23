@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 
 protocol PlayingCardStack {
+    associatedtype DataType
     var usedDecks: [Card] {get set}
     var displayed: [Card] {get set} //Indholder kun 5 kort
-    var customizedSettings: StandardCustomization {get set}
-    
+    var customizedSettings: DataType {get set}
 }
 extension PlayingCardStack {
     func topCard() -> Card {
@@ -51,7 +51,12 @@ extension PlayingCardStack {
     }
     
     mutating func getNewCard(){
-        if customizedSettings.infinityCards {
+        if let settings = customizedSettings as? StandardCustomization{
+            getNewCardGeneric(settings: settings)
+        }
+    }
+    mutating func getNewCardGeneric<T: StandardCustomization>(settings: T){
+        if settings.infinityCards {
             usedDecks.append(displayed.first!)
             displayed.remove(at: 0)
             displayed.append(usedDecks.first!)
@@ -64,8 +69,13 @@ extension PlayingCardStack {
             }
         }
     }
-    mutating func getLastCard() {
-        if customizedSettings.infinityCards {
+    mutating func getLastCard(){
+        if let settings = customizedSettings as? StandardCustomization{
+            getLastCardGeneric(settings: settings)
+        }
+    }
+    mutating func getLastCardGeneric<T: StandardCustomization>(settings: T){
+        if settings.infinityCards {
             usedDecks.insert(displayed.last ?? displayed[0], at: 0)
             displayed.remove(at: displayed.count - 1)
             displayed.insert(usedDecks.last!, at: 0)
