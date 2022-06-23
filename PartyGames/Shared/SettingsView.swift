@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(\.colorScheme) var colorScheme
     @ObservedObject var settings: StandardCustomization
     @State var name = ""
     var body: some View {
@@ -89,7 +90,8 @@ struct SettingsView: View {
                                 .multilineTextAlignment(.center)
                                 .keyboardType(.decimalPad)
                                 .frame(width: 100, height: 32, alignment: .center)
-                                .background(.white)
+                                .background(colorScheme == .dark ? .gray : .black)
+                                .foregroundColor(colorScheme == .dark ? .black : .white)
                                 .cornerRadius(8)
                         }
                         .padding(.top, 24)

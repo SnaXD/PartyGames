@@ -22,11 +22,22 @@ struct MainMenu: View {
                 GameItem(gameName: String(localized: "SlapTheQueen"), game: AnyView(SlapTheQueenGameView()), rules: AnyView(SlapTheQueenRules()))
                     .padding(.bottom)
                 GameItem(gameName: String(localized: "quesionsGame"), game: AnyView(QuestionCardsStackView()), rules: AnyView(QuestionGameRules()))
+                    .padding(.bottom)
                 GameItem(gameName: "Waterfall", game: AnyView(WaterfallGameView()), rules: AnyView(WaterfallRules()))
+                    .padding(.bottom)
                 Button {
                     openShopSheet.toggle()
                 } label: {
                     Image(systemName: "bag.fill")
+                        .font(.custom("Inconsolata", size: 32))
+                        .foregroundColor(.white)
+                        .padding()
+                        .cornerRadius(12)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(Color.purple, lineWidth: 3)
+                        )
+                    
                 }
                 Spacer()
                 Spacer()
