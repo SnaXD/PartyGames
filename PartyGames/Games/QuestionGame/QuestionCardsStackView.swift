@@ -39,15 +39,13 @@ struct QuestionCardsStackView: View {
                                     if self.game.activeCard == nil {
                                         self.game.activeCard = card
                                     }
-                                    if card != self.game.activeCard {return}
-                                    
+                                    if card != self.game.activeCard {return} 
                                     withAnimation(.spring()) {
                                         self.game.topCardOffset = drag.translation
-                                        if
-                                            drag.translation.width < -200 ||
-                                                drag.translation.width > 200 ||
-                                                drag.translation.height < -250 ||
-                                                drag.translation.height > 250 {
+                                        if drag.translation.width < -200 ||
+                                            drag.translation.width > 200 ||
+                                            drag.translation.height < -250 ||
+                                            drag.translation.height > 250 {
                                             self.game.moveToBack(card: card)
                                         } else {
                                             self.game.moveToFront(card: card)
@@ -60,7 +58,6 @@ struct QuestionCardsStackView: View {
                                         self.game.topCardOffset = .zero
                                         game.changeLastCard()
                                     }
-                                    
                                 })
                         )
                 }
