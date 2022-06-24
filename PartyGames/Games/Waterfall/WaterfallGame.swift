@@ -12,5 +12,4 @@ struct WaterfallGame: PlayingCardStack {
     @ObservedObject var customizedSettings = WaterfallCustomization()
     var usedDecks: [Card] = []
     var displayed: [Card] = [] //Indholder kun 5 kort
-    
 }

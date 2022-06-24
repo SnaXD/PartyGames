@@ -13,10 +13,45 @@ protocol PlayingCardStack {
     var usedDecks: [Card] {get set}
     var displayed: [Card] {get set} //Indholder kun 5 kort
     var customizedSettings: DataType {get set}
+    mutating func SetupGame()
 }
 extension PlayingCardStack {
     func topCard() -> Card {
         return displayed[0]
+    }
+    
+    mutating func SetupGame(){
+        var oneDeck = Deck().cards
+        if let settings = customizedSettings as? StandardCustomization{
+            //Remove Jokers if requested
+            if !settings.includeJoker {
+                oneDeck.removeAll { card in
+                    card.cardType == .joker
+                }
+            }
+            //Adds Multiple decks
+            for _ in 1...(Int(settings.amountOfDecks) ?? 1) {
+                usedDecks.append(contentsOf: oneDeck)
+            }
+            
+            //Shuffle the cards
+            usedDecks = usedDecks.shuffled()
+            
+            //Adds 5 first cards to displayed Array
+            for _ in 0...4 {
+                if let moreCards = usedDecks.first {
+                    displayed.append(moreCards)
+                    usedDecks.remove(at: 0)
+                }
+            }
+            
+            //Sets Players points to 0
+            if !settings.players.isEmpty {
+                for index in 0...settings.players.count - 1 {
+                    settings.players[index].points = 0
+                }
+            }
+        }
     }
     
     func count() -> Int

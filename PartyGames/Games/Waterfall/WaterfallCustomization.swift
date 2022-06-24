@@ -8,6 +8,7 @@
 import Foundation
 
 class WaterfallCustomization: StandardCustomization {
-    @Published var keepTrackOfHands = true
+    @Published var keepTrackOfHands = false
+    @Published var showRulesToCards = false
     
 }

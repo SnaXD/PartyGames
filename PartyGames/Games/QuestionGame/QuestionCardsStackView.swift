@@ -39,7 +39,7 @@ struct QuestionCardsStackView: View {
                                     if self.game.activeCard == nil {
                                         self.game.activeCard = card
                                     }
-                                    if card != self.game.activeCard {return} 
+                                    if card != self.game.activeCard {return}
                                     withAnimation(.spring()) {
                                         self.game.topCardOffset = drag.translation
                                         if drag.translation.width < -200 ||
