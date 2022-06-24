@@ -161,7 +161,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		AB34674B284F35B4006B312F /* KendDinPartner */ = {
+		AB34674B284F35B4006B312F /* QuestionGame */ = {
 			isa = PBXGroup;
 			children = (
 				AB346747284F2DAF006B312F /* QuestionDeck.swift */,
@@ -171,7 +171,7 @@
 				AB9DCCA0285C67D90091185F /* QuestionGameRules.swift */,
 				AB9DCCA3285C8AF20091185F /* QuestionGame.swift */,
 			);
-			path = KendDinPartner;
+			path = QuestionGame;
 			sourceTree = "<group>";
 		};
 		AB34674C284F35E2006B312F /* SlapTheQueen */ = {
@@ -204,7 +204,7 @@
 			children = (
 				AB463F2B286449DC00C8056E /* Waterfall */,
 				AB34674C284F35E2006B312F /* SlapTheQueen */,
-				AB34674B284F35B4006B312F /* KendDinPartner */,
+				AB34674B284F35B4006B312F /* QuestionGame */,
 			);
 			path = Games;
 			sourceTree = "<group>";

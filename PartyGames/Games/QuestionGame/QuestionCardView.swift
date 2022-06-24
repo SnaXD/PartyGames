@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuestionCardView: View {
-    let randomColor: [Color] = [.green, .blue, .red, .brown, .gray, .cyan, .indigo, .orange, .purple, .pink, .mint]
+    let randomColor: [Color] = [.green, .blue, .red, .brown, .teal, .cyan, .indigo, .orange, .purple, .pink, .mint]
     let card: String
     
     var body: some View {

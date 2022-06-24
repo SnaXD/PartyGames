@@ -37,6 +37,7 @@ struct MainMenu: View {
                             RoundedRectangle(cornerRadius: 12)
                                 .stroke(Color.purple, lineWidth: 3)
                         )
+                        .padding(.top, 16)
                     
                 }
                 Spacer()
