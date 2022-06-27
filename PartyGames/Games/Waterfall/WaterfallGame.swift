@@ -15,13 +15,22 @@ struct WaterfallGame: PlayingCardStack {
 }
 
 extension WaterfallGame {
+    //Make the stack of 8 cards for Cosmetic reasons
+    mutating func additionalSetup(){
+        for _ in 0...3 {
+            if let moreCards = usedDecks.first {
+                displayed.append(moreCards)
+                usedDecks.remove(at: 0)
+            }
+        }
+    }
     func smallCardWidth(screen: GeometryProxy) -> CGFloat {
         let paddingHorizontal: CGFloat = 8
-        let result = (screen.size.width - paddingHorizontal) / 3
+        let result = (screen.size.width - paddingHorizontal) / 2.5
         return result
     }
     func smallCardHeight(screen: GeometryProxy) -> CGFloat {
-        return screen.size.height / 6
+        return screen.size.height / 4
     }
     
     func bigCardWidth(geometry: GeometryProxy) -> CGFloat{
@@ -45,4 +54,5 @@ extension WaterfallGame {
         let cardPlacement = heightWithPadding / amountOfCardsShowing * CGFloat(cardIndex)
         return cardPlacement
     }
+    
 }
