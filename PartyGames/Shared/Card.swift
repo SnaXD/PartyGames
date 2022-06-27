@@ -13,6 +13,7 @@ struct Card: Identifiable, Equatable {
     let suite: Suite
     let cardType: CardTypes
     var revealContent: Bool = false
+    var inFocus: Bool = false
 }
 
 enum Suite: String, CaseIterable {

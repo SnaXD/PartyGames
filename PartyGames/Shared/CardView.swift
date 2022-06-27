@@ -12,6 +12,10 @@ struct CardView: View {
     @Binding var animationTime: Double
     @State var t = 180.0
     @State var showFrontPage = false
+    var inFocusWidth: CGFloat = 300
+    var width: CGFloat = 300
+    var inFocusHeight: CGFloat = 400
+    var height: CGFloat = 400
     var body: some View {
         VStack {
             if card.revealContent {
@@ -20,7 +24,6 @@ struct CardView: View {
                         VStack {
                             SmallNumberAndType(card: card)
                             Spacer()
-                            
                             HStack(spacing: 0){
                                 Image(systemName: card.suite.rawValue)
                                     .foregroundColor(Color.white)
@@ -54,7 +57,8 @@ struct CardView: View {
                 }
             }
         }
-        .frame(width: 300, height: 400)
+        .frame(width: card.inFocus ? inFocusWidth : width,
+               height: card.inFocus ? inFocusHeight : height)
         .background(
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(Color.gray)
