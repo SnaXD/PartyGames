@@ -6,15 +6,13 @@
 //
 
 import SwiftUI
+import ExytePopupView
 
 struct WaterfallGameView: View {
     @State var game = WaterfallGame()
     var body: some View {
         
         VStack(alignment: .trailing){
-            
-            //Card stack
-            
             ZStack {
                 GeometryReader { geometry in
                     ForEach(game.displayed) { card in
@@ -44,35 +42,20 @@ struct WaterfallGameView: View {
                 Button {
                     withAnimation(.easeInOut(duration: 0.5)){
                         for index in 0...2 {
-                            
                             game.displayed[index].inFocus.toggle()
                         }
                     }
-                    //                                                        game.displayed[0].revealContent = false
-                    //                                                            game.getNewCard()
-                    //                                                        if !game.displayed.isEmpty {
-                    //                                                            game.displayed[0].revealContent = true
-                    //                                                        }
                 } label: {
                     Text("New_card")
                 }
                 .padding(.horizontal, 32)
-                if game.customizedSettings.infinityCards {
-                    Button {
-                        game.displayed[0].revealContent = false
-                        game.getLastCard()
-                        game.displayed[0].revealContent = true
-                    } label: {
-                        Image(systemName: "arrowshape.turn.up.right.fill")
-                    }
-                }
             }
-            
-            
         }.onAppear {
             game.SetupGame()
             game.additionalSetup()
         }
+        
+        
     }
 }
 

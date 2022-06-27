@@ -13,7 +13,6 @@ struct WaterfallGame: PlayingCardStack {
     var usedDecks: [Card] = []
     var displayed: [Card] = [] //Indholder kun 5 kort
 }
-
 extension WaterfallGame {
     //Make the stack of 8 cards for Cosmetic reasons
     mutating func additionalSetup(){
