@@ -27,9 +27,8 @@ struct WaterfallGameView: View {
                         .offset(y: game.deckOffset(of: card))
                         .scaleEffect(x: game.scale(of: card), y: game.scale(of: card))
                         .onTapGesture {
-//                            if game.displayed[2].inFocus
-                                if let cardsIndex = game.displayed.firstIndex(of: card){
-                                    game.selectedCard = game.displayed[cardsIndex]
+                            if let cardsIndex = game.displayed.firstIndex(of: card){
+                                game.selectedCard = game.displayed[cardsIndex]
                                 if game.displayed[cardsIndex].inFocus == true {
                                     inspectCard.toggle()
                                     game.displayed[cardsIndex].revealContent.toggle()
@@ -76,13 +75,13 @@ struct WaterfallGameView: View {
                 }
             }
             game.removeFirst(card: game.selectedCard!, deck: &game.displayed)
-                if !game.usedDecks.isEmpty {
-                    game.displayed.append(game.usedDecks[0])
-                    game.usedDecks.remove(at: 0)
-                    print(game.displayed.count)
-                } else if game.displayed.isEmpty {
-                    //TODO: Go to gameover screen
-                }
+            if !game.usedDecks.isEmpty {
+                game.displayed.append(game.usedDecks[0])
+                game.usedDecks.remove(at: 0)
+                print(game.displayed.count)
+            } else if game.displayed.isEmpty {
+                //TODO: Go to gameover screen
+            }
             withAnimation(.easeInOut(duration: game.customizedSettings.animationTime)){
                 if game.displayed.count > 2 {
                     game.displayed[2].inFocus = true
@@ -90,16 +89,12 @@ struct WaterfallGameView: View {
             }
         }){
             ZStack{
-                RoundedRectangle(cornerRadius: 12)
-                    .foregroundColor(.white)
-                    .shadow(radius: 5)
                 CardView(card: game.selectedCard!, animationTime: $game.customizedSettings.animationTime)
+                    .shadow(radius: 5)
                     .onAppear {
                         game.selectedCard?.revealContent.toggle()
                     }
             }
-            .padding(36)
-            .padding(.vertical, 60)
         }
     }
 }

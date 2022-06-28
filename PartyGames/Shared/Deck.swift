@@ -12,9 +12,9 @@ struct Deck {
     var cards = [Card]()
     init() {
         for suite in Suite.allCases {
-//            for card in CardTypes.allCases {
-            cards.append(Card(suite: suite, cardType: .four))
-//            }
+            for card in CardTypes.allCases {
+            cards.append(Card(suite: suite, cardType: card))
+            }
         }
     }
 }
