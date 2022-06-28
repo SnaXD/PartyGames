@@ -11,7 +11,8 @@ import SwiftUI
 struct WaterfallGame: PlayingCardStack {
     @ObservedObject var customizedSettings = WaterfallCustomization()
     var usedDecks: [Card] = []
-    var displayed: [Card] = [] //Indholder kun 5 kort
+    var displayed: [Card] = []
+    var selectedCard: Card? = nil
 }
 extension WaterfallGame {
     //Make the stack of 8 cards for Cosmetic reasons

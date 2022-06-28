@@ -19,7 +19,6 @@ extension PlayingCardStack {
     func topCard() -> Card {
         return displayed[0]
     }
-    
     mutating func SetupGame(){
         var oneDeck = Deck().cards
         if let settings = customizedSettings as? StandardCustomization{
@@ -58,6 +57,11 @@ extension PlayingCardStack {
     {
         let amount = displayed.count + usedDecks.count
         return amount
+    }
+    func removeFirst(card: Card, deck: inout [Card]) {
+        let cardIndex = deck.firstIndex { deckCard in
+            deckCard.cardType == card.cardType && deckCard.suite == card.suite }
+        deck.remove(at: cardIndex!)
     }
     
     func position(of card: Card) -> Int {
