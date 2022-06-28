@@ -59,9 +59,10 @@ extension PlayingCardStack {
         return amount
     }
     func removeFirst(card: Card, deck: inout [Card]) {
-        let cardIndex = deck.firstIndex { deckCard in
-            deckCard.cardType == card.cardType && deckCard.suite == card.suite }
-        deck.remove(at: cardIndex!)
+        if let cardIndex = deck.firstIndex { deckCard in
+            deckCard.cardType == card.cardType && deckCard.suite == card.suite } {
+        deck.remove(at: cardIndex)
+            }
     }
     
     func position(of card: Card) -> Int {
