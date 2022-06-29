@@ -35,7 +35,7 @@ struct SlapTheQueenGameView: View {
             Spacer()
             ZStack {
                 ForEach(game.displayed) { card in
-                    CardView(card: card, animationTime: $game.customizedSettings.animationTime)
+                    CardView(card: card, animationTime: game.customizedSettings.animationTime)
                         .zIndex(game.zIndex(of: card))
                         .shadow(radius: 1)
                         .offset(y: game.deckOffset(of: card))

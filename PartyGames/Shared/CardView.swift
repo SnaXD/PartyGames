@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     var card: Card
-    @Binding var animationTime: Double
+    var animationTime: Double
     @State var t = 180.0
     @State var showFrontPage = false
     var inFocusWidth: CGFloat = 300
@@ -90,6 +90,6 @@ struct CardView_Previews: PreviewProvider {
 struct CardView_PreviewsWithBinding: View {
     @State var animationTime = 1.0
     var body: some View {
-        CardView(card: Card(suite: .clubs, cardType: .eight), animationTime: $animationTime)
+        CardView(card: Card(suite: .clubs, cardType: .eight), animationTime: animationTime)
     }
 }

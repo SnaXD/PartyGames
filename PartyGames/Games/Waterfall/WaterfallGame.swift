@@ -10,12 +10,9 @@ import SwiftUI
 
 struct WaterfallGame: PlayingCardStack {
     @ObservedObject var customizedSettings = WaterfallCustomization()
-    @State var openRules: Bool = false
-    @State var openSettings: Bool = false
-    @State var gameOver: Bool = false
     var usedDecks: [Card] = []
     var displayed: [Card] = []
-    var selectedCard: Card? = nil
+    var turnCounter = 0
 }
 extension WaterfallGame {
     //Make the stack of 8 cards for Cosmetic reasons
@@ -26,6 +23,11 @@ extension WaterfallGame {
                 usedDecks.remove(at: 0)
             }
         }
+    }
+    
+    func whosTurn() -> String {
+        let players = customizedSettings.players
+        return players[turnCounter % players.count].name
     }
     func smallCardWidth(screen: GeometryProxy) -> CGFloat {
         let paddingHorizontal: CGFloat = 8

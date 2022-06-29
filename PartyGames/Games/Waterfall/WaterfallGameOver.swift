@@ -19,31 +19,37 @@ struct WaterfallGameOver: View {
                 .padding(.top, 42)
             
             if !game.customizedSettings.players.isEmpty {
-                
-                ForEach($game.customizedSettings.players) { player in
-                    HStack{
-                        Text(player.name.wrappedValue)
-                        Spacer()
-                        ScrollView(.horizontal){
-                            HStack{
-                                
-                                ForEach(player.cardsOnHand) { card in
-                                    CardView(card: card.wrappedValue, animationTime: $game.customizedSettings.animationTime, width: 50, height: 50, fontSize: 20, includeTopBottomCardType: false)
-                                        .onAppear {
-                                            card.revealContent.wrappedValue = true
-                                        }
+                HStack{Text("Name")
+                    Spacer()
+                    Text("Hand")
+                }
+                .padding(.horizontal, 16)
+                .font(.system(size: 12))
+                ScrollView{
+                    ForEach($game.customizedSettings.players) { player in
+                        HStack{
+                            Text(player.name.wrappedValue)
+                                .fontWeight(.semibold)
+                                .font(.system(size: 18))
+                            Spacer()
+                            ScrollView(.horizontal){
+                                HStack{
+                                    ForEach(player.cardsOnHand) { card in
+                                        CardView(card: card.wrappedValue, animationTime: game.customizedSettings.animationTime, width: 50, height: 50, fontSize: 20, includeTopBottomCardType: false)
+                                            .onAppear {
+                                                card.revealContent.wrappedValue = true
+                                            }
+                                    }
                                 }
-                            }
-                        }.scaledToFit()
-
-                    }.frame(height: 50)
-                        .padding(.horizontal, 8)
+                            }.scaledToFit()
+                        }.frame(height: 50)
+                        Divider()
+                    }
+                    .padding(.horizontal, 16)
                 }
             }
+            Spacer()
         }
-        .onAppear(perform: {
-            
-        })
         .background(Color(UIColor.systemGreen))
     }
 }
