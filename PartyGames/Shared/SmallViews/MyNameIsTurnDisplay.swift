@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TurnDisplayer: View {
+struct MyNameIsTurnDisplay: View {
     var name: String
     var body: some View {
         ZStack{
@@ -16,11 +16,11 @@ struct TurnDisplayer: View {
             
             Spacer()
             VStack(spacing: 0){
-                Text("hello".uppercased())
+                Text("hello")
                     .foregroundColor(.white)
                     .bold()
                     .font(.system(size: 24))
-                Text("my_name_is".uppercased())
+                Text("myNameIs")
                     .foregroundColor(.white)
                     .bold()
                     .font(.system(size: 8))
@@ -49,6 +49,6 @@ struct TurnDisplayer: View {
 
 struct TurnDisplayer_Previews: PreviewProvider {
     static var previews: some View {
-        TurnDisplayer(name: "Steve")
+        MyNameIsTurnDisplay(name: "Steve")
     }
 }

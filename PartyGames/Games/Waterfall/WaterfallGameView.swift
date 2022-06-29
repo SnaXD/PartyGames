@@ -34,13 +34,6 @@ struct WaterfallGameView: View {
                         .padding()
                 }
             }.padding(.trailing, 10)
-            if !game.customizedSettings.players.isEmpty {
-                HStack{
-                    Spacer()
-                TurnDisplayer(name: game.whosTurn())
-                }
-                .padding(.trailing, 16)
-            }
             ZStack {
                 GeometryReader { geometry in
                     ForEach(game.displayed) { card in
@@ -56,7 +49,7 @@ struct WaterfallGameView: View {
                         .scaleEffect(x: game.scale(of: card), y: game.scale(of: card))
                         .onTapGesture {
                             if let cardsIndex = game.displayed.firstIndex(of: card){
-                                $selectedCard.wrappedValue = game.displayed[cardsIndex]
+                                selectedCard = card
                                 if game.displayed[cardsIndex].inFocus == true {
                                     inspectCard = true
                                     game.displayed[cardsIndex].revealContent.toggle()
@@ -69,6 +62,22 @@ struct WaterfallGameView: View {
                         
                     }.frame(width: geometry.size.width, height: geometry.size.height, alignment: .bottomTrailing)
                 }
+            }
+            .overlay {
+                VStack{
+                    HStack{
+                        Spacer()
+                        if !game.customizedSettings.players.isEmpty {
+                            HStack{
+                                Spacer()
+                                MyNameIsTurnDisplay(name: game.whosTurn())
+                            }
+                            .padding(.trailing, 16)
+                        }
+                    }
+                    Spacer()
+                }
+                
             }
         }.onAppear {
             game.SetupGame()
@@ -90,6 +99,7 @@ struct WaterfallGameView: View {
         }
         .popup(isPresented: $inspectCard, type: .default, position: .bottom, closeOnTapOutside: true, dismissCallback: {
             //TODO: Append to hands
+            game.turnCounter += 1
             for index in 0...(game.displayed.count > 3 ? 2 : game.displayed.count - 1) {
                 if game.displayed[index].id == selectedCard?.id && game.customizedSettings.infinityCards {
                     withAnimation(.easeIn(duration: game.customizedSettings.animationTime)){
@@ -104,7 +114,7 @@ struct WaterfallGameView: View {
             withAnimation(.easeOut(duration: game.customizedSettings.animationTime)){
                 game.removeFirst(card: selectedCard!, deck: &game.displayed)
             }
-            if !game.usedDecks.isEmpty {
+            if !game.usedDecks.isEmpty{
                 game.displayed.append(game.usedDecks[0])
                 //                if !game.customizedSettings.infinityCards {
                 game.usedDecks.remove(at: 0)

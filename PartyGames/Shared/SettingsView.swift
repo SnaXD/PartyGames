@@ -49,6 +49,7 @@ struct SettingsView: View {
                             }
                             .padding(.trailing)
                             Text(player.name)
+                            
                         }
                         .padding(.vertical, 4)
                     }

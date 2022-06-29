@@ -35,7 +35,8 @@
 		AB463F3328649E0700C8056E /* WaterfallGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3228649E0700C8056E /* WaterfallGameView.swift */; };
 		AB463F3528649E2400C8056E /* WaterfallRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3428649E2400C8056E /* WaterfallRules.swift */; };
 		AB463F3728649F3500C8056E /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3628649F3500C8056E /* ShopView.swift */; };
-		AB51A1B3286C7CF60047631E /* TurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51A1B2286C7CF60047631E /* TurnDisplayer.swift */; };
+		AB51A1B3286C7CF60047631E /* MyNameIsTurnDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51A1B2286C7CF60047631E /* MyNameIsTurnDisplay.swift */; };
+		AB51A1B6286C9EB50047631E /* SmallShopItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51A1B5286C9EB50047631E /* SmallShopItemView.swift */; };
 		AB8C4974286C35F400EA9CAC /* WaterfallGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8C4973286C35F400EA9CAC /* WaterfallGameOver.swift */; };
 		AB9DCC8528585C2D0091185F /* SlapTheQueenGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC8428585C2C0091185F /* SlapTheQueenGameOver.swift */; };
 		AB9DCC8B28586EF00091185F /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB9DCC8A28586EF00091185F /* PressStart2P-Regular.ttf */; };
@@ -93,7 +94,8 @@
 		AB463F3228649E0700C8056E /* WaterfallGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGameView.swift; sourceTree = "<group>"; };
 		AB463F3428649E2400C8056E /* WaterfallRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallRules.swift; sourceTree = "<group>"; };
 		AB463F3628649F3500C8056E /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
-		AB51A1B2286C7CF60047631E /* TurnDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnDisplayer.swift; sourceTree = "<group>"; };
+		AB51A1B2286C7CF60047631E /* MyNameIsTurnDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNameIsTurnDisplay.swift; sourceTree = "<group>"; };
+		AB51A1B5286C9EB50047631E /* SmallShopItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallShopItemView.swift; sourceTree = "<group>"; };
 		AB8C4973286C35F400EA9CAC /* WaterfallGameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGameOver.swift; sourceTree = "<group>"; };
 		AB9DCC8428585C2C0091185F /* SlapTheQueenGameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapTheQueenGameOver.swift; sourceTree = "<group>"; };
 		AB9DCC8A28586EF00091185F /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PressStart2P-Regular.ttf"; path = "../../../../../Downloads/Press_Start_2P/PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				AB9DCC8C2858716F0091185F /* Info.plist */,
+				AB51A1B7286CA9D70047631E /* Shop */,
 				AB9DCC992859BA7E0091185F /* MainMenu */,
 				ABDDB7D32860600900935B55 /* Extentions */,
 				AB34675A284F6F3B006B312F /* Games */,
@@ -219,6 +222,7 @@
 		AB346759284F6F29006B312F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				AB51A1B4286C7CFC0047631E /* SmallViews */,
 				AB346755284F6478006B312F /* StandardCustomization.swift */,
 				AB346757284F66DD006B312F /* Player.swift */,
 				AB34674F284F40DA006B312F /* Deck.swift */,
@@ -251,7 +255,6 @@
 		AB463F2B286449DC00C8056E /* Waterfall */ = {
 			isa = PBXGroup;
 			children = (
-				AB51A1B4286C7CFC0047631E /* SmallViews */,
 				AB463F2C28644C2700C8056E /* WaterfallGame.swift */,
 				AB463F2E28644CE200C8056E /* WaterfallCustomization.swift */,
 				AB463F30286450AE00C8056E /* AddPlayerScene.swift */,
@@ -265,9 +268,17 @@
 		AB51A1B4286C7CFC0047631E /* SmallViews */ = {
 			isa = PBXGroup;
 			children = (
-				AB51A1B2286C7CF60047631E /* TurnDisplayer.swift */,
+				AB51A1B2286C7CF60047631E /* MyNameIsTurnDisplay.swift */,
 			);
 			path = SmallViews;
+			sourceTree = "<group>";
+		};
+		AB51A1B7286CA9D70047631E /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				AB51A1B5286C9EB50047631E /* SmallShopItemView.swift */,
+			);
+			path = Shop;
 			sourceTree = "<group>";
 		};
 		AB9DCC8928586EBF0091185F /* Styles */ = {
@@ -507,8 +518,9 @@
 				AB463F3728649F3500C8056E /* ShopView.swift in Sources */,
 				AB463F3328649E0700C8056E /* WaterfallGameView.swift in Sources */,
 				AB34674A284F2E10006B312F /* CardView.swift in Sources */,
-				AB51A1B3286C7CF60047631E /* TurnDisplayer.swift in Sources */,
+				AB51A1B3286C7CF60047631E /* MyNameIsTurnDisplay.swift in Sources */,
 				AB346746284F2D66006B312F /* Card.swift in Sources */,
+				AB51A1B6286C9EB50047631E /* SmallShopItemView.swift in Sources */,
 				AB463F3528649E2400C8056E /* WaterfallRules.swift in Sources */,
 				AB463F31286450AE00C8056E /* AddPlayerScene.swift in Sources */,
 			);
