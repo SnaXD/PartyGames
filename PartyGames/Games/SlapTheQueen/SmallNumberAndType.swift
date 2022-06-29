@@ -9,12 +9,14 @@ import SwiftUI
 
 struct SmallNumberAndType: View {
     let card: Card
+    var fontSize: CGFloat = 60
     var body: some View {
         HStack{
             Image(systemName: card.suite.rawValue)
-                .foregroundColor(Color.white)
+                .foregroundColor(.white)
+                .font(.system(size: fontSize / 2))
             Text(card.cardType.rawValue)
-            .font(.title)
+                .font(.system(size: fontSize / 2))
             .foregroundColor(.white)
             .bold()
             Spacer()

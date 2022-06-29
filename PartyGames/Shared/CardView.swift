@@ -16,27 +16,33 @@ struct CardView: View {
     var width: CGFloat = 300
     var inFocusHeight: CGFloat = 400
     var height: CGFloat = 400
+    var fontSize: CGFloat = 60
+    var includeTopBottomCardType = true
     var body: some View {
         VStack {
             if card.revealContent {
                 Group {
                     if showFrontPage {
                         VStack {
-                            SmallNumberAndType(card: card)
+                            if includeTopBottomCardType {
+                                SmallNumberAndType(card: card, fontSize: fontSize)
+                            }
                             Spacer()
                             HStack(spacing: 0){
                                 Image(systemName: card.suite.rawValue)
                                     .foregroundColor(Color.white)
-                                    .font(.system(size: 60))
+                                    .font(.system(size: fontSize))
                                 Text(card.cardType.rawValue)
-                                    .font(.system(size: 60))
+                                    .font(.system(size: fontSize))
                                     .foregroundColor(.white)
                                     .bold()
                                     .multilineTextAlignment(.leading)
                             }
                             Spacer()
-                            SmallNumberAndType(card: card)
-                                .rotationEffect(.degrees(180))
+                            if includeTopBottomCardType {
+                                SmallNumberAndType(card: card, fontSize: fontSize)
+                                    .rotationEffect(.degrees(180))
+                            }
                         }
                     } else {
                         VStack{

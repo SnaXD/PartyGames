@@ -74,13 +74,11 @@ struct SlapTheQueenGameOver: View {
                 }
             }
             .padding(.top, 84)
-            
             Spacer()
         }
         .interactiveDismissDisabled()
         .background(Color.black)
     }
-    
     func close(){
         presentationMode.wrappedValue.dismiss()
     }

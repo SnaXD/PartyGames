@@ -10,6 +10,9 @@ import SwiftUI
 
 struct WaterfallGame: PlayingCardStack {
     @ObservedObject var customizedSettings = WaterfallCustomization()
+    @State var openRules: Bool = false
+    @State var openSettings: Bool = false
+    @State var gameOver: Bool = false
     var usedDecks: [Card] = []
     var displayed: [Card] = []
     var selectedCard: Card? = nil
@@ -52,7 +55,7 @@ extension WaterfallGame {
         let amountOfCardsShowing: CGFloat = 3
         let heightWithPadding = geometry.size.height + 40 - (padding * amountOfCardsShowing)
         let cardPlacement = heightWithPadding / amountOfCardsShowing * CGFloat(cardIndex)
-        return cardPlacement
+        return cardPlacement * -1
     }
     
 }

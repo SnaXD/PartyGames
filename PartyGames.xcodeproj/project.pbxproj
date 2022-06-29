@@ -35,6 +35,7 @@
 		AB463F3328649E0700C8056E /* WaterfallGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3228649E0700C8056E /* WaterfallGameView.swift */; };
 		AB463F3528649E2400C8056E /* WaterfallRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3428649E2400C8056E /* WaterfallRules.swift */; };
 		AB463F3728649F3500C8056E /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3628649F3500C8056E /* ShopView.swift */; };
+		AB8C4974286C35F400EA9CAC /* WaterfallGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8C4973286C35F400EA9CAC /* WaterfallGameOver.swift */; };
 		AB9DCC8528585C2D0091185F /* SlapTheQueenGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC8428585C2C0091185F /* SlapTheQueenGameOver.swift */; };
 		AB9DCC8B28586EF00091185F /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB9DCC8A28586EF00091185F /* PressStart2P-Regular.ttf */; };
 		AB9DCC92285878270091185F /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC94285878270091185F /* Localizable.strings */; };
@@ -91,6 +92,7 @@
 		AB463F3228649E0700C8056E /* WaterfallGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGameView.swift; sourceTree = "<group>"; };
 		AB463F3428649E2400C8056E /* WaterfallRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallRules.swift; sourceTree = "<group>"; };
 		AB463F3628649F3500C8056E /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		AB8C4973286C35F400EA9CAC /* WaterfallGameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGameOver.swift; sourceTree = "<group>"; };
 		AB9DCC8428585C2C0091185F /* SlapTheQueenGameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapTheQueenGameOver.swift; sourceTree = "<group>"; };
 		AB9DCC8A28586EF00091185F /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PressStart2P-Regular.ttf"; path = "../../../../../Downloads/Press_Start_2P/PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
 		AB9DCC8C2858716F0091185F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				AB463F30286450AE00C8056E /* AddPlayerScene.swift */,
 				AB463F3228649E0700C8056E /* WaterfallGameView.swift */,
 				AB463F3428649E2400C8056E /* WaterfallRules.swift */,
+				AB8C4973286C35F400EA9CAC /* WaterfallGameOver.swift */,
 			);
 			path = Waterfall;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				AB9DCCA4285C8AF20091185F /* QuestionGame.swift in Sources */,
 				AB34675C284F7065006B312F /* SlapTheQueenGame.swift in Sources */,
 				AB463F2F28644CE200C8056E /* WaterfallCustomization.swift in Sources */,
+				AB8C4974286C35F400EA9CAC /* WaterfallGameOver.swift in Sources */,
 				AB346736284F23FF006B312F /* PartyGamesApp.swift in Sources */,
 				AB463F2D28644C2700C8056E /* WaterfallGame.swift in Sources */,
 				AB346758284F66DD006B312F /* Player.swift in Sources */,
@@ -663,7 +667,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -694,7 +698,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
