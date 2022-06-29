@@ -33,12 +33,13 @@ struct WaterfallGameView: View {
                         .foregroundColor(.blue)
                         .padding()
                 }
-            }
+            }.padding(.trailing, 10)
             if !game.customizedSettings.players.isEmpty {
                 HStack{
                     Spacer()
-                    Text("\(game.whosTurn())")
+                TurnDisplayer(name: game.whosTurn())
                 }
+                .padding(.trailing, 16)
             }
             ZStack {
                 GeometryReader { geometry in
@@ -128,6 +129,6 @@ struct WaterfallGameView: View {
 
 struct WaterfallGameView_Previews: PreviewProvider {
     static var previews: some View {
-        WaterfallGameView()
+        WaterfallGameView(game: WaterfallGame(customizedSettings: createSettings()))
     }
 }
