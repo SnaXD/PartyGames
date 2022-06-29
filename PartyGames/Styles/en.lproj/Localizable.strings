@@ -22,7 +22,8 @@
 "Games" = "Games";
 "quesionsGame" = "Quesions Game";
 "WeCanRememberOurOwnCards" = "We can remember our own cards";
-
+"hello" = "hello";
+"my_name_is" = "My name is";
 //Questions
 "Q1" = "Who got the longest hair";
 "Q2" = "Who had the most drinks";

@@ -16,11 +16,11 @@ struct TurnDisplayer: View {
             
             Spacer()
             VStack(spacing: 0){
-                Text("Hello".uppercased())
+                Text("hello".uppercased())
                     .foregroundColor(.white)
                     .bold()
                     .font(.system(size: 24))
-                Text("My name is".uppercased())
+                Text("my_name_is".uppercased())
                     .foregroundColor(.white)
                     .bold()
                     .font(.system(size: 8))
@@ -44,7 +44,6 @@ struct TurnDisplayer: View {
                     .stroke(Color.black, lineWidth: 2)
                     .shadow(radius: 1)
             )
-            
     }
 }
 
