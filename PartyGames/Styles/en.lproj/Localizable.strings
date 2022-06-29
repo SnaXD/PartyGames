@@ -24,6 +24,10 @@
 "WeCanRememberOurOwnCards" = "We can remember our own cards";
 "hello" = "HELLO";
 "myNameIs" = "MY NAME IS";
+"HelloMyNameIs" = "Hello, My name is";
+"Cosmetics" = "Cosmetics";
+"TurnDisplays" = "Turn displays";
+"BacksideOfCards" = "Backside of cards";
 //Questions
 "Q1" = "Who got the longest hair";
 "Q2" = "Who had the most drinks";

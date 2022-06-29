@@ -24,6 +24,10 @@
 "WeCanRememberOurOwnCards" = "Vi kan selv huske vores kort";
 "hello" = "HEJ";
 "myNameIs" = "MIT NAVN ER";
+"HelloMyNameIs" = "Hej, Mit navn er";
+"Cosmetics" = "Kosmetik";
+"TurnDisplays" = "Tur visere";
+"BacksideOfCards" = "Bagside af kortne";
 //Questions
 "Q1" = "Hvem har det længste hår";
 "Q2" = "Hvem har drukket mest";
