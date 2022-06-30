@@ -9,16 +9,24 @@ import SwiftUI
 import ExytePopupView
 
 struct WaterfallGameView: View {
-    @State var inspectCard: Bool = false
-    @State var openRules: Bool = false
-    @State var openSettings: Bool = false
-    @State var gameOver: Bool = false
+    @State var inspectCard = false
+    @State var openRules = false
+    @State var openSettings = false
+    @State var gameOver = false
     @State var selectedCard: Card? = nil
     @State var game = WaterfallGame()
+    @State var openHands = false
     var body: some View {
         VStack(alignment: .trailing){
             HStack{
                 Spacer()
+                Button {
+                    openHands.toggle()
+                } label: {
+                    Image(systemName: "hand.raised.fill")
+                        .foregroundColor(game.customizedSettings.players.isEmpty ? .gray : .green)
+                        .padding()
+                }
                 Button {
                     openSettings.toggle()
                 } label: {
@@ -90,17 +98,25 @@ struct WaterfallGameView: View {
             }
         }
         .sheet(isPresented: $openSettings) {
-            SettingsView(settings: game.customizedSettings)
+            WaterfallSettingsView(settings: game.customizedSettings)
         }
         .sheet(isPresented: $openRules) {
             SlapTheQueenRules()
         }
         .sheet(isPresented: $gameOver) {
-            WaterfallGameOver(game: $game)
+            WaterfallHandsView(game: $game, title: "GAME_OVER")
         }
+        .sheet(isPresented: $openHands, content: {
+            WaterfallHandsView(game: $game, title: "PAUSE")
+        })
         .popup(isPresented: $inspectCard, type: .default, position: .bottom, closeOnTapOutside: true, dismissCallback: {
             //TODO: Append to hands
-            game.turnCounter += 1
+            if !game.customizedSettings.players.isEmpty {
+                if game.customizedSettings.cardsToKeep.contains( selectedCard!.cardType) {
+                    game.customizedSettings.players[game.turnCounter % game.customizedSettings.players.count].addCard(card: selectedCard!)
+                    game.turnCounter += 1
+                }
+            }
             for index in 0...(game.displayed.count > 3 ? 2 : game.displayed.count - 1) {
                 if game.displayed[index].id == selectedCard?.id && game.customizedSettings.infinityCards {
                     withAnimation(.easeIn(duration: game.customizedSettings.animationTime)){

@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct WaterfallGameOver: View {
+struct WaterfallHandsView: View {
     @Binding var game: WaterfallGame
+    var title: String
     var body: some View {
         VStack{
-            Text("GAME_OVER")
+            Text(LocalizedStringKey(title))
                 .font(.custom("PressStart2P-Regular", size: 42))
                 .foregroundColor(.white)
                 .shadow(radius: 2)
@@ -25,7 +26,8 @@ struct WaterfallGameOver: View {
                 }
                 .padding(.horizontal, 16)
                 .font(.system(size: 12))
-                ScrollView{
+                ScrollView(showsIndicators: false){
+                    VStack{
                     ForEach($game.customizedSettings.players) { player in
                         HStack{
                             Text(player.name.wrappedValue)
@@ -36,9 +38,16 @@ struct WaterfallGameOver: View {
                                 HStack{
                                     ForEach(player.cardsOnHand) { card in
                                         CardView(card: card.wrappedValue, animationTime: game.customizedSettings.animationTime, width: 50, height: 50, fontSize: 20, includeTopBottomCardType: false)
+                                            .contentShape(Rectangle())
+                                            .onTapGesture {
+                                                print("ALLALALALALd213")
+                                                card.wrappedValue.revealContent.toggle()
+                                            }
                                             .onAppear {
                                                 card.revealContent.wrappedValue = true
                                             }
+
+                                            
                                     }
                                 }
                             }.scaledToFit()
@@ -47,8 +56,32 @@ struct WaterfallGameOver: View {
                     }
                     .padding(.horizontal, 16)
                 }
+                }.frame(minHeight: 130, maxHeight: 430)
             }
+//            HStack(spacing: 46){
+//                Button {
+//                    let oldSettings = game.customizedSettings
+//                    @State var newGame = WaterfallGame()
+//                    newGame.customizedSettings = oldSettings
+//                    game = newGame
+//                    game.SetupGame()
+//                } label: {
+//                    Text("Play_again")
+//                        .font(.custom("PressStart2P-Regular", size: 14))
+//                        .foregroundColor(.white)
+//                }
+//                Button {
+//                    //TODO: Main menu
+//                } label: {
+//                    Text("Main_Menu")
+//                        .font(.custom("PressStart2P-Regular", size: 12))
+//                        .foregroundColor(.white)
+//                }
+//            }
             Spacer()
+            HStack{
+                Spacer()
+            }
         }
         .background(Color(UIColor.systemGreen))
     }
@@ -62,7 +95,7 @@ struct WaterfallGameOver_Previews: PreviewProvider {
 struct WaterfallGameOver_PreviewsWithBinding: View {
     @State var game = WaterfallGame(customizedSettings: createSettings())
     var body: some View {
-        WaterfallGameOver(game: $game)
+        WaterfallHandsView(game: $game, title: "GAME_OVER")
     }
 }
 

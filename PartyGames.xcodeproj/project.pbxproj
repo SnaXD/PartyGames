@@ -37,7 +37,7 @@
 		AB463F3728649F3500C8056E /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3628649F3500C8056E /* ShopView.swift */; };
 		AB51A1B3286C7CF60047631E /* MyNameIsTurnDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51A1B2286C7CF60047631E /* MyNameIsTurnDisplay.swift */; };
 		AB51A1B6286C9EB50047631E /* SmallShopItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51A1B5286C9EB50047631E /* SmallShopItemView.swift */; };
-		AB8C4974286C35F400EA9CAC /* WaterfallGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8C4973286C35F400EA9CAC /* WaterfallGameOver.swift */; };
+		AB8C4974286C35F400EA9CAC /* WaterfallHandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8C4973286C35F400EA9CAC /* WaterfallHandsView.swift */; };
 		AB9DCC8528585C2D0091185F /* SlapTheQueenGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC8428585C2C0091185F /* SlapTheQueenGameOver.swift */; };
 		AB9DCC8B28586EF00091185F /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB9DCC8A28586EF00091185F /* PressStart2P-Regular.ttf */; };
 		AB9DCC92285878270091185F /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC94285878270091185F /* Localizable.strings */; };
@@ -57,6 +57,8 @@
 		ABDC7450286D87BA0016DEBF /* ActionBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC744F286D87BA0016DEBF /* ActionBackOfCard.swift */; };
 		ABDC7452286DA1810016DEBF /* WantedPosterTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7451286DA1810016DEBF /* WantedPosterTurnDisplayer.swift */; };
 		ABDC7454286DA3000016DEBF /* UfoTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7453286DA3000016DEBF /* UfoTurnDisplayer.swift */; };
+		ABDC7456286DCAD40016DEBF /* WaterfallSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7455286DCAD40016DEBF /* WaterfallSettingsView.swift */; };
+		ABDC7459286DDC0B0016DEBF /* WrappingStack in Frameworks */ = {isa = PBXBuildFile; productRef = ABDC7458286DDC0B0016DEBF /* WrappingStack */; };
 		ABDDB7D52860603000935B55 /* QuestionCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D42860603000935B55 /* QuestionCardStack.swift */; };
 		ABDDB7D72860677A00935B55 /* PlayingCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */; };
 		E2A1653CBC6D67E5958EFCA6 /* libPods-PartyGamesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED2DABFCCD7DC4CAB90E5A /* libPods-PartyGamesTests.a */; };
@@ -106,7 +108,7 @@
 		AB463F3628649F3500C8056E /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		AB51A1B2286C7CF60047631E /* MyNameIsTurnDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNameIsTurnDisplay.swift; sourceTree = "<group>"; };
 		AB51A1B5286C9EB50047631E /* SmallShopItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallShopItemView.swift; sourceTree = "<group>"; };
-		AB8C4973286C35F400EA9CAC /* WaterfallGameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGameOver.swift; sourceTree = "<group>"; };
+		AB8C4973286C35F400EA9CAC /* WaterfallHandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallHandsView.swift; sourceTree = "<group>"; };
 		AB9DCC8428585C2C0091185F /* SlapTheQueenGameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapTheQueenGameOver.swift; sourceTree = "<group>"; };
 		AB9DCC8A28586EF00091185F /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PressStart2P-Regular.ttf"; path = "../../../../../Downloads/Press_Start_2P/PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
 		AB9DCC8C2858716F0091185F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		ABDC744F286D87BA0016DEBF /* ActionBackOfCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBackOfCard.swift; sourceTree = "<group>"; };
 		ABDC7451286DA1810016DEBF /* WantedPosterTurnDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedPosterTurnDisplayer.swift; sourceTree = "<group>"; };
 		ABDC7453286DA3000016DEBF /* UfoTurnDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UfoTurnDisplayer.swift; sourceTree = "<group>"; };
+		ABDC7455286DCAD40016DEBF /* WaterfallSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallSettingsView.swift; sourceTree = "<group>"; };
 		ABDDB7D42860603000935B55 /* QuestionCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardStack.swift; sourceTree = "<group>"; };
 		ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardStack.swift; sourceTree = "<group>"; };
 		B0A95B7A810F90680D0525AE /* Pods-PartyGamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyGamesTests.release.xcconfig"; path = "Target Support Files/Pods-PartyGamesTests/Pods-PartyGamesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46C77C2CCF2EE2A9862595EF /* libPods-PartyGames.a in Frameworks */,
+				ABDC7459286DDC0B0016DEBF /* WrappingStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +284,8 @@
 				AB463F30286450AE00C8056E /* AddPlayerScene.swift */,
 				AB463F3228649E0700C8056E /* WaterfallGameView.swift */,
 				AB463F3428649E2400C8056E /* WaterfallRules.swift */,
-				AB8C4973286C35F400EA9CAC /* WaterfallGameOver.swift */,
+				AB8C4973286C35F400EA9CAC /* WaterfallHandsView.swift */,
+				ABDC7455286DCAD40016DEBF /* WaterfallSettingsView.swift */,
 			);
 			path = Waterfall;
 			sourceTree = "<group>";
@@ -399,6 +404,9 @@
 			dependencies = (
 			);
 			name = PartyGames;
+			packageProductDependencies = (
+				ABDC7458286DDC0B0016DEBF /* WrappingStack */,
+			);
 			productName = PartyGames;
 			productReference = AB346732284F23FF006B312F /* PartyGames.app */;
 			productType = "com.apple.product-type.application";
@@ -451,6 +459,9 @@
 				da,
 			);
 			mainGroup = AB346729284F23FF006B312F;
+			packageReferences = (
+				ABDC7457286DDC0B0016DEBF /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */,
+			);
 			productRefGroup = AB346733284F23FF006B312F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -549,12 +560,13 @@
 				AB34675C284F7065006B312F /* SlapTheQueenGame.swift in Sources */,
 				AB463F2F28644CE200C8056E /* WaterfallCustomization.swift in Sources */,
 				ABDC744E286D87730016DEBF /* ManLookingThroughBackOfCard.swift in Sources */,
-				AB8C4974286C35F400EA9CAC /* WaterfallGameOver.swift in Sources */,
+				AB8C4974286C35F400EA9CAC /* WaterfallHandsView.swift in Sources */,
 				AB346736284F23FF006B312F /* PartyGamesApp.swift in Sources */,
 				AB463F2D28644C2700C8056E /* WaterfallGame.swift in Sources */,
 				AB346758284F66DD006B312F /* Player.swift in Sources */,
 				AB9DCC8528585C2D0091185F /* SlapTheQueenGameOver.swift in Sources */,
 				AB346754284F491B006B312F /* QuestionCardView.swift in Sources */,
+				ABDC7456286DCAD40016DEBF /* WaterfallSettingsView.swift in Sources */,
 				AB346752284F410D006B312F /* QuestionCard.swift in Sources */,
 				AB34676228507D3C006B312F /* SettingsView.swift in Sources */,
 				AB9DCC9D2859BD140091185F /* GameItem.swift in Sources */,
@@ -863,6 +875,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ABDC7457286DDC0B0016DEBF /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/diniska/swiftui-wrapping-stack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABDC7458286DDC0B0016DEBF /* WrappingStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABDC7457286DDC0B0016DEBF /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */;
+			productName = WrappingStack;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB34672A284F23FF006B312F /* Project object */;
 }

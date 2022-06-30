@@ -10,6 +10,7 @@
 "Insert_Coin" = "INSERT COIN TO TRY AGAIN";
 "Play_again" = "PLAY AGAIN";
 "Main_Menu" = "MAIN MENU";
+"PAUSE" = "PAUSE";
 "Settings" = "Settings";
 "No_names_needed" = "No names needed";
 "Player_name" = "Player name";
@@ -31,6 +32,11 @@
 "ColerFullCircle" = "Farverig Cirkel";
 "YouHome" = "Nogle hjemme?";
 "ActionCard" = "Action kort";
+"WantedPoster" = "Eftersøgt";
+"PlayWithJoker" = "Spil med Joker";
+"Yes" = "Ja";
+"No" = "Nej";
+"CardsToKeepInHand" = "Kort som skal gemmes";
 //Questions
 "Q1" = "Hvem har det længste hår";
 "Q2" = "Hvem har drukket mest";

@@ -8,7 +8,8 @@
 import Foundation
 
 class WaterfallCustomization: StandardCustomization {
-    @Published var keepTrackOfHands = false
+    
     @Published var showRulesToCards = false
+    @Published var cardsToKeep: [CardTypes] = [.six, .eight, .nine, .king, .one]
     
 }

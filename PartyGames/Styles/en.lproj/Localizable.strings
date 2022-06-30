@@ -10,6 +10,7 @@
 "Insert_Coin" = "INSERT COIN TO TRY AGAIN";
 "Play_again" = "PLAY AGAIN";
 "Main_Menu" = "MAIN MENU";
+"PAUSE" = "PAUSE";
 "Settings" = "Settings";
 "No_names_needed" = "No names needed";
 "Player_name" = "Player name";
@@ -32,6 +33,10 @@
 "YouHome" = "You Home?";
 "ActionCard" = "Action card";
 "WantedPoster" = "Wanted Poster";
+"PlayWithJoker" = "Play With Joker";
+"Yes" = "Yes";
+"No" = "No";
+"CardsToKeepInHand" = "Cards To Keep In Hand";
 //Questions
 "Q1" = "Who got the longest hair";
 "Q2" = "Who had the most drinks";
