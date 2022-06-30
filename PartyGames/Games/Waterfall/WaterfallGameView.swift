@@ -70,6 +70,7 @@ struct WaterfallGameView: View {
                         if !game.customizedSettings.players.isEmpty {
                             HStack{
                                 Spacer()
+                                //TODO: Display selected TurnDisplayer
                                 MyNameIsTurnDisplay(name: game.whosTurn())
                             }
                             .padding(.trailing, 16)

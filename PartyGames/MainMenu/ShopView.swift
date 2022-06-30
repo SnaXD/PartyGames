@@ -66,7 +66,7 @@ struct ShopView_Previews: PreviewProvider {
 }
 
 enum turnDisplay: CaseIterable {
-    case myNameIs
+    case myNameIs, wantedPoster
 }
 
 enum backOfCards: CaseIterable {
@@ -77,6 +77,8 @@ func getViewForTurnDisplay(display: turnDisplay) -> ShopItem{
     switch display {
     case .myNameIs:
         return ShopItem(view: AnyView(MyNameIsTurnDisplay(name: "Steve")), name: "HelloMyNameIs")
+    case .wantedPoster:
+        return ShopItem(view: AnyView(WantedPosterTurnDisplayer(name: "Steve")), name: "WantedPoster")
     }
 }
 
