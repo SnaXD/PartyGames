@@ -9,7 +9,15 @@ import SwiftUI
 
 struct GradientBackOfCard: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HStack{
+                Spacer()
+            }
+            Spacer()
+        }
+        .background(
+            AngularGradient(gradient: Gradient(colors: [.red, .green, .blue, .cyan, .purple, .orange, .pink]), center: .center)
+        )
     }
 }
 

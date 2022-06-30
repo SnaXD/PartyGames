@@ -21,7 +21,7 @@ struct ShopView: View {
                     .padding(.leading, 8)
                 VStack(spacing: 0){
                     Rectangle().frame(height: 1)
-                    ScrollView(.horizontal){
+                    ScrollView(.horizontal, showsIndicators: false){
                         ForEach(turnDisplay.allCases, id: \.self) { item in
                             SmallShopItemView(item: getViewForTurnDisplay(display: item))
                                 .padding(.horizontal, 8)
@@ -38,10 +38,12 @@ struct ShopView: View {
                     .padding(.top, 32)
                 VStack(spacing: 0){
                     Rectangle().frame(height: 1)
-                    ScrollView(.horizontal){
-                        ForEach(backOfCards.allCases, id: \.self) { item in
-                            SmallShopItemView(item: getViewForBackOfCards(backOfCard: item))
-                                .padding(.horizontal, 8)
+                    ScrollView(.horizontal, showsIndicators: false){
+                        HStack{
+                            ForEach(backOfCards.allCases, id: \.self) { item in
+                                SmallDisplayBackOfCard(item: getViewForBackOfCards(backOfCard: item))
+                                    .padding(.horizontal, 8)
+                            }
                         }
                     }
                     .padding(.vertical, 8)
@@ -78,8 +80,8 @@ func getViewForTurnDisplay(display: turnDisplay) -> ShopItem{
 func getViewForBackOfCards(backOfCard: backOfCards) -> ShopItem{
     switch backOfCard {
     case .emojis:
-        return ShopItem(view: <#T##AnyView#>, name: "Emojis")
+        return ShopItem(view: AnyView(EmojiBackOfCard()), name: "Emojis")
     case .gradient:
-        return ShopItem(view: <#T##AnyView#>, name: "Gradient")
+        return ShopItem(view: AnyView(GradientBackOfCard()), name: "Gradient")
     }
 }

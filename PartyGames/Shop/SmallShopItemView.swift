@@ -12,12 +12,7 @@ struct SmallShopItemView: View {
     var body: some View {
         VStack{
             ZStack{
-                RoundedRectangle(cornerRadius: 16)
-                    .stroke(.tint, lineWidth: 3)
-                    .background(.white)
-                    .cornerRadius(16)
-                    .shadow(radius: 1)
-                    .frame(width: 225, height: 175)
+                ShopItemFrame()
                 
                 item.view
             }

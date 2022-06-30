@@ -50,6 +50,8 @@
 		ABDC7440286CAA4C0016DEBF /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC743F286CAA4C0016DEBF /* ShopItem.swift */; };
 		ABDC7444286CCBD80016DEBF /* EmojiBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7443286CCBD80016DEBF /* EmojiBackOfCard.swift */; };
 		ABDC7446286CCC0D0016DEBF /* GradientBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7445286CCC0D0016DEBF /* GradientBackOfCard.swift */; };
+		ABDC7448286D75700016DEBF /* SmallDisplayBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7447286D75700016DEBF /* SmallDisplayBackOfCard.swift */; };
+		ABDC744A286D785C0016DEBF /* ShopItemFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7449286D785B0016DEBF /* ShopItemFrame.swift */; };
 		ABDDB7D52860603000935B55 /* QuestionCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D42860603000935B55 /* QuestionCardStack.swift */; };
 		ABDDB7D72860677A00935B55 /* PlayingCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */; };
 		E2A1653CBC6D67E5958EFCA6 /* libPods-PartyGamesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED2DABFCCD7DC4CAB90E5A /* libPods-PartyGamesTests.a */; };
@@ -114,6 +116,8 @@
 		ABDC743F286CAA4C0016DEBF /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
 		ABDC7443286CCBD80016DEBF /* EmojiBackOfCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiBackOfCard.swift; sourceTree = "<group>"; };
 		ABDC7445286CCC0D0016DEBF /* GradientBackOfCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackOfCard.swift; sourceTree = "<group>"; };
+		ABDC7447286D75700016DEBF /* SmallDisplayBackOfCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallDisplayBackOfCard.swift; sourceTree = "<group>"; };
+		ABDC7449286D785B0016DEBF /* ShopItemFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemFrame.swift; sourceTree = "<group>"; };
 		ABDDB7D42860603000935B55 /* QuestionCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardStack.swift; sourceTree = "<group>"; };
 		ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardStack.swift; sourceTree = "<group>"; };
 		B0A95B7A810F90680D0525AE /* Pods-PartyGamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyGamesTests.release.xcconfig"; path = "Target Support Files/Pods-PartyGamesTests/Pods-PartyGamesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -283,8 +287,10 @@
 		AB51A1B7286CA9D70047631E /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				ABDC7447286D75700016DEBF /* SmallDisplayBackOfCard.swift */,
 				AB51A1B5286C9EB50047631E /* SmallShopItemView.swift */,
 				ABDC743F286CAA4C0016DEBF /* ShopItem.swift */,
+				ABDC7449286D785B0016DEBF /* ShopItemFrame.swift */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -534,6 +540,7 @@
 				AB346752284F410D006B312F /* QuestionCard.swift in Sources */,
 				AB34676228507D3C006B312F /* SettingsView.swift in Sources */,
 				AB9DCC9D2859BD140091185F /* GameItem.swift in Sources */,
+				ABDC7448286D75700016DEBF /* SmallDisplayBackOfCard.swift in Sources */,
 				ABDC7444286CCBD80016DEBF /* EmojiBackOfCard.swift in Sources */,
 				AB346750284F40DA006B312F /* Deck.swift in Sources */,
 				AB9DCC92285878270091185F /* Localizable.strings in Sources */,
@@ -549,6 +556,7 @@
 				AB51A1B3286C7CF60047631E /* MyNameIsTurnDisplay.swift in Sources */,
 				AB346746284F2D66006B312F /* Card.swift in Sources */,
 				AB51A1B6286C9EB50047631E /* SmallShopItemView.swift in Sources */,
+				ABDC744A286D785C0016DEBF /* ShopItemFrame.swift in Sources */,
 				AB463F3528649E2400C8056E /* WaterfallRules.swift in Sources */,
 				AB463F31286450AE00C8056E /* AddPlayerScene.swift in Sources */,
 			);
