@@ -13,8 +13,23 @@ struct Deck {
     init() {
         for suite in Suite.allCases {
             for card in CardTypes.allCases {
-            cards.append(Card(suite: suite, cardType: card))
+                cards.append(Card(suite: suite, cardType: card, color: getSuiteColor(suite: suite)))
             }
+        }
+    }
+}
+
+extension Deck {
+    func getSuiteColor(suite: Suite) -> Color{
+        switch suite {
+        case .clubs:
+            return .black
+        case .diamonds:
+            return .red
+        case .hearts:
+            return .red
+        case .spades:
+            return .black
         }
     }
 }

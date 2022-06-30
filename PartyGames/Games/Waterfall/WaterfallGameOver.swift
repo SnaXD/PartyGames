@@ -70,9 +70,9 @@ func createSettings() -> WaterfallCustomization {
     let settings = WaterfallCustomization()
     for index in 0...5 {
         settings.addPlayer(name: "Player\(index)")
-        settings.players[index].addCard(card: Card(suite: .clubs, cardType: .ten))
-        settings.players[index].addCard(card: Card(suite: .clubs, cardType: .two))
-        settings.players[index].addCard(card: Card(suite: .clubs, cardType: .king))
+        settings.players[index].addCard(card: Card(suite: .clubs, cardType: .ten, color: .black))
+        settings.players[index].addCard(card: Card(suite: .clubs, cardType: .two, color: .black))
+        settings.players[index].addCard(card: Card(suite: .clubs, cardType: .king, color: .black))
     }
     return settings
 }

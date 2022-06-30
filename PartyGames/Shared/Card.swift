@@ -12,6 +12,7 @@ struct Card: Identifiable, Equatable {
     let id = UUID()
     let suite: Suite
     let cardType: CardTypes
+    let color: Color
     var revealContent: Bool = false
     var inFocus: Bool = false
 }
@@ -37,5 +38,5 @@ enum CardTypes: String, CaseIterable {
     case knight = "J"
     case queen = "Q"
     case king = "K"
-    case joker = "Joker" 
+    case joker = "Joker"
 }

@@ -30,14 +30,15 @@ struct CardView: View {
                             Spacer()
                             HStack(spacing: 0){
                                 Image(systemName: card.suite.rawValue)
-                                    .foregroundColor(Color.white)
+                                    .foregroundColor(card.color)
                                     .font(.system(size: fontSize))
                                 Text(card.cardType.rawValue)
                                     .font(.system(size: fontSize))
-                                    .foregroundColor(.white)
+                                    .foregroundColor(card.color)
                                     .bold()
                                     .multilineTextAlignment(.leading)
                             }
+                            
                             Spacer()
                             if includeTopBottomCardType {
                                 SmallNumberAndType(card: card, fontSize: fontSize)
@@ -50,6 +51,8 @@ struct CardView: View {
                             HStack{
                                 Spacer()
                             }
+                        }.overlay {
+                         //TODO: Add selected Card background   ManLookingThroughBackOfCard()
                         }
                     }
                 }.onAppear(perform: {
@@ -61,13 +64,23 @@ struct CardView: View {
                         showFrontPage.toggle()
                     }
                 }
-            }
+            } else {
+               VStack{
+                   Spacer()
+                   HStack{
+                       Spacer()
+                   }
+               }.overlay {
+                //TODO: Add selected Card background   ManLookingThroughBackOfCard()
+               }
+           }
         }
         .frame(width: card.inFocus ? inFocusWidth : width,
                height: card.inFocus ? inFocusHeight : height)
         .background(
             RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(Color.gray)
+            //TODO: Make forgroundColor Match background main Color
+                .foregroundColor(Color(uiColor: .systemGray2))
         )
         .rotation3DEffect(.degrees(t), axis: (x: 0, y: 1, z: 0))
     }
@@ -90,6 +103,6 @@ struct CardView_Previews: PreviewProvider {
 struct CardView_PreviewsWithBinding: View {
     @State var animationTime = 1.0
     var body: some View {
-        CardView(card: Card(suite: .clubs, cardType: .eight), animationTime: animationTime)
+        CardView(card: Card(suite: .clubs, cardType: .eight, color: .black), animationTime: animationTime)
     }
 }

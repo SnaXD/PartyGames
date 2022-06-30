@@ -13,20 +13,21 @@ struct SmallNumberAndType: View {
     var body: some View {
         HStack{
             Image(systemName: card.suite.rawValue)
-                .foregroundColor(.white)
+                .foregroundColor(card.color)
                 .font(.system(size: fontSize / 2))
             Text(card.cardType.rawValue)
                 .font(.system(size: fontSize / 2))
-            .foregroundColor(.white)
+                .foregroundColor(card.color)
             .bold()
             Spacer()
         }
+        .foregroundColor(card.color)
         .padding(8)
     }
 }
 
 struct SmallNumberAndType_preview: PreviewProvider {
     static var previews: some View {
-        SmallNumberAndType(card: Card(suite: .diamonds, cardType: .ten))
+        SmallNumberAndType(card: Card(suite: .diamonds, cardType: .ten, color: .red))
     }
 }
