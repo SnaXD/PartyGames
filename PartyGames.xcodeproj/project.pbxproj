@@ -56,6 +56,7 @@
 		ABDC744E286D87730016DEBF /* ManLookingThroughBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC744D286D87730016DEBF /* ManLookingThroughBackOfCard.swift */; };
 		ABDC7450286D87BA0016DEBF /* ActionBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC744F286D87BA0016DEBF /* ActionBackOfCard.swift */; };
 		ABDC7452286DA1810016DEBF /* WantedPosterTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7451286DA1810016DEBF /* WantedPosterTurnDisplayer.swift */; };
+		ABDC7454286DA3000016DEBF /* UfoTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7453286DA3000016DEBF /* UfoTurnDisplayer.swift */; };
 		ABDDB7D52860603000935B55 /* QuestionCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D42860603000935B55 /* QuestionCardStack.swift */; };
 		ABDDB7D72860677A00935B55 /* PlayingCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */; };
 		E2A1653CBC6D67E5958EFCA6 /* libPods-PartyGamesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED2DABFCCD7DC4CAB90E5A /* libPods-PartyGamesTests.a */; };
@@ -126,6 +127,7 @@
 		ABDC744D286D87730016DEBF /* ManLookingThroughBackOfCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManLookingThroughBackOfCard.swift; sourceTree = "<group>"; };
 		ABDC744F286D87BA0016DEBF /* ActionBackOfCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBackOfCard.swift; sourceTree = "<group>"; };
 		ABDC7451286DA1810016DEBF /* WantedPosterTurnDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedPosterTurnDisplayer.swift; sourceTree = "<group>"; };
+		ABDC7453286DA3000016DEBF /* UfoTurnDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UfoTurnDisplayer.swift; sourceTree = "<group>"; };
 		ABDDB7D42860603000935B55 /* QuestionCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardStack.swift; sourceTree = "<group>"; };
 		ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardStack.swift; sourceTree = "<group>"; };
 		B0A95B7A810F90680D0525AE /* Pods-PartyGamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyGamesTests.release.xcconfig"; path = "Target Support Files/Pods-PartyGamesTests/Pods-PartyGamesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 			children = (
 				AB51A1B2286C7CF60047631E /* MyNameIsTurnDisplay.swift */,
 				ABDC7451286DA1810016DEBF /* WantedPosterTurnDisplayer.swift */,
+				ABDC7453286DA3000016DEBF /* UfoTurnDisplayer.swift */,
 			);
 			path = TurnDisplay;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				ABDC7440286CAA4C0016DEBF /* ShopItem.swift in Sources */,
 				AB346744284F244C006B312F /* QuestionCardsStackView.swift in Sources */,
 				ABDC744C286D79DB0016DEBF /* ColorFullCircle.swift in Sources */,
+				ABDC7454286DA3000016DEBF /* UfoTurnDisplayer.swift in Sources */,
 				AB346738284F23FF006B312F /* ContentView.swift in Sources */,
 				AB9DCCA1285C67D90091185F /* QuestionGameRules.swift in Sources */,
 				AB346748284F2DAF006B312F /* QuestionDeck.swift in Sources */,
