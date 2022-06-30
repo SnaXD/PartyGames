@@ -14,7 +14,7 @@ struct ShopItemFrame: View {
             .background(.white)
             .cornerRadius(16)
             .shadow(radius: 1)
-            .frame(width: 225, height: 175)
+            .frame(width: 175, height: 150)
     }
 }
 

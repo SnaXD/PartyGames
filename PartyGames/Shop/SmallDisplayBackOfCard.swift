@@ -21,7 +21,7 @@ struct SmallDisplayBackOfCard: View {
                     .background(.white)
                     .cornerRadius(16)
                     .shadow(radius: 1)
-                    .frame(width: 125, height: 150)
+                    .frame(width: 100, height: 125)
             }
             Text(LocalizedStringKey(item.name))
         }.padding(.top, 8)

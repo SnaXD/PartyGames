@@ -10,21 +10,24 @@ import SwiftUI
 struct ShopView: View {
     var body: some View {
         ScrollView(){
-            VStack(alignment: .leading, spacing: 12){
+            LazyVStack(alignment: .leading, spacing: 12){
                 Text("Cosmetics")
                     .bold()
-                    .font(.custom("Inconsolata", size: 42))
-                    .padding(.bottom, 24)
+                    .font(.system(size: 42))
+                    .padding(.top, 24)
                     .padding(.leading, 8)
+                Divider()
                 Text("TurnDisplays")
                     .fontWeight(.semibold)
                     .padding(.leading, 8)
                 VStack(spacing: 0){
                     Rectangle().frame(height: 1)
                     ScrollView(.horizontal, showsIndicators: false){
-                        ForEach(turnDisplay.allCases, id: \.self) { item in
-                            SmallShopItemView(item: getViewForTurnDisplay(display: item))
-                                .padding(.horizontal, 8)
+                        LazyHStack{
+                            ForEach(turnDisplay.allCases, id: \.self) { item in
+                                SmallShopItemView(item: getViewForTurnDisplay(display: item))
+                                    .padding(.horizontal, 8)
+                            }
                         }
                     }
                     .padding(.vertical, 8)
@@ -39,7 +42,7 @@ struct ShopView: View {
                 VStack(spacing: 0){
                     Rectangle().frame(height: 1)
                     ScrollView(.horizontal, showsIndicators: false){
-                        HStack{
+                        LazyHStack{
                             ForEach(backOfCards.allCases, id: \.self) { item in
                                 SmallDisplayBackOfCard(item: getViewForBackOfCards(backOfCard: item))
                                     .padding(.horizontal, 8)
@@ -67,7 +70,7 @@ enum turnDisplay: CaseIterable {
 }
 
 enum backOfCards: CaseIterable {
-    case emojis, gradient
+    case emojis, gradient, colerFullCircle, manLookingThroughCard, actionImage
 }
 
 func getViewForTurnDisplay(display: turnDisplay) -> ShopItem{
@@ -83,5 +86,12 @@ func getViewForBackOfCards(backOfCard: backOfCards) -> ShopItem{
         return ShopItem(view: AnyView(EmojiBackOfCard()), name: "Emojis")
     case .gradient:
         return ShopItem(view: AnyView(GradientBackOfCard()), name: "Gradient")
+    case .colerFullCircle:
+        return ShopItem(view: AnyView(ColorFullCircle()), name: "ColerFullCircle")
+    case .manLookingThroughCard:
+        return ShopItem(view: AnyView(ManLookingThroughBackOfCard()), name: "YouHome")
+    case .actionImage:
+        return ShopItem(view: AnyView(ActionBackOfCard()), name: "ActionCard")
     }
+    
 }

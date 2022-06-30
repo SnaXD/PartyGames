@@ -52,6 +52,9 @@
 		ABDC7446286CCC0D0016DEBF /* GradientBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7445286CCC0D0016DEBF /* GradientBackOfCard.swift */; };
 		ABDC7448286D75700016DEBF /* SmallDisplayBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7447286D75700016DEBF /* SmallDisplayBackOfCard.swift */; };
 		ABDC744A286D785C0016DEBF /* ShopItemFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7449286D785B0016DEBF /* ShopItemFrame.swift */; };
+		ABDC744C286D79DB0016DEBF /* ColorFullCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC744B286D79DB0016DEBF /* ColorFullCircle.swift */; };
+		ABDC744E286D87730016DEBF /* ManLookingThroughBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC744D286D87730016DEBF /* ManLookingThroughBackOfCard.swift */; };
+		ABDC7450286D87BA0016DEBF /* ActionBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC744F286D87BA0016DEBF /* ActionBackOfCard.swift */; };
 		ABDDB7D52860603000935B55 /* QuestionCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D42860603000935B55 /* QuestionCardStack.swift */; };
 		ABDDB7D72860677A00935B55 /* PlayingCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */; };
 		E2A1653CBC6D67E5958EFCA6 /* libPods-PartyGamesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED2DABFCCD7DC4CAB90E5A /* libPods-PartyGamesTests.a */; };
@@ -118,6 +121,9 @@
 		ABDC7445286CCC0D0016DEBF /* GradientBackOfCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackOfCard.swift; sourceTree = "<group>"; };
 		ABDC7447286D75700016DEBF /* SmallDisplayBackOfCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallDisplayBackOfCard.swift; sourceTree = "<group>"; };
 		ABDC7449286D785B0016DEBF /* ShopItemFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemFrame.swift; sourceTree = "<group>"; };
+		ABDC744B286D79DB0016DEBF /* ColorFullCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFullCircle.swift; sourceTree = "<group>"; };
+		ABDC744D286D87730016DEBF /* ManLookingThroughBackOfCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManLookingThroughBackOfCard.swift; sourceTree = "<group>"; };
+		ABDC744F286D87BA0016DEBF /* ActionBackOfCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBackOfCard.swift; sourceTree = "<group>"; };
 		ABDDB7D42860603000935B55 /* QuestionCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardStack.swift; sourceTree = "<group>"; };
 		ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardStack.swift; sourceTree = "<group>"; };
 		B0A95B7A810F90680D0525AE /* Pods-PartyGamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyGamesTests.release.xcconfig"; path = "Target Support Files/Pods-PartyGamesTests/Pods-PartyGamesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -345,6 +351,9 @@
 			children = (
 				ABDC7443286CCBD80016DEBF /* EmojiBackOfCard.swift */,
 				ABDC7445286CCC0D0016DEBF /* GradientBackOfCard.swift */,
+				ABDC744B286D79DB0016DEBF /* ColorFullCircle.swift */,
+				ABDC744D286D87730016DEBF /* ManLookingThroughBackOfCard.swift */,
+				ABDC744F286D87BA0016DEBF /* ActionBackOfCard.swift */,
 			);
 			path = BackOfCards;
 			sourceTree = "<group>";
@@ -524,6 +533,7 @@
 				ABDDB7D52860603000935B55 /* QuestionCardStack.swift in Sources */,
 				ABDC7440286CAA4C0016DEBF /* ShopItem.swift in Sources */,
 				AB346744284F244C006B312F /* QuestionCardsStackView.swift in Sources */,
+				ABDC744C286D79DB0016DEBF /* ColorFullCircle.swift in Sources */,
 				AB346738284F23FF006B312F /* ContentView.swift in Sources */,
 				AB9DCCA1285C67D90091185F /* QuestionGameRules.swift in Sources */,
 				AB346748284F2DAF006B312F /* QuestionDeck.swift in Sources */,
@@ -531,6 +541,7 @@
 				AB9DCCA4285C8AF20091185F /* QuestionGame.swift in Sources */,
 				AB34675C284F7065006B312F /* SlapTheQueenGame.swift in Sources */,
 				AB463F2F28644CE200C8056E /* WaterfallCustomization.swift in Sources */,
+				ABDC744E286D87730016DEBF /* ManLookingThroughBackOfCard.swift in Sources */,
 				AB8C4974286C35F400EA9CAC /* WaterfallGameOver.swift in Sources */,
 				AB346736284F23FF006B312F /* PartyGamesApp.swift in Sources */,
 				AB463F2D28644C2700C8056E /* WaterfallGame.swift in Sources */,
@@ -557,6 +568,7 @@
 				AB346746284F2D66006B312F /* Card.swift in Sources */,
 				AB51A1B6286C9EB50047631E /* SmallShopItemView.swift in Sources */,
 				ABDC744A286D785C0016DEBF /* ShopItemFrame.swift in Sources */,
+				ABDC7450286D87BA0016DEBF /* ActionBackOfCard.swift in Sources */,
 				AB463F3528649E2400C8056E /* WaterfallRules.swift in Sources */,
 				AB463F31286450AE00C8056E /* AddPlayerScene.swift in Sources */,
 			);
