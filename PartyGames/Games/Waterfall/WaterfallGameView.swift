@@ -9,12 +9,11 @@ import SwiftUI
 import ExytePopupView
 
 struct WaterfallGameView: View {
+    @ObservedObject var vm = WaterfallViewModel()
     @State var inspectCard = false
     @State var openRules = false
     @State var openSettings = false
     @State var gameOver = false
-    @State var selectedCard: Card? = nil
-    @State var game = WaterfallGame()
     @State var openHands = false
     var body: some View {
         VStack(alignment: .trailing){
@@ -24,7 +23,7 @@ struct WaterfallGameView: View {
                     openHands.toggle()
                 } label: {
                     Image(systemName: "hand.raised.fill")
-                        .foregroundColor(game.customizedSettings.players.isEmpty ? .gray : .green)
+                        .foregroundColor(vm.game.customizedSettings.players.isEmpty ? .gray : .green)
                         .padding()
                 }
                 Button {
@@ -44,29 +43,29 @@ struct WaterfallGameView: View {
             }.padding(.trailing, 10)
             ZStack {
                 GeometryReader { geometry in
-                    ForEach(game.displayed) { card in
+                    ForEach(vm.game.displayed) { card in
                         CardView(card: card,
-                                 animationTime: game.customizedSettings.animationTime,
-                                 inFocusWidth: game.bigCardWidth(geometry: geometry),
-                                 width: game.smallCardWidth(screen: geometry),
-                                 inFocusHeight: game.bigCardHeight(geometry: geometry),
-                                 height: game.smallCardHeight(screen: geometry))
-                        .zIndex(game.zIndex(of: card))
+                                 animationTime: vm.game.customizedSettings.animationTime,
+                                 inFocusWidth: vm.game.bigCardWidth(geometry: geometry),
+                                 width: vm.game.smallCardWidth(screen: geometry),
+                                 inFocusHeight: vm.game.bigCardHeight(geometry: geometry),
+                                 height: vm.game.smallCardHeight(screen: geometry))
+                        .zIndex(vm.game.zIndex(of: card))
                         .shadow(radius: 1)
-                        .offset(y: game.deckOffset(of: card))
-                        .scaleEffect(x: game.scale(of: card), y: game.scale(of: card))
+                        .offset(y: vm.game.deckOffset(of: card))
+                        .scaleEffect(x: vm.game.scale(of: card), y: vm.game.scale(of: card))
                         .onTapGesture {
-                            if let cardsIndex = game.displayed.firstIndex(of: card){
-                                selectedCard = card
-                                if game.displayed[cardsIndex].inFocus == true {
+                            if let cardsIndex = vm.game.displayed.firstIndex(of: card){
+                                vm.selectedCard = card
+                                if vm.game.displayed[cardsIndex].inFocus == true {
                                     inspectCard = true
-                                    game.displayed[cardsIndex].revealContent.toggle()
+                                    vm.game.displayed[cardsIndex].revealContent.toggle()
                                 }
                             }
                         }
                         .padding(.trailing, 8)
-                        .offset(x: card.inFocus ? game.bigCardFindX(geometry: geometry) : 0,
-                                y: card.inFocus ? game.bigCardFindY(geometry: geometry, card: card) : 0)
+                        .offset(x: card.inFocus ? vm.game.bigCardFindX(geometry: geometry) : 0,
+                                y: card.inFocus ? vm.game.bigCardFindY(geometry: geometry, card: card) : 0)
                         
                     }.frame(width: geometry.size.width, height: geometry.size.height, alignment: .bottomTrailing)
                 }
@@ -75,11 +74,11 @@ struct WaterfallGameView: View {
                 VStack{
                     HStack{
                         Spacer()
-                        if !game.customizedSettings.players.isEmpty {
+                        if !vm.game.customizedSettings.players.isEmpty {
                             HStack{
                                 Spacer()
                                 //TODO: Display selected TurnDisplayer
-                                MyNameIsTurnDisplay(name: game.whosTurn())
+                                MyNameIsTurnDisplay(name: vm.game.whosTurn())
                             }
                             .padding(.trailing, 16)
                         }
@@ -89,66 +88,66 @@ struct WaterfallGameView: View {
                 
             }
         }.onAppear {
-            game.SetupGame()
-            game.additionalSetup()
+            vm.game.SetupGame()
+            vm.game.additionalSetup()
             withAnimation(.easeInOut(duration: 0.5)){
                 for index in 0...2 {
-                    game.displayed[index].inFocus.toggle()
+                    vm.game.displayed[index].inFocus.toggle()
                 }
             }
         }
         .sheet(isPresented: $openSettings) {
-            WaterfallSettingsView(settings: game.customizedSettings)
+            WaterfallSettingsView(settings: vm.game.customizedSettings)
         }
         .sheet(isPresented: $openRules) {
             SlapTheQueenRules()
         }
         .sheet(isPresented: $gameOver) {
-            WaterfallHandsView(game: $game, title: "GAME_OVER")
+            WaterfallHandsView(game: $vm.game, title: "GAME_OVER")
         }
         .sheet(isPresented: $openHands, content: {
-            WaterfallHandsView(game: $game, title: "PAUSE")
+            WaterfallHandsView(game: $vm.game, title: "PAUSE")
         })
         .popup(isPresented: $inspectCard, type: .default, position: .bottom, closeOnTapOutside: true, dismissCallback: {
             //TODO: Append to hands
-            if !game.customizedSettings.players.isEmpty {
-                if game.customizedSettings.cardsToKeep.contains( selectedCard!.cardType) {
-                    game.customizedSettings.players[game.turnCounter % game.customizedSettings.players.count].addCard(card: selectedCard!)
-                    game.turnCounter += 1
+            if !vm.game.customizedSettings.players.isEmpty {
+                if vm.game.customizedSettings.cardsToKeep.contains( vm.selectedCard!.cardType) {
+                    vm.game.customizedSettings.players[vm.game.turnCounter % vm.game.customizedSettings.players.count].addCard(card: vm.selectedCard!)
+                    vm.game.turnCounter += 1
                 }
             }
-            for index in 0...(game.displayed.count > 3 ? 2 : game.displayed.count - 1) {
-                if game.displayed[index].id == selectedCard?.id && game.customizedSettings.infinityCards {
-                    withAnimation(.easeIn(duration: game.customizedSettings.animationTime)){
-                        game.displayed[index].inFocus = false
-                        selectedCard?.revealContent = false
-                        game.usedDecks.append(selectedCard!)
-                        game.usedDecks.shuffle()
+            for index in 0...(vm.game.displayed.count > 3 ? 2 : vm.game.displayed.count - 1) {
+                if vm.game.displayed[index].id == vm.selectedCard?.id && vm.game.customizedSettings.infinityCards {
+                    withAnimation(.easeIn(duration: vm.game.customizedSettings.animationTime)){
+                        vm.game.displayed[index].inFocus = false
+                        vm.selectedCard?.revealContent = false
+                        vm.game.usedDecks.append(vm.selectedCard!)
+                        vm.game.usedDecks.shuffle()
                         
                     }
                 }
             }
-            withAnimation(.easeOut(duration: game.customizedSettings.animationTime)){
-                game.removeFirst(card: selectedCard!, deck: &game.displayed)
+            withAnimation(.easeOut(duration: vm.game.customizedSettings.animationTime)){
+                vm.game.removeFirst(card: vm.selectedCard!, deck: &vm.game.displayed)
             }
-            if !game.usedDecks.isEmpty{
-                game.displayed.append(game.usedDecks[0])
+            if !vm.game.usedDecks.isEmpty{
+                vm.game.displayed.append(vm.game.usedDecks[0])
                 //                if !game.customizedSettings.infinityCards {
-                game.usedDecks.remove(at: 0)
+                vm.game.usedDecks.remove(at: 0)
                 //                }
-            } else if game.displayed.isEmpty {
+            } else if vm.game.displayed.isEmpty {
                 //TODO: Go to gameover screen
             }
-            withAnimation(.easeInOut(duration: game.customizedSettings.animationTime)){
-                if game.displayed.count > 2 {
-                    game.displayed[2].inFocus = true
+            withAnimation(.easeInOut(duration: vm.game.customizedSettings.animationTime)){
+                if vm.game.displayed.count > 2 {
+                    vm.game.displayed[2].inFocus = true
                 }
             }
         }){
-            CardView(card: selectedCard!, animationTime: 1)
+            CardView(card: vm.selectedCard!, animationTime: 1)
                 .shadow(radius: 5)
                 .onAppear {
-                    selectedCard?.revealContent.toggle()
+                    vm.selectedCard?.revealContent.toggle()
                 }
         }
     }
@@ -156,6 +155,6 @@ struct WaterfallGameView: View {
 
 struct WaterfallGameView_Previews: PreviewProvider {
     static var previews: some View {
-        WaterfallGameView(game: WaterfallGame(customizedSettings: createSettings()))
+        WaterfallGameView()
     }
 }

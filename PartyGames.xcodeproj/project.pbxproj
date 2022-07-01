@@ -59,6 +59,7 @@
 		ABDC7454286DA3000016DEBF /* UfoTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7453286DA3000016DEBF /* UfoTurnDisplayer.swift */; };
 		ABDC7456286DCAD40016DEBF /* WaterfallSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7455286DCAD40016DEBF /* WaterfallSettingsView.swift */; };
 		ABDC7459286DDC0B0016DEBF /* WrappingStack in Frameworks */ = {isa = PBXBuildFile; productRef = ABDC7458286DDC0B0016DEBF /* WrappingStack */; };
+		ABDC745C286EF01C0016DEBF /* WaterfallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC745B286EF01C0016DEBF /* WaterfallViewModel.swift */; };
 		ABDDB7D52860603000935B55 /* QuestionCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D42860603000935B55 /* QuestionCardStack.swift */; };
 		ABDDB7D72860677A00935B55 /* PlayingCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */; };
 		E2A1653CBC6D67E5958EFCA6 /* libPods-PartyGamesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED2DABFCCD7DC4CAB90E5A /* libPods-PartyGamesTests.a */; };
@@ -131,6 +132,7 @@
 		ABDC7451286DA1810016DEBF /* WantedPosterTurnDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedPosterTurnDisplayer.swift; sourceTree = "<group>"; };
 		ABDC7453286DA3000016DEBF /* UfoTurnDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UfoTurnDisplayer.swift; sourceTree = "<group>"; };
 		ABDC7455286DCAD40016DEBF /* WaterfallSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallSettingsView.swift; sourceTree = "<group>"; };
+		ABDC745B286EF01C0016DEBF /* WaterfallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallViewModel.swift; sourceTree = "<group>"; };
 		ABDDB7D42860603000935B55 /* QuestionCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardStack.swift; sourceTree = "<group>"; };
 		ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardStack.swift; sourceTree = "<group>"; };
 		B0A95B7A810F90680D0525AE /* Pods-PartyGamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyGamesTests.release.xcconfig"; path = "Target Support Files/Pods-PartyGamesTests/Pods-PartyGamesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,8 +197,8 @@
 		AB346734284F23FF006B312F /* PartyGames */ = {
 			isa = PBXGroup;
 			children = (
+				ABDC745A286EF00F0016DEBF /* ViewModels */,
 				AB9DCC8C2858716F0091185F /* Info.plist */,
-				AB51A1B7286CA9D70047631E /* Shop */,
 				AB9DCC992859BA7E0091185F /* MainMenu */,
 				ABDDB7D32860600900935B55 /* Extentions */,
 				AB34675A284F6F3B006B312F /* Games */,
@@ -340,6 +342,7 @@
 		AB9DCC992859BA7E0091185F /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
+				AB51A1B7286CA9D70047631E /* Shop */,
 				AB9DCC9A2859BAA00091185F /* MainMenu.swift */,
 				AB9DCC9C2859BD140091185F /* GameItem.swift */,
 				AB463F3628649F3500C8056E /* ShopView.swift */,
@@ -367,6 +370,14 @@
 				ABDC744F286D87BA0016DEBF /* ActionBackOfCard.swift */,
 			);
 			path = BackOfCards;
+			sourceTree = "<group>";
+		};
+		ABDC745A286EF00F0016DEBF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ABDC745B286EF01C0016DEBF /* WaterfallViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		ABDDB7D32860600900935B55 /* Extentions */ = {
@@ -589,6 +600,7 @@
 				ABDC744A286D785C0016DEBF /* ShopItemFrame.swift in Sources */,
 				ABDC7450286D87BA0016DEBF /* ActionBackOfCard.swift in Sources */,
 				AB463F3528649E2400C8056E /* WaterfallRules.swift in Sources */,
+				ABDC745C286EF01C0016DEBF /* WaterfallViewModel.swift in Sources */,
 				AB463F31286450AE00C8056E /* AddPlayerScene.swift in Sources */,
 				ABDC7452286DA1810016DEBF /* WantedPosterTurnDisplayer.swift in Sources */,
 			);

@@ -28,24 +28,23 @@ struct WaterfallHandsView: View {
                 .font(.system(size: 12))
                 ScrollView(showsIndicators: false){
                     VStack{
-                        ForEach($game.customizedSettings.players) { player in
+                        ForEach($game.customizedSettings.players) { $player in
                             HStack{
-                                Text(player.name.wrappedValue)
+                                Text($player.name.wrappedValue)
                                     .fontWeight(.semibold)
                                     .font(.system(size: 18))
                                 Spacer()
-                                ScrollView(.horizontal){
+                                ScrollView(.horizontal, showsIndicators: false){
                                     HStack{
-                                        ForEach(player.cardsOnHand) { card in
-                                            CardView(card: card.wrappedValue, animationTime: game.customizedSettings.animationTime, inFocusWidth: 50, width: 50, inFocusHeight: 50, height: 50, fontSize: 20, includeTopBottomCardType: false)
+                                        ForEach($player.cardsOnHand) { $card in
+                                            CardView(card: $card.wrappedValue, animationTime: game.customizedSettings.animationTime, inFocusWidth: 50, width: 50, inFocusHeight: 50, height: 50, fontSize: 20, includeTopBottomCardType: false)
                                                 .contentShape(Rectangle())
                                                 .onTapGesture {
-                                                    print("ALLALALALALd213")
-                                                    print(card.wrappedValue.cardType.rawValue)
-                                                    card.wrappedValue.revealContent.toggle()
+                                                    print($card.wrappedValue.cardType.rawValue)
+                                                    $card.wrappedValue.revealContent.toggle()
                                                 }
                                                 .onAppear {
-                                                    card.revealContent.wrappedValue = true
+                                                    $card.revealContent.wrappedValue = true
                                                 }
                                         }
                                     }
