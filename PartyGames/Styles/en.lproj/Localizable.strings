@@ -37,6 +37,10 @@
 "Yes" = "Yes";
 "No" = "No";
 "CardsToKeepInHand" = "Cards To Keep In Hand";
+"normal" = "Normal";
+"large" = "Large";
+"max" = "Max";
+"Card_size" = "Card size";
 //Questions
 "Q1" = "Who got the longest hair";
 "Q2" = "Who had the most drinks";

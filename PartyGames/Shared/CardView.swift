@@ -38,6 +38,7 @@ struct CardView: View {
                                     .bold()
                                     .multilineTextAlignment(.leading)
                             }
+                            .shadow(color: .white, radius: 2)
                             
                             Spacer()
                             if includeTopBottomCardType {

@@ -11,5 +11,11 @@ class WaterfallCustomization: StandardCustomization {
     
     @Published var showRulesToCards = false
     @Published var cardsToKeep: [CardTypes] = [.six, .eight, .nine, .king, .one]
-    
+    @Published var inspectCardSize: inspectCardSizes = .normal
+ 
+}
+extension WaterfallCustomization {
+    enum inspectCardSizes: String, CaseIterable{
+        case normal, large, max
+    }
 }

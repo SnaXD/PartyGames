@@ -37,6 +37,10 @@
 "Yes" = "Ja";
 "No" = "Nej";
 "CardsToKeepInHand" = "Kort som skal gemmes";
+"normal" = "Normal";
+"large" = "Stor";
+"max" = "Maks";
+"Card_size" = "Kort størrelse";
 //Questions
 "Q1" = "Hvem har det længste hår";
 "Q2" = "Hvem har drukket mest";

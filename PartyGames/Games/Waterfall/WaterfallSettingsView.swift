@@ -57,11 +57,11 @@ struct WaterfallSettingsView: View {
                 HStack{
                     Text("PlayWithJoker")
                     Spacer()
-                    Picker("Infinity_cards", selection: $settings.includeJoker) {
+                    Picker("", selection: $settings.includeJoker) {
                         Text("Yes").tag(true)
                         Text("No").tag(false)
                     }.frame(width: 150)
-                    .pickerStyle(.segmented)
+                        .pickerStyle(.segmented)
                 }.padding(.top, 16)
                 
                 HStack{
@@ -88,6 +88,18 @@ struct WaterfallSettingsView: View {
                             }
                             .padding(4)
                     }
+                }
+                HStack{
+                    Text("Card_size")
+                        .padding(.trailing, 42)
+                    Spacer()
+                    Picker("", selection: $settings.inspectCardSize) {
+                        ForEach(WaterfallCustomization.inspectCardSizes.allCases, id: \.self) { value in
+                            Text(LocalizedStringKey(value.rawValue))
+                                .tag(value)
+                        }
+                    }
+                        .pickerStyle(.segmented)
                 }
             }
         }.padding(.horizontal, 8)

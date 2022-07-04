@@ -109,7 +109,8 @@ struct WaterfallGameView: View {
             WaterfallHandsView(game: $vm.game, title: "PAUSE")
         })
         .popup(isPresented: $inspectCard, type: .default, position: .bottom, closeOnTapOutside: true, dismissCallback: {
-            //TODO: Append to hands
+            //TODO: Append to hands / set max of some cards
+            //Append card to hand
             if !vm.game.customizedSettings.players.isEmpty {
                 if vm.game.customizedSettings.cardsToKeep.contains( vm.selectedCard!.cardType) {
                     vm.game.customizedSettings.players[vm.game.turnCounter % vm.game.customizedSettings.players.count].addCard(card: vm.selectedCard!)
@@ -144,11 +145,9 @@ struct WaterfallGameView: View {
                 }
             }
         }){
-            CardView(card: vm.selectedCard!, animationTime: 1)
-                .shadow(radius: 5)
-                .onAppear {
-                    vm.selectedCard?.revealContent.toggle()
-                }
+            GeometryReader { proxy in
+                vm.getInspectCard(proxy: proxy)
+            }
         }
     }
 }
