@@ -12,7 +12,7 @@ class WaterfallViewModel: ObservableObject {
     @Published var game = WaterfallGame()
 }
 extension WaterfallViewModel {
-    func getInspectCard(proxy: GeometryProxy) -> AnyView {
+    func getInspectCard() -> AnyView {
         var height: CGFloat = 0
         var width: CGFloat = 0
         var fontSize: CGFloat = 60
@@ -22,12 +22,12 @@ extension WaterfallViewModel {
             width = 300
             fontSize = 60
         case .large:
-            height = proxy.size.height / 4 * 3
-            width = proxy.size.width / 4 * 3
+            height = 600
+            width = 400
             fontSize = 100
         case .max:
-            height = proxy.size.height
-            width = proxy.size.width
+            height = 800
+            width = 600
             fontSize = 170
         }
         return AnyView(CardView(card: selectedCard!, animationTime: 1, inFocusWidth: width , inFocusHeight: height, fontSize: fontSize)

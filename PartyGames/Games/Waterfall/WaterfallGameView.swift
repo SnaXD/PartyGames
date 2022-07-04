@@ -87,12 +87,15 @@ struct WaterfallGameView: View {
                 }
                 
             }
-        }.onAppear {
+        }
+        .navigationTitle("")
+        .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
             vm.game.SetupGame()
             vm.game.additionalSetup()
             withAnimation(.easeInOut(duration: 0.5)){
                 for index in 0...2 {
-                    vm.game.displayed[index].inFocus.toggle()
+                    vm.game.displayed[index].inFocus = true
                 }
             }
         }
@@ -145,9 +148,8 @@ struct WaterfallGameView: View {
                 }
             }
         }){
-            GeometryReader { proxy in
-                vm.getInspectCard(proxy: proxy)
-            }
+            vm.getInspectCard()
+            
         }
     }
 }

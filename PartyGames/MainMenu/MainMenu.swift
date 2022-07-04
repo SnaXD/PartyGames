@@ -38,7 +38,6 @@ struct MainMenu: View {
                                 .stroke(Color.purple, lineWidth: 3)
                         )
                         .padding(.top, 16)
-                    
                 }
                 Spacer()
                 Spacer()

@@ -23,6 +23,7 @@ struct SmallNumberAndType: View {
         }
         .foregroundColor(card.color)
         .padding(8)
+        .shadow(color: .white, radius: 2)
     }
 }
 

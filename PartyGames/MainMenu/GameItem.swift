@@ -23,7 +23,6 @@ struct GameItem: View {
                     .padding()
             }
             .navigationTitle("")
-            .navigationBarHidden(true)
             .navigationBarTitleDisplayMode(.inline)
             
             Button {
