@@ -45,6 +45,7 @@
 "xDs" = "XDs";
 "custom" = "Hjemmelavet";
 "tabTwiceToCopy" = "Tryk 2 gange for at kopiere";
+"successfullyCopyed" = "Kopiret";
 
 //Waterfall Classic Rules
 "aceTitle" = "Sniper";

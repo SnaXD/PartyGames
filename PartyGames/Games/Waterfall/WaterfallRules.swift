@@ -12,6 +12,7 @@ struct WaterfallRules: View {
     @State private var classicRules: [RuleItem] = getClassicRules()
     @State private var xdsRules: [RuleItem] = getXdsRules()
     @State var ruleSize: CGFloat = 14
+    @State private var showPopup = false
     var body: some View {
         VStack(spacing: 0){
             Picker("", selection: $ruletype) {
@@ -48,17 +49,27 @@ struct WaterfallRules: View {
                     switch ruletype {
                     case .classic:
                         ForEach(classicRules, id: \.self){ rule in
-                            RuleItemsView(rule: rule, textSize: $ruleSize)
+                            RuleItemsView(rule: rule, showPopup: $showPopup, textSize: $ruleSize)
                         }.padding(.bottom, 12)
                     case .xDs:
                         withAnimation(.linear(duration: 2)) {
                             ForEach(xdsRules, id: \.self){ rule in
-                                RuleItemsView(rule: rule, textSize: $ruleSize)
+                                RuleItemsView(rule: rule, showPopup: $showPopup, textSize: $ruleSize)
                             }.padding(.bottom, 12)
                         }
                     }
                     
                 }.padding()
+            }
+        }
+        .popup(isPresented: $showPopup, type: .toast, position: .bottom, animation: .easeInOut(duration: 0.5), autohideIn: 1.5, dragToDismiss: true, closeOnTap: true, closeOnTapOutside: true) {
+            HStack{
+                Text("successfully copyed")
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 12).foregroundColor(Color(uiColor: .systemGray5))
+                    )
+                    .padding(.bottom, 32)
             }
         }
     }

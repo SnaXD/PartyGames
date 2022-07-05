@@ -10,6 +10,7 @@ import UniformTypeIdentifiers
 
 struct RuleItemsView: View {
     var rule: RuleItem
+    @Binding var showPopup: Bool
     @Binding var textSize: CGFloat
     var body: some View {
         VStack{
@@ -36,6 +37,7 @@ struct RuleItemsView: View {
             let localized = NSLocalizedString(rule.rule, comment: "")
             UIPasteboard.general.setValue(localized,
                     forPasteboardType: UTType.plainText.identifier)
+            showPopup.toggle()
             }
         .background {
             RoundedRectangle(cornerRadius: 12)
@@ -53,8 +55,12 @@ private struct RuleItems_Previews: PreviewProvider {
 
 private struct RuleItems_PreviewsWithBinding: View {
     @State var size: CGFloat = 14
+    @State var showPopup: Bool = false
     var body: some View {
-        RuleItemsView(rule: RuleItem(card: .king, title: "King", rule: "You're allowed to rule everything in the game but not change the game. This line is just to make the view a little longer to make it look like real data and make styling more easely done"), textSize: $size)
+        RuleItemsView(rule: RuleItem(card: .king, title: "King", rule: "You're allowed to rule everything in the game but not change the game. This line is just to make the view a little longer to make it look like real data and make styling more easely done"), showPopup: $showPopup, textSize: $size)
+            .popup(isPresented: $showPopup, type: .toast, position: .bottom, animation: .easeInOut(duration: 0.2), autohideIn: 1, dragToDismiss: true, closeOnTap: true, closeOnTapOutside: true) {
+                Text("successfullyCopyed")
+            }
     }
 }
 
