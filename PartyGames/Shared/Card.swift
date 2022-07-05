@@ -25,9 +25,9 @@ enum Suite: String, CaseIterable {
 }
 
 enum CardTypes: String, CaseIterable {
-    case one = "A"
+    case ace = "A"
     case two = "2"
-    case tree = "3"
+    case three = "3"
     case four = "4"
     case five = "5"
     case six = "6"

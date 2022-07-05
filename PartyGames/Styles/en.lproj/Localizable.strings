@@ -44,6 +44,68 @@
 "classic" = "Classic";
 "xDs" = "XD's";
 "custom" = "Custom";
+"tabTwiceToCopy" = "Tab twice to copy";
+
+//Waterfall Classic Rules
+"aceTitle" = "Sniper";
+"aceRule" = "Lav en cirkel med tommelfingeren og pegefingeren. Begynd med at tælle højt. Det tal du ender med, er antallet af slurke dit offer skal drikke - dette kort kan gemmes";
+"twoTitle" = "2 Slurke";
+"twoRule" = "Hvis kortet er sort skal du drikke 2 slurke. Hvis det er rødt må du uddele 2 slurke";
+"threeTitle" = "3 Slurke";
+"threeRule" = "Hvis kortet er sort skal du drikke 3 slurke. Hvis det er rødt må du uddele 3 slurke";
+"fourTitle" = "4 Slurke";
+"fourRule" = "Hvis kortet er sort skal du drikke 4 slurke. Hvis det er rødt må du uddele 4 slurke";
+"fiveTitle" = "5 Slurke";
+"fiveRule" = "Hvis kortet er sort skal du drikke 5 slurke. Hvis det er rødt må du uddele 5 slurke";
+"sixTitle" = "Tisse- eller rygekortet";
+"sixRule" = "Du må gå på toillet eller ud og ryge. Du kan sælge dette kort til en anden spiller for slurke - dette kort kan gemmes. Hvis man går på toilet eller ud og ryge uden dette kort skal man bunde en genstand";
+"sevenTitle" = "Kategori";
+"sevenRule" = "Nævn en kategori, og start med at sige en ting i den kattegori og lad den gå på tur. Den første der siger noget forkert, eller noget der allerede er sagt, taber, og skal drikke lige så mange slurke, som antallet af runder, I var igennem";
+"eightTitle" = "Fingeren på næsen";
+"eightRule" = "Den sidste der rører sin næse med fingeren skal drikke - Dette kort kan gemmes";
+"nineTitle" = "Regelkortet";
+"nineRule" = "Du må bestemme en regel som ikke ændre på spillets nuværrende regler eller fjerne en regl";
+"tenTitle" = "Vandfald";
+"tenRule" = "Den som får kortet, skal du begynde at drikke. De andre skal også begynde at drikke, men må ikke stoppe, før den forrige i rækken stopper med at drikke";
+"knightTitle" = "Knægt";
+"knightRule" = "Alle af hankøn skal skåle";
+"queenTitle" = "Dame";
+"queenRule" = "Alle af hunkøn skal skåle";
+"kingTitle" = "Konge";
+"kingRule" = "Du bliver konge og bestemmer i spillet til en anden spiller får en konge.";
+"jokerTitle" = "Joker";
+"jokerRule" = "Fjern kongen";
+
+//Waterfall XDs Rules
+"XDsAceTitle" = "Sniper";
+"XDsAceRule" = "Lav en cirkel med tommelfingeren og pegefingeren. Begynd med at tælle højt. Det tal du ender med, er antallet af slurke dit offer skal drikke - dette kort kan gemmes";
+"XDsTwoTitle" = "2 Slurke";
+"XDsTwoRule" = "Hvis kortet er sort skal du drikke 2 slurke. Hvis det er rødt må du uddele 2 slurke";
+"XDsThreeTitle" = "3 Slurke";
+"XDsThreeRule" = "Hvis kortet er sort skal du drikke 3 slurke. Hvis det er rødt må du uddele 3 slurke";
+"XDsFourTitle" = "4 Slurke";
+"XDsFourRule" = "Hvis kortet er sort skal du drikke 4 slurke. Hvis det er rødt må du uddele 4 slurke";
+"XDsFiveTitle" = "5 Slurke";
+"XDsFiveRule" = "Hvis kortet er sort skal du drikke 5 slurke. Hvis det er rødt må du uddele 5 slurke";
+"XDsSixTitle" = "Druk makker";
+"XDsSixRule" = "Alle som har en 6'er skal drikke hver gang en med en 6'er drikker";
+"XDsSevenTitle" = "Kategori";
+"XDsSevenRule" = "Nævn en kategori, og start med at sige en ting i den kattegori og lad den gå på tur. Den første der siger noget forkert, eller noget der allerede er sagt, taber, og skal drikke lige så mange slurke, som antallet af runder, I var igennem";
+"XDsEightTitle" = "Viking";
+"XDsEightRule" = "Har du kortet må du lave 2 horn på dit hoved med hænderne. Den sidste spiller til at ro skal drikke 2 tåre - Dette kort kan gemmes og bruges så mange gange man vil indtil den næste får en 8'er";
+"XDsNineTitle" = "Regelkortet";
+"XDsNineRule" = "Du må bestemme en regel som ikke ændre på spillets nuværrende regler eller fjerne en regl";
+"XDsTenTitle" = "Vandfald";
+"XDsTenRule" = "Den som får kortet, skal du begynde at drikke. De andre skal også begynde at drikke, men må ikke stoppe, før den forrige i rækken stopper med at drikke";
+"XDsKnightTitle" = "Skål!";
+"XDsKnightRule" = "Alle skal skåle";
+"XDsQueenTitle" = "Kællingekort!";
+"XDsQueenRule" = "Hvis du har kortet må ingen svare på dine spørgsmål (kun hvis du spørger om hvad et specifikt kort gør). Hvis de svare skal de have kortet. Når spillet er slut skal spillerne med et dronningkort drikke en halv genstand for hver dronning";
+"XDsKingTitle" = "Konge";
+"XDsKingRule" = "Du bliver konge og bestemmer i spillet til en anden spiller får en konge. Bonus! Du må rokere dronningkortne som du vil";
+"XDsJokerTitle" = "Joker";
+"XDsJokerRule" = "Fjern kongen";
+
 //Questions
 "Q1" = "Who got the longest hair";
 "Q2" = "Who had the most drinks";

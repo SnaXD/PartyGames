@@ -10,7 +10,7 @@ import Foundation
 class WaterfallCustomization: StandardCustomization {
     
     @Published var showRulesToCards = false
-    @Published var cardsToKeep: [CardTypes] = [.six, .eight, .nine, .king, .one]
+    @Published var cardsToKeep: [CardTypes] = [.six, .eight, .nine, .king, .ace]
     @Published var inspectCardSize: inspectCardSizes = .normal
  
 }

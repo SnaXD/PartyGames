@@ -28,6 +28,7 @@
 		AB346760284F8BAF006B312F /* SmallNumberAndType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34675F284F8BAF006B312F /* SmallNumberAndType.swift */; };
 		AB34676228507D3C006B312F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34676128507D3C006B312F /* SettingsView.swift */; };
 		AB3B97782862FD0500216EA2 /* PlayingCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B97772862FD0500216EA2 /* PlayingCardTests.swift */; };
+		AB3BE1B9287412B300D438BB /* RuleItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1B8287412B300D438BB /* RuleItemsView.swift */; };
 		AB463F2A2863298900C8056E /* QuestionGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F292863298900C8056E /* QuestionGameTests.swift */; };
 		AB463F2D28644C2700C8056E /* WaterfallGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F2C28644C2700C8056E /* WaterfallGame.swift */; };
 		AB463F2F28644CE200C8056E /* WaterfallCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F2E28644CE200C8056E /* WaterfallCustomization.swift */; };
@@ -100,6 +101,7 @@
 		AB34676128507D3C006B312F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AB3B97752862FD0500216EA2 /* PartyGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartyGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3B97772862FD0500216EA2 /* PlayingCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardTests.swift; sourceTree = "<group>"; };
+		AB3BE1B8287412B300D438BB /* RuleItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleItemsView.swift; sourceTree = "<group>"; };
 		AB463F292863298900C8056E /* QuestionGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGameTests.swift; sourceTree = "<group>"; };
 		AB463F2C28644C2700C8056E /* WaterfallGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGame.swift; sourceTree = "<group>"; };
 		AB463F2E28644CE200C8056E /* WaterfallCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCustomization.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 			children = (
 				ABDC7442286CCBAD0016DEBF /* BackOfCards */,
 				ABDC7441286CCB940016DEBF /* TurnDisplay */,
+				AB3BE1B8287412B300D438BB /* RuleItemsView.swift */,
 			);
 			path = SmallViews;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				AB346744284F244C006B312F /* QuestionCardsStackView.swift in Sources */,
 				ABDC744C286D79DB0016DEBF /* ColorFullCircle.swift in Sources */,
 				ABDC7454286DA3000016DEBF /* UfoTurnDisplayer.swift in Sources */,
+				AB3BE1B9287412B300D438BB /* RuleItemsView.swift in Sources */,
 				AB346738284F23FF006B312F /* ContentView.swift in Sources */,
 				AB9DCCA1285C67D90091185F /* QuestionGameRules.swift in Sources */,
 				AB346748284F2DAF006B312F /* QuestionDeck.swift in Sources */,

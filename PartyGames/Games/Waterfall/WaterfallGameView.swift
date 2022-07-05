@@ -103,7 +103,7 @@ struct WaterfallGameView: View {
             WaterfallSettingsView(settings: vm.game.customizedSettings)
         }
         .sheet(isPresented: $openRules) {
-            SlapTheQueenRules()
+            WaterfallRules()
         }
         .sheet(isPresented: $gameOver) {
             WaterfallHandsView(game: $vm.game, title: "GAME_OVER")
