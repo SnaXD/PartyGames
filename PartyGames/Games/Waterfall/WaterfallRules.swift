@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct WaterfallRules: View {
+    @State private var ruletype: rulesType = .classic
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Picker("", selection: $ruletype) {
+                ForEach(rulesType.allCases, id: \.self){ type in
+                    Text(LocalizedStringKey(type.rawValue))
+                        .tag(type)
+                }
+            }.pickerStyle(.segmented)
+            ScrollView{
+                
+            }
+        }
     }
 }
 
@@ -17,4 +28,8 @@ struct WaterfallRules_Previews: PreviewProvider {
     static var previews: some View {
         WaterfallRules()
     }
+}
+
+private enum rulesType: String, CaseIterable {
+    case classic, xDs, custom
 }

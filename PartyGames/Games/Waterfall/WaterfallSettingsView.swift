@@ -63,7 +63,18 @@ struct WaterfallSettingsView: View {
                     }.frame(width: 150)
                         .pickerStyle(.segmented)
                 }.padding(.top, 16)
-                
+                HStack{
+                    Text("Card_size")
+                        .padding(.trailing, 42)
+                    Spacer()
+                    Picker("", selection: $settings.inspectCardSize) {
+                        ForEach(WaterfallCustomization.inspectCardSizes.allCases, id: \.self) { value in
+                            Text(LocalizedStringKey(value.rawValue))
+                                .tag(value)
+                        }
+                    }
+                        .pickerStyle(.segmented)
+                }
                 HStack{
                     Text("CardsToKeepInHand")
                     Spacer()
@@ -88,18 +99,6 @@ struct WaterfallSettingsView: View {
                             }
                             .padding(4)
                     }
-                }
-                HStack{
-                    Text("Card_size")
-                        .padding(.trailing, 42)
-                    Spacer()
-                    Picker("", selection: $settings.inspectCardSize) {
-                        ForEach(WaterfallCustomization.inspectCardSizes.allCases, id: \.self) { value in
-                            Text(LocalizedStringKey(value.rawValue))
-                                .tag(value)
-                        }
-                    }
-                        .pickerStyle(.segmented)
                 }
             }
         }.padding(.horizontal, 8)

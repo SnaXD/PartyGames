@@ -13,9 +13,13 @@ struct MainMenu: View {
         NavigationView{
             VStack(spacing: 0){
                 Spacer()
+                Text("XD's")
+                    .foregroundColor(.red)
+                    .font(.system(size: 56))
+                    .fontWeight(.heavy)
                 Text("Games")
                     .fontWeight(.medium)
-                    .padding(.vertical, 18)
+                    .padding(.bottom, 18)
                     .foregroundColor(.white)
                     .font(.custom("Inconsolata", size: 32))
                 

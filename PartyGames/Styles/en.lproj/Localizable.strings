@@ -41,6 +41,9 @@
 "large" = "Large";
 "max" = "Max";
 "Card_size" = "Card size";
+"classic" = "Classic";
+"xDs" = "XD's";
+"custom" = "Custom";
 //Questions
 "Q1" = "Who got the longest hair";
 "Q2" = "Who had the most drinks";
