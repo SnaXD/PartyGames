@@ -17,6 +17,7 @@ struct GradientBackOfCard: View {
         }
         .background(
             AngularGradient(gradient: Gradient(colors: [.red, .green, .blue, .cyan, .purple, .orange, .pink]), center: .center)
+                .cornerRadius(12)
         )
     }
 }

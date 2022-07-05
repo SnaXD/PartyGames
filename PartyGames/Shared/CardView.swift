@@ -12,6 +12,7 @@ struct CardView: View {
     var animationTime: Double
     @State var t = 180.0
     @State var showFrontPage = false
+    @State var cosmetics = CustomizedSelectedItems.shared
     var inFocusWidth: CGFloat = 300
     var width: CGFloat = 300
     var inFocusHeight: CGFloat = 400
@@ -53,7 +54,7 @@ struct CardView: View {
                                 Spacer()
                             }
                         }.overlay {
-                         //TODO: Add selected Card background   ManLookingThroughBackOfCard()
+                            cosmetics.getViewForBackgroundImage()
                         }
                     }
                 }.onAppear(perform: {
@@ -66,22 +67,21 @@ struct CardView: View {
                     }
                 }
             } else {
-               VStack{
-                   Spacer()
-                   HStack{
-                       Spacer()
-                   }
-               }.overlay {
-                //TODO: Add selected Card background   ManLookingThroughBackOfCard()
-               }
-           }
+                VStack{
+                    Spacer()
+                    HStack{
+                        Spacer()
+                    }
+                }.overlay {
+                    cosmetics.getViewForBackgroundImage()
+                }
+            }
         }
         .frame(width: card.inFocus ? inFocusWidth : width,
                height: card.inFocus ? inFocusHeight : height)
         .background(
             RoundedRectangle(cornerRadius: 10)
-            //TODO: Make forgroundColor Match background main Color
-                .foregroundColor(Color(uiColor: .systemGray2))
+                .foregroundColor(cosmetics.selectedCardBackgroundsMatchingForgroundColor)
         )
         .rotation3DEffect(.degrees(t), axis: (x: 0, y: 1, z: 0))
     }

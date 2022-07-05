@@ -11,7 +11,8 @@ import SwiftUI
 class CustomizedSelectedItems{
     static let shared = CustomizedSelectedItems()
     
-    var selectedCardBackground: backOfCards = .standard
+    var selectedCardBackground: backOfCards = .gradient
+    var selectedCardBackgroundsMatchingForgroundColor: Color = Color(uiColor: .systemGray2)
     var selectedTurnDisplayer: turnDisplay = .standard
     
     func getViewForBackgroundImage() -> AnyView {
@@ -20,16 +21,22 @@ class CustomizedSelectedItems{
     func getViewForBackgroundImage(cardBackground: backOfCards) -> AnyView {
         switch cardBackground {
         case .emojis:
+            selectedCardBackgroundsMatchingForgroundColor = Color(uiColor: .systemGray2)
             return AnyView(EmojiBackOfCard())
         case .gradient:
+            selectedCardBackgroundsMatchingForgroundColor = Color(uiColor: .systemOrange)
             return AnyView(GradientBackOfCard())
         case .colerFullCircle:
+            selectedCardBackgroundsMatchingForgroundColor = Color(uiColor: .systemGray2)
             return AnyView(ColorFullCircle())
         case .manLookingThroughCard:
+            selectedCardBackgroundsMatchingForgroundColor = .yellow
             return AnyView(ManLookingThroughBackOfCard())
         case .actionImage:
+            selectedCardBackgroundsMatchingForgroundColor = Color(uiColor: .systemGray2)
             return AnyView(ActionBackOfCard())
         case .standard:
+            selectedCardBackgroundsMatchingForgroundColor = Color(uiColor: .systemGray2)
             return AnyView(StandardBackOfCards())
         }
     }
