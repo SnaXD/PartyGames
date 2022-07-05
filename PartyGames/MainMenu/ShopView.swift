@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ShopView: View {
+    @State var vm = ShopViewModel()
     var body: some View {
         ScrollView(){
             LazyVStack(alignment: .leading, spacing: 12){
@@ -25,7 +26,7 @@ struct ShopView: View {
                     ScrollView(.horizontal, showsIndicators: false){
                         LazyHStack{
                             ForEach(turnDisplay.allCases, id: \.self) { item in
-                                SmallShopItemView(item: getViewForTurnDisplay(display: item))
+                                SmallShopItemView(item: vm.getViewForTurnDisplay(display: item))
                                     .padding(.horizontal, 8)
                             }
                         }
@@ -44,7 +45,7 @@ struct ShopView: View {
                     ScrollView(.horizontal, showsIndicators: false){
                         LazyHStack{
                             ForEach(backOfCards.allCases, id: \.self) { item in
-                                SmallDisplayBackOfCard(item: getViewForBackOfCards(backOfCard: item))
+                                SmallDisplayBackOfCard(item: vm.getViewForBackOfCards(backOfCard: item))
                                     .padding(.horizontal, 8)
                             }
                         }.shadow(radius: 2)
@@ -65,37 +66,4 @@ struct ShopView_Previews: PreviewProvider {
     }
 }
 
-enum turnDisplay: CaseIterable {
-    case myNameIs, wantedPoster, ufo
-}
 
-enum backOfCards: CaseIterable {
-    case emojis, gradient, colerFullCircle, manLookingThroughCard, actionImage
-}
-
-func getViewForTurnDisplay(display: turnDisplay) -> ShopItem{
-    switch display {
-    case .myNameIs:
-        return ShopItem(view: AnyView(MyNameIsTurnDisplay(name: "Steve")), name: "HelloMyNameIs")
-    case .wantedPoster:
-        return ShopItem(view: AnyView(WantedPosterTurnDisplayer(name: "Steve")), name: "WantedPoster")
-    case .ufo:
-        return ShopItem(view: AnyView(UfoTurnDisplayer(name: "Steve")), name: "Ufo")
-    }
-}
-
-func getViewForBackOfCards(backOfCard: backOfCards) -> ShopItem{
-    switch backOfCard {
-    case .emojis:
-        return ShopItem(view: AnyView(EmojiBackOfCard()), name: "Emojis")
-    case .gradient:
-        return ShopItem(view: AnyView(GradientBackOfCard()), name: "Gradient")
-    case .colerFullCircle:
-        return ShopItem(view: AnyView(ColorFullCircle()), name: "ColerFullCircle")
-    case .manLookingThroughCard:
-        return ShopItem(view: AnyView(ManLookingThroughBackOfCard()), name: "YouHome")
-    case .actionImage:
-        return ShopItem(view: AnyView(ActionBackOfCard()), name: "ActionCard")
-    }
-    
-}

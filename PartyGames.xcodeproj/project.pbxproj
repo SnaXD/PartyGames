@@ -29,6 +29,10 @@
 		AB34676228507D3C006B312F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34676128507D3C006B312F /* SettingsView.swift */; };
 		AB3B97782862FD0500216EA2 /* PlayingCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B97772862FD0500216EA2 /* PlayingCardTests.swift */; };
 		AB3BE1B9287412B300D438BB /* RuleItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1B8287412B300D438BB /* RuleItemsView.swift */; };
+		AB3BE1BB28746E7A00D438BB /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1BA28746E7A00D438BB /* ShopViewModel.swift */; };
+		AB3BE1BD287471E300D438BB /* CustomizedSelectedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1BC287471E300D438BB /* CustomizedSelectedItems.swift */; };
+		AB3BE1BF2874757F00D438BB /* StandardTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1BE2874757F00D438BB /* StandardTurnDisplayer.swift */; };
+		AB3BE1C1287476AA00D438BB /* StandardBackOfCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1C0287476AA00D438BB /* StandardBackOfCards.swift */; };
 		AB463F2A2863298900C8056E /* QuestionGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F292863298900C8056E /* QuestionGameTests.swift */; };
 		AB463F2D28644C2700C8056E /* WaterfallGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F2C28644C2700C8056E /* WaterfallGame.swift */; };
 		AB463F2F28644CE200C8056E /* WaterfallCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F2E28644CE200C8056E /* WaterfallCustomization.swift */; };
@@ -102,6 +106,10 @@
 		AB3B97752862FD0500216EA2 /* PartyGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartyGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3B97772862FD0500216EA2 /* PlayingCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardTests.swift; sourceTree = "<group>"; };
 		AB3BE1B8287412B300D438BB /* RuleItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleItemsView.swift; sourceTree = "<group>"; };
+		AB3BE1BA28746E7A00D438BB /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
+		AB3BE1BC287471E300D438BB /* CustomizedSelectedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedSelectedItems.swift; sourceTree = "<group>"; };
+		AB3BE1BE2874757F00D438BB /* StandardTurnDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTurnDisplayer.swift; sourceTree = "<group>"; };
+		AB3BE1C0287476AA00D438BB /* StandardBackOfCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardBackOfCards.swift; sourceTree = "<group>"; };
 		AB463F292863298900C8056E /* QuestionGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGameTests.swift; sourceTree = "<group>"; };
 		AB463F2C28644C2700C8056E /* WaterfallGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGame.swift; sourceTree = "<group>"; };
 		AB463F2E28644CE200C8056E /* WaterfallCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCustomization.swift; sourceTree = "<group>"; };
@@ -311,6 +319,8 @@
 				AB51A1B5286C9EB50047631E /* SmallShopItemView.swift */,
 				ABDC743F286CAA4C0016DEBF /* ShopItem.swift */,
 				ABDC7449286D785B0016DEBF /* ShopItemFrame.swift */,
+				AB3BE1BA28746E7A00D438BB /* ShopViewModel.swift */,
+				AB3BE1BC287471E300D438BB /* CustomizedSelectedItems.swift */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -359,6 +369,7 @@
 				AB51A1B2286C7CF60047631E /* MyNameIsTurnDisplay.swift */,
 				ABDC7451286DA1810016DEBF /* WantedPosterTurnDisplayer.swift */,
 				ABDC7453286DA3000016DEBF /* UfoTurnDisplayer.swift */,
+				AB3BE1BE2874757F00D438BB /* StandardTurnDisplayer.swift */,
 			);
 			path = TurnDisplay;
 			sourceTree = "<group>";
@@ -371,6 +382,7 @@
 				ABDC744B286D79DB0016DEBF /* ColorFullCircle.swift */,
 				ABDC744D286D87730016DEBF /* ManLookingThroughBackOfCard.swift */,
 				ABDC744F286D87BA0016DEBF /* ActionBackOfCard.swift */,
+				AB3BE1C0287476AA00D438BB /* StandardBackOfCards.swift */,
 			);
 			path = BackOfCards;
 			sourceTree = "<group>";
@@ -571,6 +583,7 @@
 				AB9DCCA1285C67D90091185F /* QuestionGameRules.swift in Sources */,
 				AB346748284F2DAF006B312F /* QuestionDeck.swift in Sources */,
 				ABDDB7D72860677A00935B55 /* PlayingCardStack.swift in Sources */,
+				AB3BE1BD287471E300D438BB /* CustomizedSelectedItems.swift in Sources */,
 				AB9DCCA4285C8AF20091185F /* QuestionGame.swift in Sources */,
 				AB34675C284F7065006B312F /* SlapTheQueenGame.swift in Sources */,
 				AB463F2F28644CE200C8056E /* WaterfallCustomization.swift in Sources */,
@@ -585,8 +598,11 @@
 				AB346752284F410D006B312F /* QuestionCard.swift in Sources */,
 				AB34676228507D3C006B312F /* SettingsView.swift in Sources */,
 				AB9DCC9D2859BD140091185F /* GameItem.swift in Sources */,
+				AB3BE1BF2874757F00D438BB /* StandardTurnDisplayer.swift in Sources */,
 				ABDC7448286D75700016DEBF /* SmallDisplayBackOfCard.swift in Sources */,
 				ABDC7444286CCBD80016DEBF /* EmojiBackOfCard.swift in Sources */,
+				AB3BE1C1287476AA00D438BB /* StandardBackOfCards.swift in Sources */,
+				AB3BE1BB28746E7A00D438BB /* ShopViewModel.swift in Sources */,
 				AB346750284F40DA006B312F /* Deck.swift in Sources */,
 				AB9DCC92285878270091185F /* Localizable.strings in Sources */,
 				AB346756284F6478006B312F /* StandardCustomization.swift in Sources */,
