@@ -47,7 +47,7 @@ struct ShopView: View {
                                 SmallDisplayBackOfCard(item: getViewForBackOfCards(backOfCard: item))
                                     .padding(.horizontal, 8)
                             }
-                        }
+                        }.shadow(radius: 2)
                     }
                     .padding(.vertical, 8)
                     .background(Color(uiColor: .systemGray6))
@@ -55,7 +55,7 @@ struct ShopView: View {
                         .shadow(radius: 2)
                 }
             }
-        }
+        }.background(.gray)
     }
 }
 
