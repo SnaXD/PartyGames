@@ -33,7 +33,8 @@ struct RuleItemsView: View {
         }
         .padding()
         .onTapGesture(count: 2) {
-            UIPasteboard.general.setValue(rule.rule,
+            let localized = NSLocalizedString(rule.rule, comment: "")
+            UIPasteboard.general.setValue(localized,
                     forPasteboardType: UTType.plainText.identifier)
             }
         .background {
