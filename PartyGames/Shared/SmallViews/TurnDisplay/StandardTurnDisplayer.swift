@@ -12,10 +12,15 @@ struct StandardTurnDisplayer: View {
     var body: some View {
         VStack{
             Text("Its your turn")
+            .minimumScaleFactor(0.01)
+            .frame(height: 20)
             Text(name)
                 .fontWeight(.semibold)
+                .minimumScaleFactor(0.01)
+                .frame(height: 20)
         }
         .padding(8)
+        .frame(width: 100, height: 70)
         .background(
             RoundedRectangle(cornerRadius: 12)
                 .foregroundColor(Color(uiColor: .systemGray3)))

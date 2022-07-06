@@ -11,7 +11,7 @@ import SwiftUI
 class CustomizedSelectedItems{
     static let shared = CustomizedSelectedItems()
     
-    var selectedCardBackground: backOfCards = .gradient
+    var selectedCardBackground: backOfCards = .standard
     var selectedCardBackgroundsMatchingForgroundColor: Color = Color(uiColor: .systemGray2)
     var selectedTurnDisplayer: turnDisplay = .standard
     

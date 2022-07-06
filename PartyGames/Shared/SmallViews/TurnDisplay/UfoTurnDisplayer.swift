@@ -11,7 +11,20 @@ struct UfoTurnDisplayer: View {
     let name: String
     var body: some View {
         //UFO where the name is in the green cone of light
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+        Image("Ufo")
+            .resizable()
+            .scaledToFit()
+            .overlay {
+                Text(name)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color(UIColor.cyan))
+                    .font(.system(size: 20))
+                    .minimumScaleFactor(0.01)
+                    .frame(height: 20)
+                    .offset(y: 35)
+            }
+        }.frame(width: 120, height: 100)
     }
 }
 

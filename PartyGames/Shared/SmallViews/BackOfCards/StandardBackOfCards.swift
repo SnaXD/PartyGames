@@ -10,10 +10,6 @@ import SwiftUI
 struct StandardBackOfCards: View {
     var body: some View {
         HStack{
-            Spacer()
-            VStack{
-                Spacer()
-            }
         }.background(.gray)
     }
 }
