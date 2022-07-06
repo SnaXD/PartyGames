@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SmallDisplayBackOfCard: View {
     let item: ShopItem
+    let backgroundColor: Color
     var body: some View {
         VStack{
             ZStack{
@@ -17,6 +18,7 @@ struct SmallDisplayBackOfCard: View {
                     .stroke(.black, lineWidth: 3)
                     .overlay(
                         item.view
+                            .background(backgroundColor)
                     )
                     .background(.white)
                     .cornerRadius(16)
@@ -30,6 +32,6 @@ struct SmallDisplayBackOfCard: View {
 
 struct SmallDisplayBackOfCard_Previews: PreviewProvider {
     static var previews: some View {
-        SmallDisplayBackOfCard(item: ShopItem(view: AnyView(GradientBackOfCard()), name: "Gradient"))
+        SmallDisplayBackOfCard(item: ShopItem(view: AnyView(GradientBackOfCard()), name: "Gradient"), backgroundColor: .green)
     }
 }

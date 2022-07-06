@@ -17,14 +17,19 @@ struct ColorFullCircle: View {
                 }
             }
             .overlay {
-                Circle()
-                    .fill(
-                        AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center, startAngle: .zero, endAngle: .degrees(360))
-                    )
-                Circle().frame(width: proxy.size.height / 3.5, height: proxy.size.height / 3.5, alignment: .center)
-                    .foregroundColor(.white)
+                ZStack{
+                    Circle()
+                        .stroke(.black, lineWidth: 1)
+                    Circle()
+                        .fill(
+                            AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center, startAngle: .zero, endAngle: .degrees(360))
+                        )
+                    
+                    Circle().frame(width: proxy.size.height / 3.5, height: proxy.size.height / 3.5, alignment: .center)
+                        .foregroundColor(Color(uiColor: .systemGray2))
+                }
+                .padding(16)
             }
-            .padding(16)
         }
     }
 }

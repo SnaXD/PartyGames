@@ -12,7 +12,7 @@ struct CardView: View {
     var animationTime: Double
     @State var t = 180.0
     @State var showFrontPage = false
-    @State var cosmetics = CustomizedSelectedItems.shared
+    @State var cosmetics = CosmeticViews.shared
     var inFocusWidth: CGFloat = 300
     var width: CGFloat = 300
     var inFocusHeight: CGFloat = 400

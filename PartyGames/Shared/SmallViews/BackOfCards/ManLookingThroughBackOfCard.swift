@@ -14,11 +14,12 @@ struct ManLookingThroughBackOfCard: View {
             HStack{
                 Spacer()
             }
-        }.background(.yellow)
-        .overlay {
+        }.background{
             Image("ManLookingThroughCard")
                 .resizable()
                 .scaledToFit()
+                .cornerRadius(12)
+                
         }
     }
 }

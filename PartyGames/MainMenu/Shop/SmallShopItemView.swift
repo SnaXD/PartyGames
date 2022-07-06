@@ -12,8 +12,7 @@ struct SmallShopItemView: View {
     var body: some View {
         VStack{
             ZStack{
-                ShopItemFrame()
-                
+                ShopItemFrame()                
                 item.view
             }
             Text(LocalizedStringKey(item.name))

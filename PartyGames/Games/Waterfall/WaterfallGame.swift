@@ -37,10 +37,8 @@ extension WaterfallGame {
     func smallCardHeight(screen: GeometryProxy) -> CGFloat {
         return screen.size.height / 4
     }
-    
     func bigCardWidth(geometry: GeometryProxy) -> CGFloat{
         return geometry.size.width / 2
-        
     }
     func bigCardHeight(geometry: GeometryProxy) -> CGFloat{
         return (geometry.size.height - 50) / 3

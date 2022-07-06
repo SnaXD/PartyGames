@@ -10,14 +10,15 @@ import SwiftUI
 struct ActionBackOfCard: View {
     var body: some View {
         VStack{
+            Spacer()
             HStack{
                 Spacer()
             }
-            Spacer()
-        }.overlay {
+        }.background{
             Image("ActionBackOfCard")
                 .resizable()
                 .scaledToFill()
+                .cornerRadius(12)
         }
     }
 }
