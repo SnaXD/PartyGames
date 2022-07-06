@@ -21,7 +21,7 @@ struct UfoTurnDisplayer: View {
                     .foregroundColor(Color(UIColor.cyan))
                     .font(.system(size: 20))
                     .minimumScaleFactor(0.01)
-                    .frame(height: 20)
+                    .frame(width: 100, height: 20)
                     .offset(y: 35)
             }
         }.frame(width: 120, height: 100)

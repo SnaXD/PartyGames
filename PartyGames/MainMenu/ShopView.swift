@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ShopView: View {
     @State var vm = ShopViewModel()
+    @ObservedObject var cosmetics = CustomizedSelectedItems.shared
     var body: some View {
         ScrollView(){
             LazyVStack(alignment: .leading, spacing: 12){
@@ -28,6 +29,9 @@ struct ShopView: View {
                             ForEach(turnDisplay.allCases, id: \.self) { item in
                                 SmallShopItemView(item: vm.getViewForTurnDisplay(display: item))
                                     .padding(.horizontal, 8)
+                                    .onTapGesture {
+                                        cosmetics.selectedTurnDisplayer = item
+                                    }
                             }
                         }
                     }
@@ -47,8 +51,12 @@ struct ShopView: View {
                             ForEach(backOfCards.allCases, id: \.self) { item in
                                 SmallDisplayBackOfCard(item: vm.getViewForBackOfCards(backOfCard: item))
                                     .padding(.horizontal, 8)
+                                    .tint(item == cosmetics.selectedCardBackground ? .yellow : .blue)
+                                    .onTapGesture {
+                                        cosmetics.selectedCardBackground = item
+                                    }
                             }
-                        }.shadow(radius: 2)
+                        }
                     }
                     .padding(.vertical, 8)
                     .background(Color(uiColor: .systemGray6))

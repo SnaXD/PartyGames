@@ -8,12 +8,12 @@
 import Foundation
 import SwiftUI
 
-class CustomizedSelectedItems{
+class CustomizedSelectedItems: ObservableObject{
     static let shared = CustomizedSelectedItems()
     
-    var selectedCardBackground: backOfCards = .standard
+    @Published var selectedCardBackground: backOfCards = .standard
     var selectedCardBackgroundsMatchingForgroundColor: Color = Color(uiColor: .systemGray2)
-    var selectedTurnDisplayer: turnDisplay = .standard
+    @Published var selectedTurnDisplayer: turnDisplay = .standard
     
     func getViewForBackgroundImage() -> AnyView {
      return getViewForBackgroundImage(cardBackground: selectedCardBackground)
