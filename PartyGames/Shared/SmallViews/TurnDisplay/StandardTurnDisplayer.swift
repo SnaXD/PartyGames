@@ -10,9 +10,15 @@ import SwiftUI
 struct StandardTurnDisplayer: View {
     let name: String
     var body: some View {
-        HStack{
+        VStack{
+            Text("Its your turn")
             Text(name)
+                .fontWeight(.semibold)
         }
+        .padding(8)
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .foregroundColor(Color(uiColor: .systemGray3)))
     }
 }
 

@@ -10,6 +10,7 @@ import ExytePopupView
 
 struct WaterfallGameView: View {
     @ObservedObject var vm = WaterfallViewModel()
+    var cosmetics = CustomizedSelectedItems.shared
     @State var inspectCard = false
     @State var openRules = false
     @State var openSettings = false
@@ -78,7 +79,8 @@ struct WaterfallGameView: View {
                             HStack{
                                 Spacer()
                                 //TODO: Display selected TurnDisplayer
-                                MyNameIsTurnDisplay(name: vm.game.whosTurn())
+                                cosmetics.getViewForTurnDisplayer(name: vm.game.whosTurn())
+//                                MyNameIsTurnDisplay(name: vm.game.whosTurn())
                             }
                             .padding(.trailing, 16)
                         }
@@ -117,9 +119,10 @@ struct WaterfallGameView: View {
             if !vm.game.customizedSettings.players.isEmpty {
                 if vm.game.customizedSettings.cardsToKeep.contains( vm.selectedCard!.cardType) {
                     vm.game.customizedSettings.players[vm.game.turnCounter % vm.game.customizedSettings.players.count].addCard(card: vm.selectedCard!)
-                    vm.game.turnCounter += 1
                 }
+                vm.game.turnCounter += 1
             }
+            
             for index in 0...(vm.game.displayed.count > 3 ? 2 : vm.game.displayed.count - 1) {
                 if vm.game.displayed[index].id == vm.selectedCard?.id && vm.game.customizedSettings.infinityCards {
                     withAnimation(.easeIn(duration: vm.game.customizedSettings.animationTime)){
