@@ -46,7 +46,7 @@
 "custom" = "Hjemmelavet";
 "tabTwiceToCopy" = "Tryk 2 gange for at kopiere";
 "successfullyCopyed" = "Kopiret";
-
+"ItsYourTurn" = "Det er din tur";
 //Waterfall Classic Rules
 "aceTitle" = "Sniper";
 "aceRule" = "Lav en cirkel med tommelfingeren og pegefingeren. Begynd med at tælle højt. Det tal du ender med, er antallet af slurke dit offer skal drikke - dette kort kan gemmes";

@@ -46,6 +46,7 @@
 "custom" = "Custom";
 "tabTwiceToCopy" = "Tab twice to copy";
 "successfullyCopyed" = "Successfully copyed";
+"ItsYourTurn" = "Its Your Turn";
 
 //Waterfall Classic Rules
 "aceTitle" = "Sniper";

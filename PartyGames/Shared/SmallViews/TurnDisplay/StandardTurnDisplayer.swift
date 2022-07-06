@@ -11,7 +11,7 @@ struct StandardTurnDisplayer: View {
     let name: String
     var body: some View {
         VStack{
-            Text("Its your turn")
+            Text("ItsYourTurn")
             .minimumScaleFactor(0.01)
             .frame(height: 20)
             Text(name)
