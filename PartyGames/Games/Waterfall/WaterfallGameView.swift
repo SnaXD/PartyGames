@@ -10,7 +10,7 @@ import ExytePopupView
 
 struct WaterfallGameView: View {
     @ObservedObject var vm = WaterfallViewModel()
-    var cosmetics = CustomizedSelectedItems.shared
+    var cosmetics = CosmeticViews.shared
     @State var inspectCard = false
     @State var openRules = false
     @State var openSettings = false
@@ -78,16 +78,13 @@ struct WaterfallGameView: View {
                         if !vm.game.customizedSettings.players.isEmpty {
                             HStack{
                                 Spacer()
-                                //TODO: Display selected TurnDisplayer
                                 cosmetics.getViewForTurnDisplayer(name: vm.game.whosTurn())
-//                                MyNameIsTurnDisplay(name: vm.game.whosTurn())
                             }
                             .padding(.trailing, 16)
                         }
                     }
                     Spacer()
                 }
-                
             }
         }
         .navigationTitle("")

@@ -11,7 +11,7 @@ import SwiftUI
 class ShopViewModel {
     
     func getViewForTurnDisplay(display: turnDisplay) -> ShopItem{
-        let items = CustomizedSelectedItems.shared
+        let items = CosmeticViews.shared
         switch display {
         case .myNameIs:
             return ShopItem(view: items.getViewForTurnDisplayer(name: "Steve", turnDisplayer: .myNameIs), name: "HelloMyNameIs")
@@ -25,7 +25,7 @@ class ShopViewModel {
     }
     
     func getViewForBackOfCards(backOfCard: backOfCards) -> ShopItem{
-        let items = CustomizedSelectedItems.shared
+        let items = CosmeticViews.shared
         switch backOfCard {
         case .emojis:
             return ShopItem(view: items.getViewForBackgroundImage(cardBackground: .emojis), name: "Emojis")
@@ -44,10 +44,10 @@ class ShopViewModel {
     }
 }
 
-enum turnDisplay: CaseIterable {
+enum turnDisplay: String, CaseIterable {
     case standard, myNameIs, wantedPoster, ufo
 }
 
-enum backOfCards: CaseIterable {
+enum backOfCards: String, CaseIterable {
     case standard, emojis, gradient, colerFullCircle, manLookingThroughCard, actionImage
 }

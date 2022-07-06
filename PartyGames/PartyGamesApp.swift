@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct PartyGamesApp: App {
+    
+    init(){
+        CosmeticViews.shared.setupLastUsedCosmetics()
+    }
     var body: some Scene {
         WindowGroup {
             MainMenu()
         }
     }
 }
+

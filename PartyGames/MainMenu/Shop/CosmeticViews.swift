@@ -8,39 +8,50 @@
 import Foundation
 import SwiftUI
 
-class CustomizedSelectedItems: ObservableObject{
-    static let shared = CustomizedSelectedItems()
+class CosmeticViews: ObservableObject, Cosmetics{
+    static var shared = CosmeticViews()
     
     @Published var selectedCardBackground: backOfCards = .standard
     var selectedCardBackgroundsMatchingForgroundColor: Color = Color(uiColor: .systemGray2)
     @Published var selectedTurnDisplayer: turnDisplay = .standard
     
+    func getForgroundColor(for background: backOfCards) -> Color{
+        let standard = Color(uiColor: .systemGray2)
+        switch background {
+        case .standard:
+            return standard
+        case .emojis:
+            return standard
+        case .gradient:
+            return Color(uiColor: .systemOrange)
+        case .colerFullCircle:
+            return standard
+        case .manLookingThroughCard:
+            return .yellow
+        case .actionImage:
+            return standard
+        }
+    }
     func getViewForBackgroundImage() -> AnyView {
-     return getViewForBackgroundImage(cardBackground: selectedCardBackground)
+        return getViewForBackgroundImage(cardBackground: selectedCardBackground)
     }
     func getViewForBackgroundImage(cardBackground: backOfCards) -> AnyView {
+        selectedCardBackgroundsMatchingForgroundColor = getForgroundColor(for: cardBackground)
         switch cardBackground {
         case .emojis:
-            selectedCardBackgroundsMatchingForgroundColor = Color(uiColor: .systemGray2)
             return AnyView(EmojiBackOfCard())
         case .gradient:
-            selectedCardBackgroundsMatchingForgroundColor = Color(uiColor: .systemOrange)
             return AnyView(GradientBackOfCard())
         case .colerFullCircle:
-            selectedCardBackgroundsMatchingForgroundColor = Color(uiColor: .systemGray2)
             return AnyView(ColorFullCircle())
         case .manLookingThroughCard:
-            selectedCardBackgroundsMatchingForgroundColor = .yellow
             return AnyView(ManLookingThroughBackOfCard())
         case .actionImage:
-            selectedCardBackgroundsMatchingForgroundColor = Color(uiColor: .systemGray2)
             return AnyView(ActionBackOfCard())
         case .standard:
-            selectedCardBackgroundsMatchingForgroundColor = Color(uiColor: .systemGray2)
             return AnyView(StandardBackOfCards())
         }
     }
-    
     
     func getViewForTurnDisplayer(name: String) -> AnyView {
         return getViewForTurnDisplayer(name: name, turnDisplayer: selectedTurnDisplayer)
@@ -57,5 +68,4 @@ class CustomizedSelectedItems: ObservableObject{
             return AnyView(StandardTurnDisplayer(name: name))
         }
     }
-    
 }
