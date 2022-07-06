@@ -48,13 +48,13 @@ class CustomizedSelectedItems{
     func getViewForTurnDisplayer(name: String, turnDisplayer: turnDisplay) -> AnyView {
         switch turnDisplayer {
         case .myNameIs:
-            return AnyView(MyNameIsTurnDisplay(name: "Steve"))
+            return AnyView(MyNameIsTurnDisplay(name: name))
         case .wantedPoster:
-            return AnyView(WantedPosterTurnDisplayer(name: "Steve"))
+            return AnyView(WantedPosterTurnDisplayer(name: name))
         case .ufo:
-            return AnyView(UfoTurnDisplayer(name: "Steve"))
+            return AnyView(UfoTurnDisplayer(name: name))
         case .standard:
-            return AnyView(StandardTurnDisplayer(name: "Steve"))
+            return AnyView(StandardTurnDisplayer(name: name))
         }
     }
     
