@@ -111,7 +111,6 @@ struct WaterfallGameView: View {
             WaterfallHandsView(game: $vm.game, title: "PAUSE")
         })
         .popup(isPresented: $inspectCard, type: .default, position: .bottom, closeOnTapOutside: true, dismissCallback: {
-            //TODO: Append to hands / set max of some cards
             //Append card to hand
             if !vm.game.customizedSettings.players.isEmpty {
                 if vm.game.customizedSettings.cardsToKeep.contains( vm.selectedCard!.cardType) {
@@ -140,7 +139,7 @@ struct WaterfallGameView: View {
                 vm.game.usedDecks.remove(at: 0)
                 //                }
             } else if vm.game.displayed.isEmpty {
-                //TODO: Go to gameover screen
+                gameOver.toggle()
             }
             withAnimation(.easeInOut(duration: vm.game.customizedSettings.animationTime)){
                 if vm.game.displayed.count > 2 {

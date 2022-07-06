@@ -56,26 +56,26 @@ struct WaterfallHandsView: View {
                     }
                 }.frame(minHeight: 130, maxHeight: 430)
             }
-            //            HStack(spacing: 46){
-            //                Button {
-            //                    let oldSettings = game.customizedSettings
-            //                    @State var newGame = WaterfallGame()
-            //                    newGame.customizedSettings = oldSettings
-            //                    game = newGame
-            //                    game.SetupGame()
-            //                } label: {
-            //                    Text("Play_again")
-            //                        .font(.custom("PressStart2P-Regular", size: 14))
-            //                        .foregroundColor(.white)
-            //                }
-            //                Button {
-            //                    //TODO: Main menu
-            //                } label: {
-            //                    Text("Main_Menu")
-            //                        .font(.custom("PressStart2P-Regular", size: 12))
-            //                        .foregroundColor(.white)
-            //                }
-            //            }
+                        HStack(spacing: 46){
+                            Button {
+                                let oldSettings = game.customizedSettings
+                                @State var newGame = WaterfallGame()
+                                newGame.customizedSettings = oldSettings
+                                game = newGame
+                                game.SetupGame()
+                            } label: {
+                                Text("Play_again")
+                                    .font(.custom("PressStart2P-Regular", size: 14))
+                                    .foregroundColor(.white)
+                            }
+                            Button {
+                                //TODO: Main menu
+                            } label: {
+                                Text("Main_Menu")
+                                    .font(.custom("PressStart2P-Regular", size: 12))
+                                    .foregroundColor(.white)
+                            }
+                        }
             Spacer()
             HStack{
                 Spacer()
