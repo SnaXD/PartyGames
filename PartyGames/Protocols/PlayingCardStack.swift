@@ -44,6 +44,12 @@ extension PlayingCardStack {
                 }
             }
             
+            if settings.players.isEmpty, let listOfUserNames = UserDefaults.standard.array(forKey: "listOfPlayerNames") as? [String] {
+                listOfUserNames.forEach { name in
+                    settings.addPlayer(name: name, startup: true)
+                }
+            }
+            
             //Sets Players points to 0
             if !settings.players.isEmpty {
                 for index in 0...settings.players.count - 1 {

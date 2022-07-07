@@ -24,7 +24,6 @@ extension WaterfallGame {
             }
         }
     }
-    
     func whosTurn() -> String {
         let players = customizedSettings.players
         return players[turnCounter % players.count].name
@@ -37,18 +36,16 @@ extension WaterfallGame {
     func smallCardHeight(screen: GeometryProxy) -> CGFloat {
         return screen.size.height / 4
     }
-    func bigCardWidth(geometry: GeometryProxy) -> CGFloat{
+    func bigCardWidth(geometry: GeometryProxy) -> CGFloat {
         return geometry.size.width / 2
     }
-    func bigCardHeight(geometry: GeometryProxy) -> CGFloat{
+    func bigCardHeight(geometry: GeometryProxy) -> CGFloat {
         return (geometry.size.height - 50) / 3
     }
-    
     func bigCardFindX(geometry: GeometryProxy) -> CGFloat {
         let leadingPadding:CGFloat = 8 * 2
         return ((geometry.size.width - bigCardWidth(geometry: geometry) - leadingPadding) * -1)
     }
-    
     func bigCardFindY(geometry: GeometryProxy, card: Card) -> CGFloat {
         let cardIndex = displayed.firstIndex(of: card)!
         let padding: CGFloat = 8
@@ -57,5 +54,4 @@ extension WaterfallGame {
         let cardPlacement = heightWithPadding / amountOfCardsShowing * CGFloat(cardIndex)
         return cardPlacement * -1
     }
-    
 }
