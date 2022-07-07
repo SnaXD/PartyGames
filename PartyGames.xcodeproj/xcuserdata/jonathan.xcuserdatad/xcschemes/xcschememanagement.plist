@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>PartyGames-Beta.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>PartyGames.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>AB346731284F23FF006B312F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ABE3D2C42876E9DE00DF39D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

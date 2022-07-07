@@ -14,22 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB346731284F23FF006B312F"
-               BuildableName = "PartyGames.app"
-               BlueprintName = "PartyGames"
-               ReferencedContainer = "container:PartyGames.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "ABE3D2C42876E9DE00DF39D7"
-               BuildableName = "PartyGames BETA.app"
+               BuildableName = "PartyGames copy.app"
                BlueprintName = "PartyGames BETA"
                ReferencedContainer = "container:PartyGames.xcodeproj">
             </BuildableReference>
@@ -42,36 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB3B97742862FD0500216EA2"
-               BuildableName = "PartyGamesTests.xctest"
-               BlueprintName = "PartyGamesTests"
-               ReferencedContainer = "container:PartyGames.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ABACFE812863081C008207F7"
-               BuildableName = "PartyGamesTests2.xctest"
-               BlueprintName = "PartyGamesTests2"
-               ReferencedContainer = "container:PartyGames.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB463F1F2863295500C8056E"
-               BuildableName = "QuestionGameTests.xctest"
-               BlueprintName = "QuestionGameTests"
-               ReferencedContainer = "container:PartyGames.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -88,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AB346731284F23FF006B312F"
-            BuildableName = "PartyGames.app"
-            BlueprintName = "PartyGames"
+            BlueprintIdentifier = "ABE3D2C42876E9DE00DF39D7"
+            BuildableName = "PartyGames copy.app"
+            BlueprintName = "PartyGames BETA"
             ReferencedContainer = "container:PartyGames.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -105,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AB346731284F23FF006B312F"
-            BuildableName = "PartyGames.app"
-            BlueprintName = "PartyGames"
+            BlueprintIdentifier = "ABE3D2C42876E9DE00DF39D7"
+            BuildableName = "PartyGames copy.app"
+            BlueprintName = "PartyGames BETA"
             ReferencedContainer = "container:PartyGames.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

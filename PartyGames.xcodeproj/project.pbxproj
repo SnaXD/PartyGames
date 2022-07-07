@@ -67,6 +67,64 @@
 		ABDC745C286EF01C0016DEBF /* WaterfallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC745B286EF01C0016DEBF /* WaterfallViewModel.swift */; };
 		ABDDB7D52860603000935B55 /* QuestionCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D42860603000935B55 /* QuestionCardStack.swift */; };
 		ABDDB7D72860677A00935B55 /* PlayingCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */; };
+		ABE3D2C92876E9DE00DF39D7 /* Cosmetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1C32875A7E200D438BB /* Cosmetics.swift */; };
+		ABE3D2CA2876E9DE00DF39D7 /* SlapTheQueenRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34675D284F8462006B312F /* SlapTheQueenRules.swift */; };
+		ABE3D2CB2876E9DE00DF39D7 /* QuestionCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D42860603000935B55 /* QuestionCardStack.swift */; };
+		ABE3D2CC2876E9DE00DF39D7 /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC743F286CAA4C0016DEBF /* ShopItem.swift */; };
+		ABE3D2CD2876E9DE00DF39D7 /* QuestionCardsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346743284F244C006B312F /* QuestionCardsStackView.swift */; };
+		ABE3D2CE2876E9DE00DF39D7 /* ColorFullCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC744B286D79DB0016DEBF /* ColorFullCircle.swift */; };
+		ABE3D2CF2876E9DE00DF39D7 /* UfoTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7453286DA3000016DEBF /* UfoTurnDisplayer.swift */; };
+		ABE3D2D02876E9DE00DF39D7 /* RuleItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1B8287412B300D438BB /* RuleItemsView.swift */; };
+		ABE3D2D12876E9DE00DF39D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346737284F23FF006B312F /* ContentView.swift */; };
+		ABE3D2D22876E9DE00DF39D7 /* QuestionGameRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCCA0285C67D90091185F /* QuestionGameRules.swift */; };
+		ABE3D2D32876E9DE00DF39D7 /* QuestionDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346747284F2DAF006B312F /* QuestionDeck.swift */; };
+		ABE3D2D42876E9DE00DF39D7 /* PlayingCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */; };
+		ABE3D2D52876E9DE00DF39D7 /* CosmeticViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1BC287471E300D438BB /* CosmeticViews.swift */; };
+		ABE3D2D62876E9DE00DF39D7 /* QuestionGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCCA3285C8AF20091185F /* QuestionGame.swift */; };
+		ABE3D2D72876E9DE00DF39D7 /* SlapTheQueenGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34675B284F7065006B312F /* SlapTheQueenGame.swift */; };
+		ABE3D2D82876E9DE00DF39D7 /* WaterfallCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F2E28644CE200C8056E /* WaterfallCustomization.swift */; };
+		ABE3D2D92876E9DE00DF39D7 /* ManLookingThroughBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC744D286D87730016DEBF /* ManLookingThroughBackOfCard.swift */; };
+		ABE3D2DA2876E9DE00DF39D7 /* WaterfallHandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8C4973286C35F400EA9CAC /* WaterfallHandsView.swift */; };
+		ABE3D2DB2876E9DE00DF39D7 /* PartyGamesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346735284F23FF006B312F /* PartyGamesApp.swift */; };
+		ABE3D2DC2876E9DE00DF39D7 /* WaterfallGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F2C28644C2700C8056E /* WaterfallGame.swift */; };
+		ABE3D2DD2876E9DE00DF39D7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346757284F66DD006B312F /* Player.swift */; };
+		ABE3D2DE2876E9DE00DF39D7 /* SlapTheQueenGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC8428585C2C0091185F /* SlapTheQueenGameOver.swift */; };
+		ABE3D2DF2876E9DE00DF39D7 /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346753284F491B006B312F /* QuestionCardView.swift */; };
+		ABE3D2E02876E9DE00DF39D7 /* WaterfallSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7455286DCAD40016DEBF /* WaterfallSettingsView.swift */; };
+		ABE3D2E12876E9DE00DF39D7 /* QuestionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346751284F410D006B312F /* QuestionCard.swift */; };
+		ABE3D2E22876E9DE00DF39D7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34676128507D3C006B312F /* SettingsView.swift */; };
+		ABE3D2E32876E9DE00DF39D7 /* GameItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC9C2859BD140091185F /* GameItem.swift */; };
+		ABE3D2E42876E9DE00DF39D7 /* StandardTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1BE2874757F00D438BB /* StandardTurnDisplayer.swift */; };
+		ABE3D2E52876E9DE00DF39D7 /* SmallDisplayBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7447286D75700016DEBF /* SmallDisplayBackOfCard.swift */; };
+		ABE3D2E62876E9DE00DF39D7 /* EmojiBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7443286CCBD80016DEBF /* EmojiBackOfCard.swift */; };
+		ABE3D2E72876E9DE00DF39D7 /* StandardBackOfCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1C0287476AA00D438BB /* StandardBackOfCards.swift */; };
+		ABE3D2E82876E9DE00DF39D7 /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1BA28746E7A00D438BB /* ShopViewModel.swift */; };
+		ABE3D2E92876E9DE00DF39D7 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34674F284F40DA006B312F /* Deck.swift */; };
+		ABE3D2EA2876E9DE00DF39D7 /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC94285878270091185F /* Localizable.strings */; };
+		ABE3D2EB2876E9DE00DF39D7 /* StandardCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346755284F6478006B312F /* StandardCustomization.swift */; };
+		ABE3D2EC2876E9DE00DF39D7 /* Filled.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC972858A0C30091185F /* Filled.swift */; };
+		ABE3D2ED2876E9DE00DF39D7 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9DCC9A2859BAA00091185F /* MainMenu.swift */; };
+		ABE3D2EE2876E9DE00DF39D7 /* GradientBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7445286CCC0D0016DEBF /* GradientBackOfCard.swift */; };
+		ABE3D2EF2876E9DE00DF39D7 /* SmallNumberAndType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34675F284F8BAF006B312F /* SmallNumberAndType.swift */; };
+		ABE3D2F02876E9DE00DF39D7 /* SlapTheQueenGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34674D284F365A006B312F /* SlapTheQueenGameView.swift */; };
+		ABE3D2F12876E9DE00DF39D7 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3628649F3500C8056E /* ShopView.swift */; };
+		ABE3D2F22876E9DE00DF39D7 /* WaterfallGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3228649E0700C8056E /* WaterfallGameView.swift */; };
+		ABE3D2F32876E9DE00DF39D7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346749284F2E10006B312F /* CardView.swift */; };
+		ABE3D2F42876E9DE00DF39D7 /* MyNameIsTurnDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51A1B2286C7CF60047631E /* MyNameIsTurnDisplay.swift */; };
+		ABE3D2F52876E9DE00DF39D7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346745284F2D66006B312F /* Card.swift */; };
+		ABE3D2F62876E9DE00DF39D7 /* SmallShopItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51A1B5286C9EB50047631E /* SmallShopItemView.swift */; };
+		ABE3D2F72876E9DE00DF39D7 /* ShopItemFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7449286D785B0016DEBF /* ShopItemFrame.swift */; };
+		ABE3D2F82876E9DE00DF39D7 /* ActionBackOfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC744F286D87BA0016DEBF /* ActionBackOfCard.swift */; };
+		ABE3D2F92876E9DE00DF39D7 /* WaterfallRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3428649E2400C8056E /* WaterfallRules.swift */; };
+		ABE3D2FA2876E9DE00DF39D7 /* WaterfallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC745B286EF01C0016DEBF /* WaterfallViewModel.swift */; };
+		ABE3D2FB2876E9DE00DF39D7 /* WantedPosterTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7451286DA1810016DEBF /* WantedPosterTurnDisplayer.swift */; };
+		ABE3D2FD2876E9DE00DF39D7 /* libPods-PartyGames.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1820B561B18CA6B875DE05D5 /* libPods-PartyGames.a */; };
+		ABE3D2FE2876E9DE00DF39D7 /* WrappingStack in Frameworks */ = {isa = PBXBuildFile; productRef = ABE3D2C52876E9DE00DF39D7 /* WrappingStack */; };
+		ABE3D3002876E9DE00DF39D7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AB301CC72869DFDE0054DAE5 /* Podfile */; };
+		ABE3D3012876E9DE00DF39D7 /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB9DCC8A28586EF00091185F /* PressStart2P-Regular.ttf */; };
+		ABE3D3022876E9DE00DF39D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB34673C284F2401006B312F /* Preview Assets.xcassets */; };
+		ABE3D3032876E9DE00DF39D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB346739284F2401006B312F /* Assets.xcassets */; };
+		ABE3D3042876E9DE00DF39D7 /* Inconsolata.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB9DCC9E2859C4100091185F /* Inconsolata.ttf */; };
 		E2A1653CBC6D67E5958EFCA6 /* libPods-PartyGamesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED2DABFCCD7DC4CAB90E5A /* libPods-PartyGamesTests.a */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +203,8 @@
 		ABDC745B286EF01C0016DEBF /* WaterfallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallViewModel.swift; sourceTree = "<group>"; };
 		ABDDB7D42860603000935B55 /* QuestionCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardStack.swift; sourceTree = "<group>"; };
 		ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardStack.swift; sourceTree = "<group>"; };
+		ABE3D3082876E9DE00DF39D7 /* PartyGames BETA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PartyGames BETA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE3D3092876E9DE00DF39D7 /* PartyGames copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PartyGames copy-Info.plist"; path = "/Users/jonathan/Documents/GitHub/PartyGames/PartyGames copy-Info.plist"; sourceTree = "<absolute>"; };
 		B0A95B7A810F90680D0525AE /* Pods-PartyGamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyGamesTests.release.xcconfig"; path = "Target Support Files/Pods-PartyGamesTests/Pods-PartyGamesTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB7A20107167DC8F73D1DFA4 /* Pods-PartyGames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyGames.debug.xcconfig"; path = "Target Support Files/Pods-PartyGames/Pods-PartyGames.debug.xcconfig"; sourceTree = "<group>"; };
 		E41D895DD10ECE7EB3F6E7B0 /* Pods-PartyGamesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyGamesTests.debug.xcconfig"; path = "Target Support Files/Pods-PartyGamesTests/Pods-PartyGamesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +226,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2A1653CBC6D67E5958EFCA6 /* libPods-PartyGamesTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE3D2FC2876E9DE00DF39D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE3D2FD2876E9DE00DF39D7 /* libPods-PartyGames.a in Frameworks */,
+				ABE3D2FE2876E9DE00DF39D7 /* WrappingStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +261,7 @@
 				AB346733284F23FF006B312F /* Products */,
 				35F74446CE12C3A0698A5CC7 /* Pods */,
 				CE9837A1F42D1A029BFBE036 /* Frameworks */,
+				ABE3D3092876E9DE00DF39D7 /* PartyGames copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,6 +270,7 @@
 			children = (
 				AB346732284F23FF006B312F /* PartyGames.app */,
 				AB3B97752862FD0500216EA2 /* PartyGamesTests.xctest */,
+				ABE3D3082876E9DE00DF39D7 /* PartyGames BETA.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -456,6 +527,27 @@
 			productReference = AB3B97752862FD0500216EA2 /* PartyGamesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		ABE3D2C42876E9DE00DF39D7 /* PartyGames BETA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE3D3052876E9DE00DF39D7 /* Build configuration list for PBXNativeTarget "PartyGames BETA" */;
+			buildPhases = (
+				ABE3D2C72876E9DE00DF39D7 /* [CP] Check Pods Manifest.lock */,
+				ABE3D2C82876E9DE00DF39D7 /* Sources */,
+				ABE3D2FC2876E9DE00DF39D7 /* Frameworks */,
+				ABE3D2FF2876E9DE00DF39D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PartyGames BETA";
+			packageProductDependencies = (
+				ABE3D2C52876E9DE00DF39D7 /* WrappingStack */,
+			);
+			productName = PartyGames;
+			productReference = ABE3D3082876E9DE00DF39D7 /* PartyGames BETA.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -494,6 +586,7 @@
 			targets = (
 				AB346731284F23FF006B312F /* PartyGames */,
 				AB3B97742862FD0500216EA2 /* PartyGamesTests */,
+				ABE3D2C42876E9DE00DF39D7 /* PartyGames BETA */,
 			);
 		};
 /* End PBXProject section */
@@ -518,9 +611,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ABE3D2FF2876E9DE00DF39D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE3D3002876E9DE00DF39D7 /* Podfile in Resources */,
+				ABE3D3012876E9DE00DF39D7 /* PressStart2P-Regular.ttf in Resources */,
+				ABE3D3022876E9DE00DF39D7 /* Preview Assets.xcassets in Resources */,
+				ABE3D3032876E9DE00DF39D7 /* Assets.xcassets in Resources */,
+				ABE3D3042876E9DE00DF39D7 /* Inconsolata.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		ABE3D2C72876E9DE00DF39D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PartyGames-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C7D03609D205F95D2313F76E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -632,6 +759,64 @@
 			files = (
 				AB3B97782862FD0500216EA2 /* PlayingCardTests.swift in Sources */,
 				AB463F2A2863298900C8056E /* QuestionGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE3D2C82876E9DE00DF39D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE3D2C92876E9DE00DF39D7 /* Cosmetics.swift in Sources */,
+				ABE3D2CA2876E9DE00DF39D7 /* SlapTheQueenRules.swift in Sources */,
+				ABE3D2CB2876E9DE00DF39D7 /* QuestionCardStack.swift in Sources */,
+				ABE3D2CC2876E9DE00DF39D7 /* ShopItem.swift in Sources */,
+				ABE3D2CD2876E9DE00DF39D7 /* QuestionCardsStackView.swift in Sources */,
+				ABE3D2CE2876E9DE00DF39D7 /* ColorFullCircle.swift in Sources */,
+				ABE3D2CF2876E9DE00DF39D7 /* UfoTurnDisplayer.swift in Sources */,
+				ABE3D2D02876E9DE00DF39D7 /* RuleItemsView.swift in Sources */,
+				ABE3D2D12876E9DE00DF39D7 /* ContentView.swift in Sources */,
+				ABE3D2D22876E9DE00DF39D7 /* QuestionGameRules.swift in Sources */,
+				ABE3D2D32876E9DE00DF39D7 /* QuestionDeck.swift in Sources */,
+				ABE3D2D42876E9DE00DF39D7 /* PlayingCardStack.swift in Sources */,
+				ABE3D2D52876E9DE00DF39D7 /* CosmeticViews.swift in Sources */,
+				ABE3D2D62876E9DE00DF39D7 /* QuestionGame.swift in Sources */,
+				ABE3D2D72876E9DE00DF39D7 /* SlapTheQueenGame.swift in Sources */,
+				ABE3D2D82876E9DE00DF39D7 /* WaterfallCustomization.swift in Sources */,
+				ABE3D2D92876E9DE00DF39D7 /* ManLookingThroughBackOfCard.swift in Sources */,
+				ABE3D2DA2876E9DE00DF39D7 /* WaterfallHandsView.swift in Sources */,
+				ABE3D2DB2876E9DE00DF39D7 /* PartyGamesApp.swift in Sources */,
+				ABE3D2DC2876E9DE00DF39D7 /* WaterfallGame.swift in Sources */,
+				ABE3D2DD2876E9DE00DF39D7 /* Player.swift in Sources */,
+				ABE3D2DE2876E9DE00DF39D7 /* SlapTheQueenGameOver.swift in Sources */,
+				ABE3D2DF2876E9DE00DF39D7 /* QuestionCardView.swift in Sources */,
+				ABE3D2E02876E9DE00DF39D7 /* WaterfallSettingsView.swift in Sources */,
+				ABE3D2E12876E9DE00DF39D7 /* QuestionCard.swift in Sources */,
+				ABE3D2E22876E9DE00DF39D7 /* SettingsView.swift in Sources */,
+				ABE3D2E32876E9DE00DF39D7 /* GameItem.swift in Sources */,
+				ABE3D2E42876E9DE00DF39D7 /* StandardTurnDisplayer.swift in Sources */,
+				ABE3D2E52876E9DE00DF39D7 /* SmallDisplayBackOfCard.swift in Sources */,
+				ABE3D2E62876E9DE00DF39D7 /* EmojiBackOfCard.swift in Sources */,
+				ABE3D2E72876E9DE00DF39D7 /* StandardBackOfCards.swift in Sources */,
+				ABE3D2E82876E9DE00DF39D7 /* ShopViewModel.swift in Sources */,
+				ABE3D2E92876E9DE00DF39D7 /* Deck.swift in Sources */,
+				ABE3D2EA2876E9DE00DF39D7 /* Localizable.strings in Sources */,
+				ABE3D2EB2876E9DE00DF39D7 /* StandardCustomization.swift in Sources */,
+				ABE3D2EC2876E9DE00DF39D7 /* Filled.swift in Sources */,
+				ABE3D2ED2876E9DE00DF39D7 /* MainMenu.swift in Sources */,
+				ABE3D2EE2876E9DE00DF39D7 /* GradientBackOfCard.swift in Sources */,
+				ABE3D2EF2876E9DE00DF39D7 /* SmallNumberAndType.swift in Sources */,
+				ABE3D2F02876E9DE00DF39D7 /* SlapTheQueenGameView.swift in Sources */,
+				ABE3D2F12876E9DE00DF39D7 /* ShopView.swift in Sources */,
+				ABE3D2F22876E9DE00DF39D7 /* WaterfallGameView.swift in Sources */,
+				ABE3D2F32876E9DE00DF39D7 /* CardView.swift in Sources */,
+				ABE3D2F42876E9DE00DF39D7 /* MyNameIsTurnDisplay.swift in Sources */,
+				ABE3D2F52876E9DE00DF39D7 /* Card.swift in Sources */,
+				ABE3D2F62876E9DE00DF39D7 /* SmallShopItemView.swift in Sources */,
+				ABE3D2F72876E9DE00DF39D7 /* ShopItemFrame.swift in Sources */,
+				ABE3D2F82876E9DE00DF39D7 /* ActionBackOfCard.swift in Sources */,
+				ABE3D2F92876E9DE00DF39D7 /* WaterfallRules.swift in Sources */,
+				ABE3D2FA2876E9DE00DF39D7 /* WaterfallViewModel.swift in Sources */,
+				ABE3D2FB2876E9DE00DF39D7 /* WantedPosterTurnDisplayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,6 +972,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PartyGames/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "XDs Partygames";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -797,7 +983,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = XDI.PartyGames;
+				PRODUCT_BUNDLE_IDENTIFIER = net.xddevelop.xdspartygames;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -818,6 +1004,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PartyGames/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "XDs Partygames";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -828,7 +1015,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = XDI.PartyGames;
+				PRODUCT_BUNDLE_IDENTIFIER = net.xddevelop.xdspartygames;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -876,6 +1063,70 @@
 			};
 			name = Release;
 		};
+		ABE3D3062876E9DE00DF39D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB7A20107167DC8F73D1DFA4 /* Pods-PartyGames.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Beta";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PartyGames/Preview Content\"";
+				DEVELOPMENT_TEAM = QN87FRUFS2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PartyGames/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "XDs Partygames";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.xddevelop.xdspartygames;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABE3D3072876E9DE00DF39D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7AE64770DE3389AEA4A2CB9 /* Pods-PartyGames.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Beta";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PartyGames/Preview Content\"";
+				DEVELOPMENT_TEAM = QN87FRUFS2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PartyGames/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "XDs Partygames";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.xddevelop.xdspartygames;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -906,10 +1157,27 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		ABE3D3052876E9DE00DF39D7 /* Build configuration list for PBXNativeTarget "PartyGames BETA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE3D3062876E9DE00DF39D7 /* Debug */,
+				ABE3D3072876E9DE00DF39D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
 		ABDC7457286DDC0B0016DEBF /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/diniska/swiftui-wrapping-stack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		ABE3D2C62876E9DE00DF39D7 /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/diniska/swiftui-wrapping-stack";
 			requirement = {
@@ -923,6 +1191,11 @@
 		ABDC7458286DDC0B0016DEBF /* WrappingStack */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ABDC7457286DDC0B0016DEBF /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */;
+			productName = WrappingStack;
+		};
+		ABE3D2C52876E9DE00DF39D7 /* WrappingStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABE3D2C62876E9DE00DF39D7 /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */;
 			productName = WrappingStack;
 		};
 /* End XCSwiftPackageProductDependency section */
