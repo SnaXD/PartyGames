@@ -10,7 +10,20 @@ import SwiftUI
 struct WantedPosterTurnDisplayer: View {
     let name: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+        Image("WantedPoster")
+            .resizable()
+            .scaledToFit()
+            .overlay {
+                Text(name)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color(UIColor.darkGray))
+                    .font(.system(size: 20))
+                    .minimumScaleFactor(0.01)
+                    .frame(width: 100, height: 20)
+                    .offset(y: 43)
+            }
+        }.frame(width: 120, height: 130)
     }
 }
 
