@@ -89,14 +89,14 @@ struct WaterfallGameOver_Previews: PreviewProvider {
         WaterfallGameOver_PreviewsWithBinding()
     }
 }
-struct WaterfallGameOver_PreviewsWithBinding: View {
+private struct WaterfallGameOver_PreviewsWithBinding: View {
     @State var game = WaterfallGame(customizedSettings: createSettings())
     var body: some View {
         WaterfallHandsView(game: $game, title: "GAME_OVER")
     }
 }
 
-func createSettings() -> WaterfallCustomization {
+private func createSettings() -> WaterfallCustomization {
     let settings = WaterfallCustomization()
     for index in 0...5 {
         settings.addPlayer(name: "Player\(index)")
