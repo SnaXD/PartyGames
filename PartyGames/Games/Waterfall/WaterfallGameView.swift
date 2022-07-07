@@ -56,11 +56,11 @@ struct WaterfallGameView: View {
                         .offset(y: vm.game.deckOffset(of: card))
                         .scaleEffect(x: vm.game.scale(of: card), y: vm.game.scale(of: card))
                         .onTapGesture {
-                            if let cardsIndex = vm.game.displayed.firstIndex(of: card){
+                            if let cardIndex = vm.game.displayed.firstIndex(of: card){
                                 vm.selectedCard = card
-                                if vm.game.displayed[cardsIndex].inFocus == true {
+                                if vm.game.displayed[cardIndex].inFocus == true {
                                     inspectCard = true
-                                    vm.game.displayed[cardsIndex].revealContent.toggle()
+                                    vm.game.displayed[cardIndex].revealContent.toggle()
                                 }
                             }
                         }

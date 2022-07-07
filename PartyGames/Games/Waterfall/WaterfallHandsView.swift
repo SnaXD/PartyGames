@@ -39,12 +39,31 @@ struct WaterfallHandsView: View {
                                         ForEach($player.cardsOnHand) { $card in
                                             CardView(card: $card.wrappedValue, animationTime: game.customizedSettings.animationTime, inFocusWidth: 50, width: 50, inFocusHeight: 50, height: 50, fontSize: 20, includeTopBottomCardType: false)
                                                 .contentShape(Rectangle())
-                                                .onTapGesture {
-                                                    print($card.wrappedValue.cardType.rawValue)
-                                                    $card.wrappedValue.revealContent.toggle()
-                                                }
-                                                .onAppear {
-                                                    $card.revealContent.wrappedValue = true
+                                                .contextMenu{
+                                                    Button("Flip") {
+                                                        withAnimation(.easeInOut(duration: 1.0)){ $card.wrappedValue.revealContent.toggle()}
+                                                    }
+                                                    Button {
+                                                        withAnimation(.easeInOut(duration: 1.0)){ $player.wrappedValue.removeCard(card: $card.wrappedValue) }
+                                                    } label: {
+                                                        Text("Remove")
+                                                    }
+                                                    ForEach(game.customizedSettings.players) { player in
+                                                        if player.id != $player.id.wrappedValue {
+                                                            Button {
+                                                                if let selectedPlayerIndex = game.customizedSettings.players.firstIndex(where: { listPlayer in
+                                                                    listPlayer.id == player.id
+                                                                }) {
+                                                                    $game.customizedSettings.players[selectedPlayerIndex].wrappedValue.addCard(card: card)
+                                                                    $player.wrappedValue.removeCard(card: card)
+                                                                }
+                                                            } label: {
+                                                                HStack{
+                                                                    Text("giveTo \(player.name)")
+                                                                }
+                                                            }
+                                                        }
+                                                    }
                                                 }
                                         }
                                     }
@@ -54,7 +73,7 @@ struct WaterfallHandsView: View {
                         }
                         .padding(.horizontal, 16)
                     }
-                }.frame(minHeight: 130, maxHeight: 430)
+                }.frame(minHeight: 130)
             }
             Spacer()
             HStack{

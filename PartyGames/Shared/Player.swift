@@ -15,12 +15,15 @@ struct Player: Identifiable {
 }
 extension Player {
     mutating func addCard(card: Card) {
-        cardsOnHand.append(card)
+        var modifyedCard = card
+        modifyedCard.revealContent = true
+        cardsOnHand.append(modifyedCard)
     }
     mutating func removeCard(card: Card) {
         for index in 0...cardsOnHand.count - 1 {
             if cardsOnHand[index] == card {
                 cardsOnHand.remove(at: index)
+                break
             }
         }
         

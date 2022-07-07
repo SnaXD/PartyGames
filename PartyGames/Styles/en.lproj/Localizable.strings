@@ -47,6 +47,7 @@
 "tabTwiceToCopy" = "Tab twice to copy";
 "successfullyCopyed" = "Successfully copyed";
 "ItsYourTurn" = "Its Your Turn";
+"giveTo %@" = "Give to %@";
 
 //Waterfall Classic Rules
 "aceTitle" = "Sniper";
