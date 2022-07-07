@@ -29,6 +29,7 @@ struct ShopView: View {
                             ForEach(turnDisplay.allCases, id: \.self) { item in
                                 SmallShopItemView(item: vm.getViewForTurnDisplay(display: item))
                                     .padding(.horizontal, 8)
+                                    .tint(item == cosmetics.selectedTurnDisplayer ? .yellow : .blue)
                                     .onTapGesture {
                                         cosmetics.selectedTurnDisplayer = item
                                         cosmetics.saveSelectedCosmetics()
