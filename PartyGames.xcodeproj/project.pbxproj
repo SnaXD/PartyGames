@@ -63,7 +63,6 @@
 		ABDC7452286DA1810016DEBF /* WantedPosterTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7451286DA1810016DEBF /* WantedPosterTurnDisplayer.swift */; };
 		ABDC7454286DA3000016DEBF /* UfoTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7453286DA3000016DEBF /* UfoTurnDisplayer.swift */; };
 		ABDC7456286DCAD40016DEBF /* WaterfallSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7455286DCAD40016DEBF /* WaterfallSettingsView.swift */; };
-		ABDC7459286DDC0B0016DEBF /* WrappingStack in Frameworks */ = {isa = PBXBuildFile; productRef = ABDC7458286DDC0B0016DEBF /* WrappingStack */; };
 		ABDC745C286EF01C0016DEBF /* WaterfallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC745B286EF01C0016DEBF /* WaterfallViewModel.swift */; };
 		ABDDB7D52860603000935B55 /* QuestionCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D42860603000935B55 /* QuestionCardStack.swift */; };
 		ABDDB7D72860677A00935B55 /* PlayingCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */; };
@@ -119,7 +118,6 @@
 		ABE3D2FA2876E9DE00DF39D7 /* WaterfallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC745B286EF01C0016DEBF /* WaterfallViewModel.swift */; };
 		ABE3D2FB2876E9DE00DF39D7 /* WantedPosterTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC7451286DA1810016DEBF /* WantedPosterTurnDisplayer.swift */; };
 		ABE3D2FD2876E9DE00DF39D7 /* libPods-PartyGames.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1820B561B18CA6B875DE05D5 /* libPods-PartyGames.a */; };
-		ABE3D2FE2876E9DE00DF39D7 /* WrappingStack in Frameworks */ = {isa = PBXBuildFile; productRef = ABE3D2C52876E9DE00DF39D7 /* WrappingStack */; };
 		ABE3D3002876E9DE00DF39D7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AB301CC72869DFDE0054DAE5 /* Podfile */; };
 		ABE3D3012876E9DE00DF39D7 /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB9DCC8A28586EF00091185F /* PressStart2P-Regular.ttf */; };
 		ABE3D3022876E9DE00DF39D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB34673C284F2401006B312F /* Preview Assets.xcassets */; };
@@ -217,7 +215,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				46C77C2CCF2EE2A9862595EF /* libPods-PartyGames.a in Frameworks */,
-				ABDC7459286DDC0B0016DEBF /* WrappingStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +231,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE3D2FD2876E9DE00DF39D7 /* libPods-PartyGames.a in Frameworks */,
-				ABE3D2FE2876E9DE00DF39D7 /* WrappingStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +498,6 @@
 			);
 			name = PartyGames;
 			packageProductDependencies = (
-				ABDC7458286DDC0B0016DEBF /* WrappingStack */,
 			);
 			productName = PartyGames;
 			productReference = AB346732284F23FF006B312F /* PartyGames.app */;
@@ -542,7 +537,6 @@
 			);
 			name = "PartyGames BETA";
 			packageProductDependencies = (
-				ABE3D2C52876E9DE00DF39D7 /* WrappingStack */,
 			);
 			productName = PartyGames;
 			productReference = ABE3D3082876E9DE00DF39D7 /* PartyGames BETA.app */;
@@ -578,7 +572,6 @@
 			);
 			mainGroup = AB346729284F23FF006B312F;
 			packageReferences = (
-				ABDC7457286DDC0B0016DEBF /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */,
 			);
 			productRefGroup = AB346733284F23FF006B312F /* Products */;
 			projectDirPath = "";
@@ -1167,38 +1160,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		ABDC7457286DDC0B0016DEBF /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/diniska/swiftui-wrapping-stack";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		ABE3D2C62876E9DE00DF39D7 /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/diniska/swiftui-wrapping-stack";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		ABDC7458286DDC0B0016DEBF /* WrappingStack */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ABDC7457286DDC0B0016DEBF /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */;
-			productName = WrappingStack;
-		};
-		ABE3D2C52876E9DE00DF39D7 /* WrappingStack */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ABE3D2C62876E9DE00DF39D7 /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */;
-			productName = WrappingStack;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB34672A284F23FF006B312F /* Project object */;
 }

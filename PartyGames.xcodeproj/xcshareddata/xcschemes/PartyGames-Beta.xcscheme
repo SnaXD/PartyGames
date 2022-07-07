@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ABE3D2C42876E9DE00DF39D7"
-               BuildableName = "PartyGames copy.app"
+               BuildableName = "PartyGames BETA.app"
                BlueprintName = "PartyGames BETA"
                ReferencedContainer = "container:PartyGames.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ABE3D2C42876E9DE00DF39D7"
-            BuildableName = "PartyGames copy.app"
+            BuildableName = "PartyGames BETA.app"
             BlueprintName = "PartyGames BETA"
             ReferencedContainer = "container:PartyGames.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ABE3D2C42876E9DE00DF39D7"
-            BuildableName = "PartyGames copy.app"
+            BuildableName = "PartyGames BETA.app"
             BlueprintName = "PartyGames BETA"
             ReferencedContainer = "container:PartyGames.xcodeproj">
          </BuildableReference>

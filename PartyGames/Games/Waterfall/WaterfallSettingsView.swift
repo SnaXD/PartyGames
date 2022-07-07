@@ -6,11 +6,29 @@
 //
 
 import SwiftUI
-import WrappingStack
 
 struct WaterfallSettingsView: View {
     @ObservedObject var settings: WaterfallCustomization
     @State var name = ""
+    fileprivate func KeepCardInHandPickerItem(_ type: CardTypes) -> some View {
+        return Text(type.rawValue)
+            .fontWeight(.semibold)
+            .font(.system(size: 18))
+            .padding()
+            .background(settings.cardsToKeep.contains(type) ? .green : .red)
+            .cornerRadius(8)
+            .onTapGesture {
+                if settings.cardsToKeep.contains(type) {
+                    settings.cardsToKeep.removeAll { typeToKeep in
+                        typeToKeep == type
+                    }
+                } else {
+                    self.settings.cardsToKeep.append(type)
+                }
+            }
+            .padding(4)
+    }
+    
     var body: some View {
         ScrollView{
             LazyVStack{
@@ -73,31 +91,28 @@ struct WaterfallSettingsView: View {
                                 .tag(value)
                         }
                     }
-                        .pickerStyle(.segmented)
+                    .pickerStyle(.segmented)
                 }
                 HStack{
                     Text("CardsToKeepInHand")
                     Spacer()
                 }
                 .padding(.top, 16)
-                WrappingHStack(id: \.self){
-                    ForEach(CardTypes.allCases, id: \.self){ type in
-                        Text(type.rawValue)
-                            .fontWeight(.semibold)
-                            .font(.system(size: 18))
-                            .padding()
-                            .background(settings.cardsToKeep.contains(type) ? .green : .red)
-                            .cornerRadius(8)
-                            .onTapGesture {
-                                if settings.cardsToKeep.contains(type) {
-                                    settings.cardsToKeep.removeAll { typeToKeep in
-                                        typeToKeep == type
-                                    }
-                                } else {
-                                    self.settings.cardsToKeep.append(type)
-                                }
-                            }
-                            .padding(4)
+                VStack{
+                    HStack{
+                        ForEach(settings.getHalfOfCardTypes(part: .first), id: \.self) { type in
+                            KeepCardInHandPickerItem(type)
+                        }
+                    }
+                    HStack{
+                        ForEach(settings.getHalfOfCardTypes(part: .secound), id: \.self) { type in
+                            KeepCardInHandPickerItem(type)
+                        }
+                    }
+                    HStack{
+                        ForEach(settings.getHalfOfCardTypes(part: .third), id: \.self) { type in
+                            KeepCardInHandPickerItem(type)
+                        }
                     }
                 }
             }
