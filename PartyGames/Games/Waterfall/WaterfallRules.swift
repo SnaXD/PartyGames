@@ -12,7 +12,7 @@ struct WaterfallRules: View {
     @State private var classicRules: [RuleItem] = getClassicRules()
     @State private var xdsRules: [RuleItem] = getXdsRules()
     @State var ruleSize: CGFloat = 14
-    @State private var showPopup = false
+    @State private var showPopupForSuccessfulCopy = false
     var body: some View {
         VStack(spacing: 0){
             Picker("", selection: $ruletype) {
@@ -49,12 +49,12 @@ struct WaterfallRules: View {
                     switch ruletype {
                     case .classic:
                         ForEach(classicRules, id: \.self){ rule in
-                            RuleItemsView(rule: rule, showPopup: $showPopup, textSize: $ruleSize)
+                            RuleItemsView(rule: rule, showPopup: $showPopupForSuccessfulCopy, textSize: $ruleSize)
                         }.padding(.bottom, 12)
                     case .xDs:
                         withAnimation(.linear(duration: 2)) {
                             ForEach(xdsRules, id: \.self){ rule in
-                                RuleItemsView(rule: rule, showPopup: $showPopup, textSize: $ruleSize)
+                                RuleItemsView(rule: rule, showPopup: $showPopupForSuccessfulCopy, textSize: $ruleSize)
                             }.padding(.bottom, 12)
                         }
                     }
@@ -62,7 +62,7 @@ struct WaterfallRules: View {
                 }.padding()
             }
         }
-        .popup(isPresented: $showPopup, type: .toast, position: .bottom, animation: .easeInOut(duration: 0.5), autohideIn: 1.5, dragToDismiss: true, closeOnTap: true, closeOnTapOutside: true) {
+        .popup(isPresented: $showPopupForSuccessfulCopy, type: .toast, position: .bottom, animation: .easeInOut(duration: 0.5), autohideIn: 1.5, dragToDismiss: true, closeOnTap: true, closeOnTapOutside: true) {
             HStack{
                 Text("successfully copyed")
                     .padding()
@@ -96,7 +96,7 @@ private func getClassicRules() -> [RuleItem]{
             RuleItem(card: .eight, title: "eightTitle", rule: "eightRule"),
             RuleItem(card: .nine, title: "nineTitle", rule: "nineRule"),
             RuleItem(card: .ten, title: "tenTitle", rule: "tenRule"),
-            RuleItem(card: .knight, title: "knightTitle", rule: "knightRule"),
+            RuleItem(card: .jack, title: "knightTitle", rule: "knightRule"),
             RuleItem(card: .queen, title: "queenTitle", rule: "queenRule"),
             RuleItem(card: .king, title: "kingTitle", rule: "kingRule")
     ]
@@ -113,7 +113,7 @@ private func getXdsRules() -> [RuleItem]{
             RuleItem(card: .eight, title: "XDsEightTitle", rule: "XDsEightRule"),
             RuleItem(card: .nine, title: "XDsNineTitle", rule: "XDsNineRule"),
             RuleItem(card: .ten, title: "XDsTenTitle", rule: "XDsTenRule"),
-            RuleItem(card: .knight, title: "XDsKnightTitle", rule: "XDsKnightRule"),
+            RuleItem(card: .jack, title: "XDsKnightTitle", rule: "XDsKnightRule"),
             RuleItem(card: .queen, title: "XDsQueenTitle", rule: "XDsQueenRule"),
             RuleItem(card: .king, title: "XDsKingTitle", rule: "XDsKingRule")
     ]

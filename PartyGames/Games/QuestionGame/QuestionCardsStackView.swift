@@ -42,10 +42,10 @@ struct QuestionCardsStackView: View {
                                     if card != self.game.activeCard {return}
                                     withAnimation(.spring()) {
                                         self.game.topCardOffset = drag.translation
-                                        if drag.translation.width < -200 ||
-                                            drag.translation.width > 200 ||
-                                            drag.translation.height < -250 ||
-                                            drag.translation.height > 250 {
+                                        if drag.translation.width < -160 ||
+                                            drag.translation.width > 160 ||
+                                            drag.translation.height < -210 ||
+                                            drag.translation.height > 210 {
                                             self.game.moveToBack(card: card)
                                         } else {
                                             self.game.moveToFront(card: card)

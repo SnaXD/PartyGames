@@ -35,7 +35,7 @@ enum CardTypes: String, CaseIterable {
     case eight = "8"
     case nine = "9"
     case ten = "10"
-    case knight = "J"
+    case jack = "J"
     case queen = "Q"
     case king = "K"
     case joker = "Joker"

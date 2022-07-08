@@ -78,6 +78,30 @@
 "jokerTitle" = "Joker";
 "jokerRule" = "Fjern kongen";
 
+//Slap the queen rules
+"STQGoal" = "Målet";
+"STQGoalDescription" = "Få så mange point du kan. Den første til at lave bevægelsen vinder. Hvis du laver bevægelsen før du burde så taber du et point";
+"STQRule0-10" = "[0-10]";
+"STQRule0-10Rule" = "Gør intet";
+"STQRuleJack" = "[J]";
+"STQRuleJackRule" = "Lav et L i panden med din peje- og tommelfinger";
+"STQRuleQueen" = "[Q]";
+"STQRuleQueenRule" = "Bliv enig om et sted i slår. Når dette kort bliver vist slå der";
+"STQRuleKing" = "[K]";
+"STQRuleKingRule" = "Hold begge dine hælder med adskildte fingre på hver sin side af toppen af dit hoved";
+
+//Questions game rules
+"QGStepOneTitle" = "Lav hold";
+"QGStepOne" = "Lav hold af 3 eller flere";
+"QGStepTwoTitle" = "Vælg en spilleder";
+"QGStepTwo" = "Udvælg en person som skal læse spørgsmålene";
+"QGStepThreeTitle" = "Pej på hvem der kunne finde på det";
+"QGStepThree" = "Når spørgsmålet er læst op pej på den person på dit hold som du syntes er mest tilbøjelig til at gøre hvad der står på kortet";
+"QGStepFourTitle" = "Vælg en taber";
+"QGStepFour" = "Ikke skifte valg! Hvis i alle vælger den samme person kan i sammen peje på et modstanderhold som så skal tage en slurk";
+"QGStepFiveTitle" = "Helle!";
+"QGStepFive" = "Når du har valgt et modstander hold som skal drikke så må de ikke vælge jer i denne runde (Så hurtighed betyder alt)";
+
 //Waterfall XDs Rules
 "XDsAceTitle" = "Sniper";
 "XDsAceRule" = "Lav en cirkel med tommelfingeren og pegefingeren. Begynd med at tælle højt. Det tal du ender med, er antallet af slurke dit offer skal drikke - dette kort kan gemmes";
@@ -179,3 +203,22 @@
 "Q68" = "Hvem bliver hurtigst fuld";
 "Q69" = "Hvem får anden dags tømmermænd";
 "Q70" = "Hvem kunne godt leve af pasta i en måned";
+"Q71" = "Hvem kunne blive naret af ~~Microsoft techsupport~~ Telefon scammers";
+"Q72" = "Hvem er mest kræsen";
+"Q72" = "Hvem kunne godt ligge en hel i sin seng en hel dag";
+"Q73" = "Hvem bruger flest penge i byen";
+"Q74" = "Hvem ~~drikker mest~~ samler på flasker";
+"Q75" = "Hvem får oftest en sang på hjernen";
+"Q76" = "Hvem quoter oftest et meme";
+"Q77" = "Hvem kunne godt finde på at tage til Australien";
+"Q78" = "Hvem kunne godt bo i IKEA";
+"Q79" = "Hvem går mest op i memes";
+"Q80" = "Hvem kunne godt finde på at udgive sig for at være en anden hvis nogle ringer forkert";
+"Q81" = "Hvem har flest ting med Wifi";
+"Q82" = "Hvem kunne godt have en anden familie i kælderen";
+"Q83" = "Hvem er mest impulsiv";
+"Q84" = "Hvem har fødselsdag næste gang";
+"Q85" = "Hvem er mest tilbøjelig til at få 9 børn";
+"Q86" = "Hvem smadre altid skærmen på sin telefon";
+"Q87" = "Hvem er mest tilbøjelig til at køre galt";
+"Q88" = "Hvem har flest sko";

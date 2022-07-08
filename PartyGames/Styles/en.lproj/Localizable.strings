@@ -109,6 +109,30 @@
 "XDsJokerTitle" = "Joker";
 "XDsJokerRule" = "Fjern kongen";
 
+//Slap the queen rules
+"STQGoal" = "Goal";
+"STQGoalDescription" = "Get as many Points as possible. The first person to do the gesture wins a point. If you do a gesture when you shouldnt youll be reducted one point";
+"STQRule0-10" = "[0-10]";
+"STQRule0-10Rule" = "Do nothing";
+"STQRuleJack" = "[J]";
+"STQRuleJackRule" = "Make a L on the top of your head with your index finger and thumb";
+"STQRuleQueen" = "[Q]";
+"STQRuleQueenRule" = "Agree on a spot to slap and when this card shows slap that place";
+"STQRuleKing" = "[K]";
+"STQRuleKingRule" = "Put both your hands with seperated fingers on each side of the top of your head";
+
+//Questions game rules
+"QGStepOneTitle" = "Make Teams";
+"QGStepOne" = "Make Teams of 3 or more";
+"QGStepTwoTitle" = "Choose Gameleader";
+"QGStepTwo" = "Point out one person to Read the questions";
+"QGStepThreeTitle" = "Point on whos most likely";
+"QGStepThree" = "When the question is read point to a person on your team you think is most likely to do what the card says";
+"QGStepFourTitle" = "Choose a loser";
+"QGStepFour" = "No changing! If you all choose the same person you can together point at an opponant team who then have to take a sip";
+"QGStepFiveTitle" = "Safe!";
+"QGStepFive" = "When you choose the opponant team to take a sip then they cant choose your team for this round (So its all about speed)";
+
 //Questions
 "Q1" = "Who got the longest hair";
 "Q2" = "Who had the most drinks";
@@ -180,4 +204,22 @@
 "Q68" = "Who gets drunk the fastest";
 "Q69" = "Who gets secound day hungover";
 "Q70" = "Who could be eating only pasta for a month";
-
+"Q71" = "Who could get fooled by ~~Microsoft techsupport~~ phone scammers";
+"Q72" = "Whos the most picky about what they eat";
+"Q72" = "Who could stay in their bed for a whole day";
+"Q73" = "Who spends the most money out clubbing";
+"Q74" = "Who ~~Drinks the most~~ Collects empty bottles";
+"Q75" = "Whos most likely to get a song stuck in their head";
+"Q76" = "Who quotes a meme most often";
+"Q77" = "Whos most likely to take a trip to Australia";
+"Q78" = "Who could live in IKEA";
+"Q79" = "Whos the most into memes";
+"Q80" = "Who would pretend to be somebody else if someone dials wrong";
+"Q81" = "Who got the most stuff on WIFI";
+"Q82" = "Whos most likely to have another familiy in the basement";
+"Q83" = "Whos the most impulsive";
+"Q84" = "Whos birthday is next up";
+"Q85" = "Whos most likely to have 9 kids";
+"Q86" = "Who always cracks their phone";
+"Q87" = "Whos most likely to crash a car";
+"Q88" = "Who got the most shoes";

@@ -15,7 +15,7 @@ struct QuestionGame: QuestionCardStack {
     var displayed = [QuestionCard]() //List is always max 5 Questions
     
     mutating func Setup(){
-        let amountOfQuestions = 70
+        let amountOfQuestions = 88
         let localizedShortedQuestionsKeyword = "Q"
         
         for questionNumber in 1...amountOfQuestions {

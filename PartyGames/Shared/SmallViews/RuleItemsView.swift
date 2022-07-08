@@ -41,13 +41,13 @@ struct RuleItemsView: View {
             }
         .background {
             RoundedRectangle(cornerRadius: 12)
-                .foregroundColor(Color(uiColor: .systemGray3))
+                .foregroundColor(Color(uiColor: .systemGray6))
                 .shadow(radius: 2)
         }
     }
 }
 
-private struct RuleItems_Previews: PreviewProvider {
+ struct RuleItems_Previews: PreviewProvider {
     static var previews: some View {
         RuleItems_PreviewsWithBinding()
     }

@@ -20,7 +20,8 @@ struct WaterfallHandsView: View {
                 .padding(.top, 42)
             
             if !game.customizedSettings.players.isEmpty {
-                HStack{Text("Name")
+                HStack{
+                    Text("Name")
                     Spacer()
                     Text("Hand")
                 }
