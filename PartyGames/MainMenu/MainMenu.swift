@@ -11,7 +11,7 @@ struct MainMenu: View {
     @State var openShopSheet: Bool = false
     var body: some View {
         NavigationView{
-            VStack(spacing: 0){
+            VStack(alignment: .center, spacing: 0){
                 Spacer()
                 Text("XD's")
                     .foregroundColor(.red)
@@ -29,6 +29,8 @@ struct MainMenu: View {
                     .padding(.bottom)
                 GameItem(gameName: "Waterfall", game: AnyView(WaterfallGameView()), rules: AnyView(WaterfallRules()))
                     .padding(.bottom)
+                GameItem(gameName: "Dices", game: AnyView(MajerGameView()), rules: AnyView(SlapTheQueenRules()))
+                    .padding(.bottom)
                 Button {
                     openShopSheet.toggle()
                 } label: {
@@ -43,7 +45,6 @@ struct MainMenu: View {
                         )
                         .padding(.top, 16)
                 }
-                Spacer()
                 Spacer()
                 HStack{
                     Spacer()

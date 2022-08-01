@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		46C77C2CCF2EE2A9862595EF /* libPods-PartyGames.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1820B561B18CA6B875DE05D5 /* libPods-PartyGames.a */; };
+		AB0E9FCD289801100030C9EE /* DiceForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E9FCC289801100030C9EE /* DiceForm.swift */; };
+		AB0E9FCE289801100030C9EE /* DiceForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E9FCC289801100030C9EE /* DiceForm.swift */; };
+		AB23BAF52897D2840041179B /* DiceFaceUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB23BAF42897D2840041179B /* DiceFaceUI.swift */; };
 		AB301CC82869DFDF0054DAE5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AB301CC72869DFDE0054DAE5 /* Podfile */; };
+		AB30D6632897BFE5002511DC /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB30D6622897BFE5002511DC /* ColorExtention.swift */; };
 		AB346736284F23FF006B312F /* PartyGamesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346735284F23FF006B312F /* PartyGamesApp.swift */; };
 		AB346738284F23FF006B312F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB346737284F23FF006B312F /* ContentView.swift */; };
 		AB34673A284F2401006B312F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB346739284F2401006B312F /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 		AB3BE1BF2874757F00D438BB /* StandardTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1BE2874757F00D438BB /* StandardTurnDisplayer.swift */; };
 		AB3BE1C1287476AA00D438BB /* StandardBackOfCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1C0287476AA00D438BB /* StandardBackOfCards.swift */; };
 		AB3BE1C42875A7E200D438BB /* Cosmetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1C32875A7E200D438BB /* Cosmetics.swift */; };
+		AB45D4182897A60E008FC6A9 /* MajerGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45D4172897A60E008FC6A9 /* MajerGameView.swift */; };
+		AB45D4192897A60E008FC6A9 /* MajerGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45D4172897A60E008FC6A9 /* MajerGameView.swift */; };
+		AB45D41B2897A620008FC6A9 /* MajerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45D41A2897A620008FC6A9 /* MajerGame.swift */; };
+		AB45D41C2897A620008FC6A9 /* MajerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45D41A2897A620008FC6A9 /* MajerGame.swift */; };
 		AB463F2A2863298900C8056E /* QuestionGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F292863298900C8056E /* QuestionGameTests.swift */; };
 		AB463F2D28644C2700C8056E /* WaterfallGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F2C28644C2700C8056E /* WaterfallGame.swift */; };
 		AB463F2F28644CE200C8056E /* WaterfallCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F2E28644CE200C8056E /* WaterfallCustomization.swift */; };
@@ -123,6 +131,10 @@
 		ABE3D3022876E9DE00DF39D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB34673C284F2401006B312F /* Preview Assets.xcassets */; };
 		ABE3D3032876E9DE00DF39D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB346739284F2401006B312F /* Assets.xcassets */; };
 		ABE3D3042876E9DE00DF39D7 /* Inconsolata.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB9DCC9E2859C4100091185F /* Inconsolata.ttf */; };
+		ABEAF94E2897E78200F2A907 /* Dices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEAF94D2897E78200F2A907 /* Dices.swift */; };
+		ABEAF9502897EC4000F2A907 /* DiceFaceUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB23BAF42897D2840041179B /* DiceFaceUI.swift */; };
+		ABEAF9512897EC5600F2A907 /* Dices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEAF94D2897E78200F2A907 /* Dices.swift */; };
+		ABEAF9522897FA0400F2A907 /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB30D6622897BFE5002511DC /* ColorExtention.swift */; };
 		E2A1653CBC6D67E5958EFCA6 /* libPods-PartyGamesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED2DABFCCD7DC4CAB90E5A /* libPods-PartyGamesTests.a */; };
 /* End PBXBuildFile section */
 
@@ -139,7 +151,10 @@
 /* Begin PBXFileReference section */
 		1820B561B18CA6B875DE05D5 /* libPods-PartyGames.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PartyGames.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CED2DABFCCD7DC4CAB90E5A /* libPods-PartyGamesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PartyGamesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0E9FCC289801100030C9EE /* DiceForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceForm.swift; sourceTree = "<group>"; };
+		AB23BAF42897D2840041179B /* DiceFaceUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceFaceUI.swift; sourceTree = "<group>"; };
 		AB301CC72869DFDE0054DAE5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		AB30D6622897BFE5002511DC /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
 		AB346732284F23FF006B312F /* PartyGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB346735284F23FF006B312F /* PartyGamesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyGamesApp.swift; sourceTree = "<group>"; };
 		AB346737284F23FF006B312F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -167,6 +182,8 @@
 		AB3BE1BE2874757F00D438BB /* StandardTurnDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTurnDisplayer.swift; sourceTree = "<group>"; };
 		AB3BE1C0287476AA00D438BB /* StandardBackOfCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardBackOfCards.swift; sourceTree = "<group>"; };
 		AB3BE1C32875A7E200D438BB /* Cosmetics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cosmetics.swift; sourceTree = "<group>"; };
+		AB45D4172897A60E008FC6A9 /* MajerGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajerGameView.swift; sourceTree = "<group>"; };
+		AB45D41A2897A620008FC6A9 /* MajerGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajerGame.swift; sourceTree = "<group>"; };
 		AB463F292863298900C8056E /* QuestionGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGameTests.swift; sourceTree = "<group>"; };
 		AB463F2C28644C2700C8056E /* WaterfallGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGame.swift; sourceTree = "<group>"; };
 		AB463F2E28644CE200C8056E /* WaterfallCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCustomization.swift; sourceTree = "<group>"; };
@@ -202,7 +219,7 @@
 		ABDDB7D42860603000935B55 /* QuestionCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardStack.swift; sourceTree = "<group>"; };
 		ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardStack.swift; sourceTree = "<group>"; };
 		ABE3D3082876E9DE00DF39D7 /* PartyGames BETA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PartyGames BETA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABE3D3092876E9DE00DF39D7 /* PartyGames copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PartyGames copy-Info.plist"; path = "/Users/jonathan/Documents/GitHub/PartyGames/PartyGames copy-Info.plist"; sourceTree = "<absolute>"; };
+		ABEAF94D2897E78200F2A907 /* Dices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dices.swift; sourceTree = "<group>"; };
 		B0A95B7A810F90680D0525AE /* Pods-PartyGamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyGamesTests.release.xcconfig"; path = "Target Support Files/Pods-PartyGamesTests/Pods-PartyGamesTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB7A20107167DC8F73D1DFA4 /* Pods-PartyGames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyGames.debug.xcconfig"; path = "Target Support Files/Pods-PartyGames/Pods-PartyGames.debug.xcconfig"; sourceTree = "<group>"; };
 		E41D895DD10ECE7EB3F6E7B0 /* Pods-PartyGamesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyGamesTests.debug.xcconfig"; path = "Target Support Files/Pods-PartyGamesTests/Pods-PartyGamesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -249,6 +266,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AB23BAF32897D2790041179B /* Dice */ = {
+			isa = PBXGroup;
+			children = (
+				AB23BAF42897D2840041179B /* DiceFaceUI.swift */,
+				AB0E9FCC289801100030C9EE /* DiceForm.swift */,
+			);
+			path = Dice;
+			sourceTree = "<group>";
+		};
+		AB30D6612897BFD1002511DC /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				AB30D6622897BFE5002511DC /* ColorExtention.swift */,
+			);
+			name = Extentions;
+			path = Protocols/Extentions;
+			sourceTree = "<group>";
+		};
 		AB346729284F23FF006B312F = {
 			isa = PBXGroup;
 			children = (
@@ -257,7 +292,6 @@
 				AB346733284F23FF006B312F /* Products */,
 				35F74446CE12C3A0698A5CC7 /* Pods */,
 				CE9837A1F42D1A029BFBE036 /* Frameworks */,
-				ABE3D3092876E9DE00DF39D7 /* PartyGames copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,6 +308,7 @@
 		AB346734284F23FF006B312F /* PartyGames */ = {
 			isa = PBXGroup;
 			children = (
+				AB30D6612897BFD1002511DC /* Extentions */,
 				AB3BE1C22875A7D100D438BB /* Protocols */,
 				ABDC745A286EF00F0016DEBF /* ViewModels */,
 				AB9DCC8C2858716F0091185F /* Info.plist */,
@@ -339,6 +374,7 @@
 		AB34675A284F6F3B006B312F /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				AB45D4162897A5FC008FC6A9 /* Majer */,
 				AB463F2B286449DC00C8056E /* Waterfall */,
 				AB34674C284F35E2006B312F /* SlapTheQueen */,
 				AB34674B284F35B4006B312F /* QuestionGame */,
@@ -361,8 +397,19 @@
 				ABDDB7D62860677A00935B55 /* PlayingCardStack.swift */,
 				ABDDB7D42860603000935B55 /* QuestionCardStack.swift */,
 				AB3BE1C32875A7E200D438BB /* Cosmetics.swift */,
+				ABEAF94D2897E78200F2A907 /* Dices.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AB45D4162897A5FC008FC6A9 /* Majer */ = {
+			isa = PBXGroup;
+			children = (
+				AB23BAF32897D2790041179B /* Dice */,
+				AB45D4172897A60E008FC6A9 /* MajerGameView.swift */,
+				AB45D41A2897A620008FC6A9 /* MajerGame.swift */,
+			);
+			path = Majer;
 			sourceTree = "<group>";
 		};
 		AB463F2B286449DC00C8056E /* Waterfall */ = {
@@ -696,8 +743,10 @@
 				AB34675E284F8462006B312F /* SlapTheQueenRules.swift in Sources */,
 				ABDDB7D52860603000935B55 /* QuestionCardStack.swift in Sources */,
 				ABDC7440286CAA4C0016DEBF /* ShopItem.swift in Sources */,
+				AB45D41B2897A620008FC6A9 /* MajerGame.swift in Sources */,
 				AB346744284F244C006B312F /* QuestionCardsStackView.swift in Sources */,
 				ABDC744C286D79DB0016DEBF /* ColorFullCircle.swift in Sources */,
+				AB45D4182897A60E008FC6A9 /* MajerGameView.swift in Sources */,
 				ABDC7454286DA3000016DEBF /* UfoTurnDisplayer.swift in Sources */,
 				AB3BE1B9287412B300D438BB /* RuleItemsView.swift in Sources */,
 				AB346738284F23FF006B312F /* ContentView.swift in Sources */,
@@ -706,11 +755,13 @@
 				ABDDB7D72860677A00935B55 /* PlayingCardStack.swift in Sources */,
 				AB3BE1BD287471E300D438BB /* CosmeticViews.swift in Sources */,
 				AB9DCCA4285C8AF20091185F /* QuestionGame.swift in Sources */,
+				AB23BAF52897D2840041179B /* DiceFaceUI.swift in Sources */,
 				AB34675C284F7065006B312F /* SlapTheQueenGame.swift in Sources */,
 				AB463F2F28644CE200C8056E /* WaterfallCustomization.swift in Sources */,
 				ABDC744E286D87730016DEBF /* ManLookingThroughBackOfCard.swift in Sources */,
 				AB8C4974286C35F400EA9CAC /* WaterfallHandsView.swift in Sources */,
 				AB346736284F23FF006B312F /* PartyGamesApp.swift in Sources */,
+				ABEAF94E2897E78200F2A907 /* Dices.swift in Sources */,
 				AB463F2D28644C2700C8056E /* WaterfallGame.swift in Sources */,
 				AB346758284F66DD006B312F /* Player.swift in Sources */,
 				AB9DCC8528585C2D0091185F /* SlapTheQueenGameOver.swift in Sources */,
@@ -726,6 +777,7 @@
 				AB3BE1BB28746E7A00D438BB /* ShopViewModel.swift in Sources */,
 				AB346750284F40DA006B312F /* Deck.swift in Sources */,
 				AB9DCC92285878270091185F /* Localizable.strings in Sources */,
+				AB30D6632897BFE5002511DC /* ColorExtention.swift in Sources */,
 				AB346756284F6478006B312F /* StandardCustomization.swift in Sources */,
 				AB9DCC982858A0C30091185F /* Filled.swift in Sources */,
 				AB9DCC9B2859BAA00091185F /* MainMenu.swift in Sources */,
@@ -738,6 +790,7 @@
 				AB51A1B3286C7CF60047631E /* MyNameIsTurnDisplay.swift in Sources */,
 				AB346746284F2D66006B312F /* Card.swift in Sources */,
 				AB51A1B6286C9EB50047631E /* SmallShopItemView.swift in Sources */,
+				AB0E9FCD289801100030C9EE /* DiceForm.swift in Sources */,
 				ABDC744A286D785C0016DEBF /* ShopItemFrame.swift in Sources */,
 				ABDC7450286D87BA0016DEBF /* ActionBackOfCard.swift in Sources */,
 				AB463F3528649E2400C8056E /* WaterfallRules.swift in Sources */,
@@ -763,11 +816,14 @@
 				ABE3D2CA2876E9DE00DF39D7 /* SlapTheQueenRules.swift in Sources */,
 				ABE3D2CB2876E9DE00DF39D7 /* QuestionCardStack.swift in Sources */,
 				ABE3D2CC2876E9DE00DF39D7 /* ShopItem.swift in Sources */,
+				AB45D41C2897A620008FC6A9 /* MajerGame.swift in Sources */,
 				ABE3D2CD2876E9DE00DF39D7 /* QuestionCardsStackView.swift in Sources */,
 				ABE3D2CE2876E9DE00DF39D7 /* ColorFullCircle.swift in Sources */,
+				AB45D4192897A60E008FC6A9 /* MajerGameView.swift in Sources */,
 				ABE3D2CF2876E9DE00DF39D7 /* UfoTurnDisplayer.swift in Sources */,
 				ABE3D2D02876E9DE00DF39D7 /* RuleItemsView.swift in Sources */,
 				ABE3D2D12876E9DE00DF39D7 /* ContentView.swift in Sources */,
+				ABEAF9512897EC5600F2A907 /* Dices.swift in Sources */,
 				ABE3D2D22876E9DE00DF39D7 /* QuestionGameRules.swift in Sources */,
 				ABE3D2D32876E9DE00DF39D7 /* QuestionDeck.swift in Sources */,
 				ABE3D2D42876E9DE00DF39D7 /* PlayingCardStack.swift in Sources */,
@@ -776,6 +832,8 @@
 				ABE3D2D72876E9DE00DF39D7 /* SlapTheQueenGame.swift in Sources */,
 				ABE3D2D82876E9DE00DF39D7 /* WaterfallCustomization.swift in Sources */,
 				ABE3D2D92876E9DE00DF39D7 /* ManLookingThroughBackOfCard.swift in Sources */,
+				ABEAF9522897FA0400F2A907 /* ColorExtention.swift in Sources */,
+				ABEAF9502897EC4000F2A907 /* DiceFaceUI.swift in Sources */,
 				ABE3D2DA2876E9DE00DF39D7 /* WaterfallHandsView.swift in Sources */,
 				ABE3D2DB2876E9DE00DF39D7 /* PartyGamesApp.swift in Sources */,
 				ABE3D2DC2876E9DE00DF39D7 /* WaterfallGame.swift in Sources */,
@@ -805,6 +863,7 @@
 				ABE3D2F42876E9DE00DF39D7 /* MyNameIsTurnDisplay.swift in Sources */,
 				ABE3D2F52876E9DE00DF39D7 /* Card.swift in Sources */,
 				ABE3D2F62876E9DE00DF39D7 /* SmallShopItemView.swift in Sources */,
+				AB0E9FCE289801100030C9EE /* DiceForm.swift in Sources */,
 				ABE3D2F72876E9DE00DF39D7 /* ShopItemFrame.swift in Sources */,
 				ABE3D2F82876E9DE00DF39D7 /* ActionBackOfCard.swift in Sources */,
 				ABE3D2F92876E9DE00DF39D7 /* WaterfallRules.swift in Sources */,
