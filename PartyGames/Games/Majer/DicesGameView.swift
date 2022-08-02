@@ -1,5 +1,5 @@
 //
-//  MajerGameView.swift
+//  DicesGameView.swift
 //  PartyGames
 //
 //  Created by Jonathan T. Nielsen on 01/08/2022.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct MajerGameView: View {
-    var game = MajerGame()
-    @State var dice: diceFaces = .six
+struct DicesGameView: View {
+    @State var game = DicesGame()
     @State var counter = 0
     @State var timerRunning = false
     @State var hideDices = true
+    @State var animateDices = false
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
@@ -20,29 +20,47 @@ struct MajerGameView: View {
             ZStack{
                 VStack{
                     HStack{
-                        DiceForm(hideDices: $hideDices, game: game, dice: $dice)
-                        DiceForm(hideDices: $hideDices, game: game, dice: $dice)
+                        Spacer()
+                        Text("1")
+                        Spacer()
+                        DiceForm(hideDices: $hideDices, game: game, dice: $game.dices[0], animate: animateDices)
+                        DiceForm(hideDices: $hideDices, game: game, dice: $game.dices[1], animate: animateDices)
+                        Spacer()
+                        Text("2")
+                        Spacer()
                     }
                     HStack{
-                        DiceForm(hideDices: $hideDices, game: game, dice: $dice)
-                        DiceForm(hideDices: $hideDices, game: game, dice: $dice)
+                        Spacer()
+                        Text("3")
+                        Spacer()
+                        DiceForm(hideDices: $hideDices, game: game, dice: $game.dices[2], animate: animateDices)
+                        DiceForm(hideDices: $hideDices, game: game, dice: $game.dices[3], animate: animateDices)
+                        Spacer()
+                        Text("4")
+                        Spacer()
                     }
                 }
                 
-                    
+                
                 VStack{
                     VStack{
                         Button {
                         } label: {
-                            Text("Roll the dices (1)")
+                            Text("Roll the dices (.5)")
                                 .font(.system(size: 30))
                                 .fontWeight(.semibold)
-                                .frame(width: 225, height: 80, alignment: .center)
-                                .onLongPressGesture(minimumDuration: 1) {
-                                    dice = game.random()
+                                .minimumScaleFactor(0.01)
+                                .frame(width: 225, height: 50, alignment: .center)
+                                .onLongPressGesture(minimumDuration: 0.5) {
+                                    withAnimation(.easeOut(duration: 1)) {
+                                        animateDices.toggle()
+                                    }
+                                    animateDices.toggle()
+                                    game.RerollDices()
                                     counter = 0
                                     timerRunning = true
                                 }
+                            
                         }.buttonStyle(FilledStyle())
                             .shadow(radius: 4)
                         
@@ -75,14 +93,14 @@ struct MajerGameView: View {
             }
         }
         .onAppear {
-            dice = game.random()
+            game.RerollDices()
         }
     }
 }
 
-struct MajerGameView_Previews: PreviewProvider {
+struct DicesGameView_Previews: PreviewProvider {
     static var previews: some View {
-        MajerGameView()
+        DicesGameView()
     }
 }
 

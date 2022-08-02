@@ -38,10 +38,10 @@
 		AB3BE1BF2874757F00D438BB /* StandardTurnDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1BE2874757F00D438BB /* StandardTurnDisplayer.swift */; };
 		AB3BE1C1287476AA00D438BB /* StandardBackOfCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1C0287476AA00D438BB /* StandardBackOfCards.swift */; };
 		AB3BE1C42875A7E200D438BB /* Cosmetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BE1C32875A7E200D438BB /* Cosmetics.swift */; };
-		AB45D4182897A60E008FC6A9 /* MajerGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45D4172897A60E008FC6A9 /* MajerGameView.swift */; };
-		AB45D4192897A60E008FC6A9 /* MajerGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45D4172897A60E008FC6A9 /* MajerGameView.swift */; };
-		AB45D41B2897A620008FC6A9 /* MajerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45D41A2897A620008FC6A9 /* MajerGame.swift */; };
-		AB45D41C2897A620008FC6A9 /* MajerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45D41A2897A620008FC6A9 /* MajerGame.swift */; };
+		AB45D4182897A60E008FC6A9 /* DicesGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45D4172897A60E008FC6A9 /* DicesGameView.swift */; };
+		AB45D4192897A60E008FC6A9 /* DicesGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45D4172897A60E008FC6A9 /* DicesGameView.swift */; };
+		AB45D41B2897A620008FC6A9 /* DicesGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45D41A2897A620008FC6A9 /* DicesGame.swift */; };
+		AB45D41C2897A620008FC6A9 /* DicesGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45D41A2897A620008FC6A9 /* DicesGame.swift */; };
 		AB463F2A2863298900C8056E /* QuestionGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F292863298900C8056E /* QuestionGameTests.swift */; };
 		AB463F2D28644C2700C8056E /* WaterfallGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F2C28644C2700C8056E /* WaterfallGame.swift */; };
 		AB463F2F28644CE200C8056E /* WaterfallCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F2E28644CE200C8056E /* WaterfallCustomization.swift */; };
@@ -182,8 +182,8 @@
 		AB3BE1BE2874757F00D438BB /* StandardTurnDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTurnDisplayer.swift; sourceTree = "<group>"; };
 		AB3BE1C0287476AA00D438BB /* StandardBackOfCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardBackOfCards.swift; sourceTree = "<group>"; };
 		AB3BE1C32875A7E200D438BB /* Cosmetics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cosmetics.swift; sourceTree = "<group>"; };
-		AB45D4172897A60E008FC6A9 /* MajerGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajerGameView.swift; sourceTree = "<group>"; };
-		AB45D41A2897A620008FC6A9 /* MajerGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajerGame.swift; sourceTree = "<group>"; };
+		AB45D4172897A60E008FC6A9 /* DicesGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicesGameView.swift; sourceTree = "<group>"; };
+		AB45D41A2897A620008FC6A9 /* DicesGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicesGame.swift; sourceTree = "<group>"; };
 		AB463F292863298900C8056E /* QuestionGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGameTests.swift; sourceTree = "<group>"; };
 		AB463F2C28644C2700C8056E /* WaterfallGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGame.swift; sourceTree = "<group>"; };
 		AB463F2E28644CE200C8056E /* WaterfallCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCustomization.swift; sourceTree = "<group>"; };
@@ -406,8 +406,8 @@
 			isa = PBXGroup;
 			children = (
 				AB23BAF32897D2790041179B /* Dice */,
-				AB45D4172897A60E008FC6A9 /* MajerGameView.swift */,
-				AB45D41A2897A620008FC6A9 /* MajerGame.swift */,
+				AB45D4172897A60E008FC6A9 /* DicesGameView.swift */,
+				AB45D41A2897A620008FC6A9 /* DicesGame.swift */,
 			);
 			path = Majer;
 			sourceTree = "<group>";
@@ -743,10 +743,10 @@
 				AB34675E284F8462006B312F /* SlapTheQueenRules.swift in Sources */,
 				ABDDB7D52860603000935B55 /* QuestionCardStack.swift in Sources */,
 				ABDC7440286CAA4C0016DEBF /* ShopItem.swift in Sources */,
-				AB45D41B2897A620008FC6A9 /* MajerGame.swift in Sources */,
+				AB45D41B2897A620008FC6A9 /* DicesGame.swift in Sources */,
 				AB346744284F244C006B312F /* QuestionCardsStackView.swift in Sources */,
 				ABDC744C286D79DB0016DEBF /* ColorFullCircle.swift in Sources */,
-				AB45D4182897A60E008FC6A9 /* MajerGameView.swift in Sources */,
+				AB45D4182897A60E008FC6A9 /* DicesGameView.swift in Sources */,
 				ABDC7454286DA3000016DEBF /* UfoTurnDisplayer.swift in Sources */,
 				AB3BE1B9287412B300D438BB /* RuleItemsView.swift in Sources */,
 				AB346738284F23FF006B312F /* ContentView.swift in Sources */,
@@ -816,10 +816,10 @@
 				ABE3D2CA2876E9DE00DF39D7 /* SlapTheQueenRules.swift in Sources */,
 				ABE3D2CB2876E9DE00DF39D7 /* QuestionCardStack.swift in Sources */,
 				ABE3D2CC2876E9DE00DF39D7 /* ShopItem.swift in Sources */,
-				AB45D41C2897A620008FC6A9 /* MajerGame.swift in Sources */,
+				AB45D41C2897A620008FC6A9 /* DicesGame.swift in Sources */,
 				ABE3D2CD2876E9DE00DF39D7 /* QuestionCardsStackView.swift in Sources */,
 				ABE3D2CE2876E9DE00DF39D7 /* ColorFullCircle.swift in Sources */,
-				AB45D4192897A60E008FC6A9 /* MajerGameView.swift in Sources */,
+				AB45D4192897A60E008FC6A9 /* DicesGameView.swift in Sources */,
 				ABE3D2CF2876E9DE00DF39D7 /* UfoTurnDisplayer.swift in Sources */,
 				ABE3D2D02876E9DE00DF39D7 /* RuleItemsView.swift in Sources */,
 				ABE3D2D12876E9DE00DF39D7 /* ContentView.swift in Sources */,

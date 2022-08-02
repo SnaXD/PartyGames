@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DiceFaceUI: View {
+    var animate = false
     let set: Array<Array<Int>>
     let columns = [
         GridItem(.fixed(30), spacing: 0),
@@ -34,7 +35,8 @@ struct DiceFaceUI: View {
                         .frame(height: 30)
                 }
             }
-            .frame(width: 100, height: 100)
+            .frame(width: animate ? 130 : 100, height: animate ? 130: 100)
+            .scaleEffect(animate ? 1.7 : 1, anchor: .center)
             
         }
 }
