@@ -132,6 +132,34 @@
 "XDsJokerTitle" = "Joker";
 "XDsJokerRule" = "Fjern kongen";
 
+
+//Dice game rules
+//Meyer
+"Meyer" = "Meyer";
+"MeyerRule1Title" = "Terninger";
+"MeyerRule1" = "Du skal kun bruge 2 terninger. Efter at have slået sidder man den højeste terning først. Rankeringen af terningen er så (Meyer (1+2), Lille-meyer (1+3), Alle par f.eks. 6+6, 5+5, 4+4 osv. med 6 værne det højeste. Alt her under er så rankeret efter højeste sammenlagte tal f.eks. 6+5, 6+4, 6+3 osv.";
+"MeyerRule2Title" = "Fælleskål";
+"MeyerRule2" = "Nogle spiller med en særregl at 3+2 er fællesskål og kan rede alt. Så starter turen forfra og starter hos ham der slog 3+2 uden nogle straf";
+"MeyerRule3Title" = "Spilstart";
+"MeyerRule3" = "Efter at have slået skal du holde dine terninger skjult for den næste spiller. Så skal du sige f.eks. 'Jeg har 65' Den næste spiller skal så vurdere om de tror på dig. Hvis du lyver får du terningerne igen og går 1 liv ned men hvis de tror på dig skal de forsøge at slå det samme eller et højre rankeret slag og give videre til den næste spiller.";
+"MeyerRule4Title" = "Det eller der over";
+"MeyerRule4" = "Har du slået et lavere slag end der blev krævet og ikke føler for at bluffe kan du sige 'det eller der over' og så slå med terningerne igen uden at kikke og sende den videre i håb om et bedre slag ";
+"MeyerRule5Title" = "Point";
+"MeyerRule5" = "Hvis i ikke har noget at skrive liv på så kan i tælle dem på hånden eller spiller i som drukspil sige det er x antal tåre pr liv. Normalt starter man på 6 liv og når du ikke har flere er du ude af spillet";
+
+//Snyd
+"Snyd" = "Snyd/Tænkeboks";
+"SnydRule1Title" = "Terninger";
+"SnydRule1" = "Alle spillere skal have 4 terninger og de er rankeret i følgende rækkefølge med 1 værende det bedste: 1, 6, 5, 4, 3, 2";
+"SnydRule2Title" = "Spillets gang";
+"SnydRule2" = "Man slår og skiftesvis gætter på hvor mange ens man tror der er. Hvis i er 3 spillere har i 12 terninger så kan du starte med at sige f.eks. 4 5'ere. Dernest skal den næste spiller vurdere om de tror at der er 4 5'ere i spillet. Hvis den næste tror på det går turen videre og de skal så overgå ved at sige noget som er højere i enten mægden eller af terninge typen f.eks. 4 6'ere eller 5 2'ere";
+"SnydRule3Title" = "Snyd";
+"SnydRule3" = "Hvis du ikke tror på det bud der er blevet kaldt og den er blevet givet videre til dig (f.eks 8 5'ere ud af 12 terninger)kan du kalde snyd. Så tæller i hvor magne (i dette tilfælde 5'ere) og ser om der er 8 eller der over. Hvis de er der så taber du og alle andre må fjerne en terning så i, i næste runde spiller med 10 terninger. Hvis der ikke var 8 5'ere så har de tabt og alle andre end dem som sagde det ligger en terning fra. Man spiller indtil kun 1 har terninger tilbage";
+"SnydRule4Title" = "Prik";
+"SnydRule4" = "Hvis du har en 1'er eller ogås kaldet 'Prik' så er dette en joker. Denne er en +1 til alle terninge typer";
+"SnydRule5Title" = "Spiller i med Trappe";
+"SnydRule5" = "Hvis i spiller med trappe tager starter man fra 1 og skal have alle sine egne terninger til at stige med 1 (har du 4 terninger så skal du slå 1, 2, 3, 4. Har du 2 terninger skal du slå 1, 2. Har du 1 terning skal du slå 1. Hvis nogle har en trappe så vil de sige de har deres mægde af terninger + 1 og så fungere de alle som 1'eren";
+
 //Questions
 "Q1" = "Hvem har det længste hår";
 "Q2" = "Hvem har drukket mest";

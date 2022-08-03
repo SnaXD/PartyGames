@@ -29,7 +29,7 @@ struct MainMenu: View {
                     .padding(.bottom)
                 GameItem(gameName: "Waterfall", game: AnyView(WaterfallGameView()), rules: AnyView(WaterfallRules()))
                     .padding(.bottom)
-                GameItem(gameName: "Dices", game: AnyView(DicesGameView()), rules: AnyView(SlapTheQueenRules()))
+                GameItem(gameName: "Dices", game: AnyView(DicesGameView()), rules: AnyView(DicesRules()))
                     .padding(.bottom)
                 Button {
                     openShopSheet.toggle()

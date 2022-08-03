@@ -67,7 +67,7 @@ struct ShopView: View {
                         .shadow(radius: 2)
                 }
             }
-        }.background(.gray)
+        }.background(Color(uiColor: .systemGray5))
     }
 }
 

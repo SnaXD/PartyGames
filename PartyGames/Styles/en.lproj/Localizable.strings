@@ -133,6 +133,35 @@
 "QGStepFiveTitle" = "Safe!";
 "QGStepFive" = "When you choose the opponant team to take a sip then they cant choose your team for this round (So its all about speed)";
 
+
+//Dice game rules
+//Meyer
+"Meyer" = "Mia";
+"MeyerRule1Title" = "Dices";
+"MeyerRule1" = "This game requires 2 dices. You roll the dices and put the highest number first. Ranking of the dices are in the following order: (Mia (2+1), Little-Mia (3+1), All pairs fx 6+6, 5+5, 4+4 aso. With the 6 beeing the highest. Everything else is the ranked by the highest number fx 6+5, 6+4, 6+3 aso.";
+
+"MeyerRule2Title" = "Special rule";
+"MeyerRule2" = "Some plays with a special rule called 'Cheers'. Its when the dices are 3+2 and it can save everything. If you hit 3+2 then you start all over and starts at the guy who hit the 3+2 without any punishment";
+"MeyerRule3Title" = "Game start";
+"MeyerRule3" = "First you roll the dices and keep them hidden for the next player. Then you say somefing like 'I got 65' then the next player got to decide if they belive in you. If you lie the dices return to you and you loose 1 life(2 if you said mia). Otherwice if they belive in you then they got to roll the same or better ranked then repeat to the next player.";
+"MeyerRule4Title" = "Something like that";
+"MeyerRule4" = "If you hit a worse ranked roll then asked of you and you dont wanna bluff then you can say 'Something like that' roll the dices and dont look then give it to the next player hoping you got a better roll then required of you.";
+"MeyerRule5Title" = "Lifes";
+"MeyerRule5" = "If you got nothing to write lifes down on then you can use a dice, your fingers or agree about a punishment when loosing a life (like 2 zips). Usually you got 6 lifes and when you're out of life then you're out of the game.";
+
+//Snyd
+"Snyd" = "Liars dice";
+"SnydRule1Title" = "Dices";
+"SnydRule1" = "All plyers got to have 4 dices. They are ranked in the following order: 1, 6, 5, 4, 3, 2";
+"SnydRule2Title" = "The game";
+"SnydRule2" = "Everybody rolls at first. You then say your guess on how many of a kind. If you're 3 players then you got 12 dices. You can start by saying i think heres four 5s. then the next player got to decide if they belive in you. If they do then its their turn to overrule by saying somthing higher on either dice this could be four 6s or five 2s.";
+"SnydRule3Title" = "Liar";
+"SnydRule3" = "If you dont belive in what you've been told and its beeing passed on to you (fx eight 5s out of 12 dices) then you can call liar. Then you got to count how many (in this case 5s) and see if theres 8 or above. If its true then you loose and everybody else can remove a die from their next roll so you're now playing with 10 dices. If there wasnt eight 5s then they have lose and everybody but that person can remove a die. You continue to only one player got dices left";
+"SnydRule4Title" = "Ones";
+"SnydRule4" = "If you got a 1 it works as a joker. This is +1 to all the dice faces";
+"SnydRule5Title" = "Do you play with stairs";
+"SnydRule5" = "If you play with staris. Stairs starts from 1 and you got to have all your dices by an increment of 1 (So if you got 4 dices then you got to hit 1, 2, 3, 4. If you got 2 dices then hit 1, 2. If you got 1 die then you got to hit 1 aso. If anybody got stars then it means their amount of dices + 1(not excisting) all works as if they where 1s";
+
 //Questions
 "Q1" = "Who got the longest hair";
 "Q2" = "Who had the most drinks";

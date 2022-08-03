@@ -64,7 +64,7 @@ struct WaterfallRules: View {
         }
         .popup(isPresented: $showPopupForSuccessfulCopy, type: .toast, position: .bottom, animation: .easeInOut(duration: 0.5), autohideIn: 1.5, dragToDismiss: true, closeOnTap: true, closeOnTapOutside: true) {
             HStack{
-                Text("successfully copyed")
+                Text("successfullyCopyed")
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius: 12).foregroundColor(Color(uiColor: .systemGray5))
@@ -86,35 +86,35 @@ private enum rulesType: String, CaseIterable {
 }
 
 private func getClassicRules() -> [RuleItem]{
-    return [RuleItem(card: .ace, title: "aceTitle", rule: "aceRule"),
-            RuleItem(card: .two, title: "twoTitle", rule: "twoRule"),
-            RuleItem(card: .three, title: "threeTitle", rule: "threeRule"),
-            RuleItem(card: .four, title: "fourTitle", rule: "fourRule"),
-            RuleItem(card: .five, title: "fiveTitle", rule: "fiveRule"),
-            RuleItem(card: .six, title: "sixTitle", rule: "sixRule"),
-            RuleItem(card: .seven, title: "sevenTitle", rule: "sevenRule"),
-            RuleItem(card: .eight, title: "eightTitle", rule: "eightRule"),
-            RuleItem(card: .nine, title: "nineTitle", rule: "nineRule"),
-            RuleItem(card: .ten, title: "tenTitle", rule: "tenRule"),
-            RuleItem(card: .jack, title: "knightTitle", rule: "knightRule"),
-            RuleItem(card: .queen, title: "queenTitle", rule: "queenRule"),
-            RuleItem(card: .king, title: "kingTitle", rule: "kingRule")
+    return [RuleItem(card: .ace, title: "aceTitle", rule: "aceRule", useCardType: true),
+            RuleItem(card: .two, title: "twoTitle", rule: "twoRule", useCardType: true),
+            RuleItem(card: .three, title: "threeTitle", rule: "threeRule", useCardType: true),
+            RuleItem(card: .four, title: "fourTitle", rule: "fourRule", useCardType: true),
+            RuleItem(card: .five, title: "fiveTitle", rule: "fiveRule", useCardType: true),
+            RuleItem(card: .six, title: "sixTitle", rule: "sixRule", useCardType: true),
+            RuleItem(card: .seven, title: "sevenTitle", rule: "sevenRule", useCardType: true),
+            RuleItem(card: .eight, title: "eightTitle", rule: "eightRule", useCardType: true),
+            RuleItem(card: .nine, title: "nineTitle", rule: "nineRule", useCardType: true),
+            RuleItem(card: .ten, title: "tenTitle", rule: "tenRule", useCardType: true),
+            RuleItem(card: .jack, title: "knightTitle", rule: "knightRule", useCardType: true),
+            RuleItem(card: .queen, title: "queenTitle", rule: "queenRule", useCardType: true),
+            RuleItem(card: .king, title: "kingTitle", rule: "kingRule", useCardType: true)
     ]
 }
 
 private func getXdsRules() -> [RuleItem]{
-    return [RuleItem(card: .ace, title: "XDsAceTitle", rule: "XDsAceRule"),
-            RuleItem(card: .two, title: "XDsTwoTitle", rule: "XDsTwoRule"),
-            RuleItem(card: .three, title: "XDsThreeTitle", rule: "XDsThreeRule"),
-            RuleItem(card: .four, title: "XDsFourTitle", rule: "XDsFourRule"),
-            RuleItem(card: .five, title: "XDsFiveTitle", rule: "XDsFiveRule"),
-            RuleItem(card: .six, title: "XDsSixTitle", rule: "XDsSixRule"),
-            RuleItem(card: .seven, title: "XDsSevenTitle", rule: "XDsSevenRule"),
-            RuleItem(card: .eight, title: "XDsEightTitle", rule: "XDsEightRule"),
-            RuleItem(card: .nine, title: "XDsNineTitle", rule: "XDsNineRule"),
-            RuleItem(card: .ten, title: "XDsTenTitle", rule: "XDsTenRule"),
-            RuleItem(card: .jack, title: "XDsKnightTitle", rule: "XDsKnightRule"),
-            RuleItem(card: .queen, title: "XDsQueenTitle", rule: "XDsQueenRule"),
-            RuleItem(card: .king, title: "XDsKingTitle", rule: "XDsKingRule")
+    return [RuleItem(card: .ace, title: "XDsAceTitle", rule: "XDsAceRule", useCardType: true),
+            RuleItem(card: .two, title: "XDsTwoTitle", rule: "XDsTwoRule", useCardType: true),
+            RuleItem(card: .three, title: "XDsThreeTitle", rule: "XDsThreeRule", useCardType: true),
+            RuleItem(card: .four, title: "XDsFourTitle", rule: "XDsFourRule", useCardType: true),
+            RuleItem(card: .five, title: "XDsFiveTitle", rule: "XDsFiveRule", useCardType: true),
+            RuleItem(card: .six, title: "XDsSixTitle", rule: "XDsSixRule", useCardType: true),
+            RuleItem(card: .seven, title: "XDsSevenTitle", rule: "XDsSevenRule", useCardType: true),
+            RuleItem(card: .eight, title: "XDsEightTitle", rule: "XDsEightRule", useCardType: true),
+            RuleItem(card: .nine, title: "XDsNineTitle", rule: "XDsNineRule", useCardType: true),
+            RuleItem(card: .ten, title: "XDsTenTitle", rule: "XDsTenRule", useCardType: true),
+            RuleItem(card: .jack, title: "XDsKnightTitle", rule: "XDsKnightRule", useCardType: true),
+            RuleItem(card: .queen, title: "XDsQueenTitle", rule: "XDsQueenRule", useCardType: true),
+            RuleItem(card: .king, title: "XDsKingTitle", rule: "XDsKingRule", useCardType: true)
     ]
 }
