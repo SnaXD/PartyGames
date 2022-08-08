@@ -46,7 +46,7 @@ struct DicesGameView: View {
                     VStack{
                         Button {
                         } label: {
-                            Text("Roll the dices (.5)")
+                            Text("RollTheDices")
                                 .font(.system(size: 30))
                                 .fontWeight(.semibold)
                                 .minimumScaleFactor(0.01)
@@ -60,6 +60,11 @@ struct DicesGameView: View {
                                     counter = 0
                                     timerRunning = true
                                 }
+                                .overlay {
+                                    Text("HoldFor.5SecToRoll")
+                                        .font(.system(size: 12))
+                                        .offset(y: 23)
+                                }
                             
                         }.buttonStyle(FilledStyle())
                             .shadow(radius: 4)
@@ -69,7 +74,7 @@ struct DicesGameView: View {
                         } label: {
                             HStack{
                                 Text(hideDices ? "Hide" : "Show")
-                                Text("dices")
+                                Text("Dices")
                             }
                             .font(.system(size: 18))
                             .frame(width: 225)
@@ -78,7 +83,7 @@ struct DicesGameView: View {
                     
                     
                     Spacer()
-                    Text("Time since last roll")
+                    Text("TimeSinceLastRoll")
                     Text("\(counter)")
                         .onReceive(timer) { _ in
                             if timerRunning {

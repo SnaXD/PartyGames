@@ -160,6 +160,14 @@
 "SnydRule5Title" = "Spiller i med Trappe";
 "SnydRule5" = "Hvis i spiller med trappe tager starter man fra 1 og skal have alle sine egne terninger til at stige med 1 (har du 4 terninger så skal du slå 1, 2, 3, 4. Har du 2 terninger skal du slå 1, 2. Har du 1 terning skal du slå 1. Hvis nogle har en trappe så vil de sige de har deres mægde af terninger + 1 og så fungere de alle som 1'eren";
 
+//Dice in general
+"RollTheDices" = "Kast terninger";
+"HoldFor.5SecToRoll" = "Tryk i .5 sek for at kaste";
+"Hide" = "Gem";
+"Show" = "Vis";
+"Dices" = "terninger";
+"TimeSinceLastRoll" = "Tid siden sidste kast";
+
 //Questions
 "Q1" = "Hvem har det længste hår";
 "Q2" = "Hvem har drukket mest";

@@ -162,6 +162,13 @@
 "SnydRule5Title" = "Do you play with stairs";
 "SnydRule5" = "If you play with staris. Stairs starts from 1 and you got to have all your dices by an increment of 1 (So if you got 4 dices then you got to hit 1, 2, 3, 4. If you got 2 dices then hit 1, 2. If you got 1 die then you got to hit 1 aso. If anybody got stars then it means their amount of dices + 1(not excisting) all works as if they where 1s";
 
+//Dice in general
+"RollTheDices" = "Roll the dices";
+"HoldFor.5SecToRoll" = "Hold for .5 sec to roll";
+"Hide" = "Hide";
+"Show" = "Show";
+"Dices" = "dices";
+"TimeSinceLastRoll" = "Time since last roll";
 //Questions
 "Q1" = "Who got the longest hair";
 "Q2" = "Who had the most drinks";
