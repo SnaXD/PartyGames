@@ -50,6 +50,11 @@
 		AB463F3728649F3500C8056E /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463F3628649F3500C8056E /* ShopView.swift */; };
 		AB51A1B3286C7CF60047631E /* MyNameIsTurnDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51A1B2286C7CF60047631E /* MyNameIsTurnDisplay.swift */; };
 		AB51A1B6286C9EB50047631E /* SmallShopItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51A1B5286C9EB50047631E /* SmallShopItemView.swift */; };
+		AB61AA0028AA326700A29992 /* AnimatedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61A9FF28AA326700A29992 /* AnimatedText.swift */; };
+		AB61AA0128AA326700A29992 /* AnimatedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61A9FF28AA326700A29992 /* AnimatedText.swift */; };
+		AB61AA0328AA559400A29992 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AA0228AA559400A29992 /* StoreKit.framework */; };
+		AB61AA0628AA55DF00A29992 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61AA0528AA55DF00A29992 /* StoreManager.swift */; };
+		AB61AA0728AA55DF00A29992 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61AA0528AA55DF00A29992 /* StoreManager.swift */; };
 		AB8C4974286C35F400EA9CAC /* WaterfallHandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8C4973286C35F400EA9CAC /* WaterfallHandsView.swift */; };
 		AB946403289935AB001717E7 /* DicesRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB946402289935AB001717E7 /* DicesRules.swift */; };
 		AB946404289935AB001717E7 /* DicesRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB946402289935AB001717E7 /* DicesRules.swift */; };
@@ -194,6 +199,9 @@
 		AB463F3628649F3500C8056E /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		AB51A1B2286C7CF60047631E /* MyNameIsTurnDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNameIsTurnDisplay.swift; sourceTree = "<group>"; };
 		AB51A1B5286C9EB50047631E /* SmallShopItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallShopItemView.swift; sourceTree = "<group>"; };
+		AB61A9FF28AA326700A29992 /* AnimatedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedText.swift; sourceTree = "<group>"; };
+		AB61AA0228AA559400A29992 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		AB61AA0528AA55DF00A29992 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		AB8C4973286C35F400EA9CAC /* WaterfallHandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallHandsView.swift; sourceTree = "<group>"; };
 		AB946402289935AB001717E7 /* DicesRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicesRules.swift; sourceTree = "<group>"; };
 		AB9DCC8428585C2C0091185F /* SlapTheQueenGameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapTheQueenGameOver.swift; sourceTree = "<group>"; };
@@ -235,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46C77C2CCF2EE2A9862595EF /* libPods-PartyGames.a in Frameworks */,
+				AB61AA0328AA559400A29992 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +320,7 @@
 		AB346734284F23FF006B312F /* PartyGames */ = {
 			isa = PBXGroup;
 			children = (
+				AB61AA0428AA55CD00A29992 /* Appstore */,
 				AB30D6612897BFD1002511DC /* Extentions */,
 				AB3BE1C22875A7D100D438BB /* Protocols */,
 				ABDC745A286EF00F0016DEBF /* ViewModels */,
@@ -452,6 +462,14 @@
 			path = Shop;
 			sourceTree = "<group>";
 		};
+		AB61AA0428AA55CD00A29992 /* Appstore */ = {
+			isa = PBXGroup;
+			children = (
+				AB61AA0528AA55DF00A29992 /* StoreManager.swift */,
+			);
+			path = Appstore;
+			sourceTree = "<group>";
+		};
 		AB946405289935EF001717E7 /* DiceGameRules */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,6 +512,7 @@
 				AB9DCC9A2859BAA00091185F /* MainMenu.swift */,
 				AB9DCC9C2859BD140091185F /* GameItem.swift */,
 				AB463F3628649F3500C8056E /* ShopView.swift */,
+				AB61A9FF28AA326700A29992 /* AnimatedText.swift */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
@@ -533,6 +552,7 @@
 		CE9837A1F42D1A029BFBE036 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB61AA0228AA559400A29992 /* StoreKit.framework */,
 				1820B561B18CA6B875DE05D5 /* libPods-PartyGames.a */,
 				4CED2DABFCCD7DC4CAB90E5A /* libPods-PartyGamesTests.a */,
 			);
@@ -795,6 +815,7 @@
 				AB9DCC982858A0C30091185F /* Filled.swift in Sources */,
 				AB9DCC9B2859BAA00091185F /* MainMenu.swift in Sources */,
 				ABDC7446286CCC0D0016DEBF /* GradientBackOfCard.swift in Sources */,
+				AB61AA0028AA326700A29992 /* AnimatedText.swift in Sources */,
 				AB346760284F8BAF006B312F /* SmallNumberAndType.swift in Sources */,
 				AB34674E284F365A006B312F /* SlapTheQueenGameView.swift in Sources */,
 				AB463F3728649F3500C8056E /* ShopView.swift in Sources */,
@@ -807,6 +828,7 @@
 				ABDC744A286D785C0016DEBF /* ShopItemFrame.swift in Sources */,
 				ABDC7450286D87BA0016DEBF /* ActionBackOfCard.swift in Sources */,
 				AB463F3528649E2400C8056E /* WaterfallRules.swift in Sources */,
+				AB61AA0628AA55DF00A29992 /* StoreManager.swift in Sources */,
 				ABDC745C286EF01C0016DEBF /* WaterfallViewModel.swift in Sources */,
 				ABDC7452286DA1810016DEBF /* WantedPosterTurnDisplayer.swift in Sources */,
 			);
@@ -869,6 +891,7 @@
 				ABE3D2EC2876E9DE00DF39D7 /* Filled.swift in Sources */,
 				ABE3D2ED2876E9DE00DF39D7 /* MainMenu.swift in Sources */,
 				ABE3D2EE2876E9DE00DF39D7 /* GradientBackOfCard.swift in Sources */,
+				AB61AA0128AA326700A29992 /* AnimatedText.swift in Sources */,
 				ABE3D2EF2876E9DE00DF39D7 /* SmallNumberAndType.swift in Sources */,
 				ABE3D2F02876E9DE00DF39D7 /* SlapTheQueenGameView.swift in Sources */,
 				ABE3D2F12876E9DE00DF39D7 /* ShopView.swift in Sources */,
@@ -881,6 +904,7 @@
 				ABE3D2F72876E9DE00DF39D7 /* ShopItemFrame.swift in Sources */,
 				ABE3D2F82876E9DE00DF39D7 /* ActionBackOfCard.swift in Sources */,
 				ABE3D2F92876E9DE00DF39D7 /* WaterfallRules.swift in Sources */,
+				AB61AA0728AA55DF00A29992 /* StoreManager.swift in Sources */,
 				ABE3D2FA2876E9DE00DF39D7 /* WaterfallViewModel.swift in Sources */,
 				ABE3D2FB2876E9DE00DF39D7 /* WantedPosterTurnDisplayer.swift in Sources */,
 			);
@@ -1152,7 +1176,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = net.xddevelop.xdspartygames;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1184,7 +1208,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = net.xddevelop.xdspartygames;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

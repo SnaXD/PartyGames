@@ -8,20 +8,52 @@
 import SwiftUI
 
 struct ShopView: View {
+    @StateObject var storeManager: StoreManager
     @State var vm = ShopViewModel()
     @ObservedObject var cosmetics = CosmeticViews.shared
     var body: some View {
         ScrollView(){
             LazyVStack(alignment: .leading, spacing: 12){
+                HStack(alignment: .firstTextBaseline){
                 Text("Cosmetics")
                     .bold()
                     .font(.system(size: 42))
                     .padding(.top, 24)
                     .padding(.leading, 8)
+                    
+                    Spacer()
+                    
+                    Button {
+                        storeManager.restoreProducts()
+                    } label: {
+                        Text("Restore")
+                            .font(.system(size: 12))
+                            .foregroundColor(.blue)
+                            .padding(.trailing, 8)
+                    }
+
+                }
                 Divider()
-                Text("TurnDisplays")
-                    .fontWeight(.semibold)
-                    .padding(.leading, 8)
+                HStack{
+                    Text("TurnDisplays")
+                        .fontWeight(.semibold)
+                        .padding(.leading, 8)
+                Spacer()
+                    if UserDefaults.standard.bool(forKey: "EveryTurnDisplay") {
+                            Text("Purchased")
+                                .foregroundColor(.green)
+                                .padding(.trailing, 8)
+                    } else {
+                        Button {
+                            //TODO: Check for Wifi connection
+                            storeManager.purchaseProduct(product: storeManager.myProducts[0])
+                        } label: {
+                        Text("Unlock")
+                            .foregroundColor(.blue)
+                            .padding(.trailing, 8)
+                    }
+                }
+                }
                 VStack(spacing: 0){
                     Rectangle().frame(height: 1)
                     ScrollView(.horizontal, showsIndicators: false){
@@ -42,10 +74,26 @@ struct ShopView: View {
                     Rectangle().frame(height: 1)
                         .shadow(radius: 2)
                 }
-                Text("BacksideOfCards")
-                    .fontWeight(.semibold)
-                    .padding(.leading, 8)
-                    .padding(.top, 32)
+                HStack{
+                    Text("BacksideOfCards")
+                        .fontWeight(.semibold)
+                    Spacer()
+                        if UserDefaults.standard.bool(forKey: "CardBackgrounds") {
+                                Text("Purchased")
+                                    .foregroundColor(.green)
+                        } else {
+                            Button {
+                                //TODO: Check for Wifi connection
+                                storeManager.purchaseProduct(product: storeManager.myProducts[1])
+                            } label: {
+                            Text("Unlock")
+                                .foregroundColor(.blue)
+                        }
+                    }
+                }
+                .padding(.horizontal, 8)
+                .padding(.top, 32)
+                
                 VStack(spacing: 0){
                     Rectangle().frame(height: 1)
                     ScrollView(.horizontal, showsIndicators: false){
@@ -73,7 +121,7 @@ struct ShopView: View {
 
 struct ShopView_Previews: PreviewProvider {
     static var previews: some View {
-        ShopView()
+        ShopView(storeManager: StoreManager())
     }
 }
 

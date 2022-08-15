@@ -6,16 +6,23 @@
 //
 
 import SwiftUI
+import StoreKit
 
 @main
 struct PartyGamesApp: App {
     
+    @StateObject var storeManager = StoreManager()
     init(){
         CosmeticViews.shared.setupLastUsedCosmetics()
     }
     var body: some Scene {
         WindowGroup {
-            MainMenu()
+            MainMenu(storeManager: storeManager)
+                .onAppear(perform: {
+                    SKPaymentQueue.default().add(storeManager)
+                    storeManager.getProducts(productIDs: ["EveryTurnDisplay"])
+                })
+            
         }
     }
 }
