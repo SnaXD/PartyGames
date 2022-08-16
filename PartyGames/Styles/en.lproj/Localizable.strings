@@ -48,6 +48,10 @@
 "successfullyCopyed" = "Successfully copyed";
 "ItsYourTurn" = "Its Your Turn";
 "giveTo %@" = "Give to %@";
+"TryingToLoad" = "Trying to load";
+"Products" = "Products";
+"Purchased" = "Purchased";
+"Unlock" = "Unlock";
 
 //Waterfall Classic Rules
 "aceTitle" = "Sniper";

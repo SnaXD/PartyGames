@@ -128,11 +128,11 @@ struct ShopView: View {
                     .opacity(0.6)
                 
                 VStack{
-                    Text("Trying to load")
+                    Text("TryingToLoad")
                     ProgressView()
                         .scaleEffect(x: 3, y: 3, anchor: .center)
                         .padding(28)
-                    Text("products")
+                    Text("Products")
                 }
                 .padding()
                 .padding(.horizontal, 32)

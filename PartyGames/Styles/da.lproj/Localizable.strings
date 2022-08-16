@@ -48,6 +48,11 @@
 "successfullyCopyed" = "Kopiret";
 "ItsYourTurn" = "Det er din tur";
 "giveTo %@" = "Giv til %@";
+"TryingToLoad" = "Forsøger at finde produkter";
+"Products" = "Produkter";
+"Purchased" = "Købt!";
+"Unlock" = "Lås alle op";
+
 //Waterfall Classic Rules
 "aceTitle" = "Sniper";
 "aceRule" = "Lav en cirkel med tommelfingeren og pegefingeren. Begynd med at tælle højt. Det tal du ender med, er antallet af slurke dit offer skal drikke - dette kort kan gemmes";

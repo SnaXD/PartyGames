@@ -65,7 +65,7 @@ struct DicesGameView: View {
                                 }
                                 .overlay {
                                     Text("HoldFor.5SecToRoll")
-                                        .font(.system(size: 12))
+                                        .font(.system(size: 16))
                                         .offset(y: 23)
                                 }
                         }
