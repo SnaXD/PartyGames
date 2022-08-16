@@ -13,6 +13,8 @@ struct WaterfallRules: View {
     @State private var xdsRules: [RuleItem] = getXdsRules()
     @State var ruleSize: CGFloat = 14
     @State private var showPopupForSuccessfulCopy = false
+    @State private var generatedRule: String = ""
+    @State private var generatedCategory: String = ""
     var body: some View {
         VStack(spacing: 0){
             Picker("", selection: $ruletype) {
@@ -58,6 +60,41 @@ struct WaterfallRules: View {
                             }.padding(.bottom, 12)
                         }
                     }
+                    Button {
+                        generatedRule = ruleGenerator(lastRule: generatedRule)
+                    } label: {
+                        Text("GenerateRule")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(RoundedRectangle(cornerRadius: 8)
+                                .fill(Color(uiColor: .systemBlue)))
+                        
+                    }
+                    Text(LocalizedStringKey(generatedRule))
+                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity, minHeight: 42)
+                        .padding(4)
+                        .background(RoundedRectangle(cornerRadius: 40)
+                            .fill(Color(uiColor: .systemGray5)))
+                    
+                    Button {
+                        generatedCategory = categoryGenerator(lastCategory: generatedCategory)
+                    } label: {
+                        Text("GenerateCategory")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(RoundedRectangle(cornerRadius: 8)
+                                .fill(Color(uiColor: .systemBlue)))
+                    }
+                    .padding(.top, 8)
+                    Text(LocalizedStringKey(generatedCategory))
+                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity, minHeight: 42)
+                        .padding(4)
+                        .background(RoundedRectangle(cornerRadius: 40)
+                            .fill(Color(uiColor: .systemGray5)))
+                    
+                    
                     
                 }.padding()
             }
@@ -117,4 +154,29 @@ private func getXdsRules() -> [RuleItem]{
             RuleItem(card: .queen, title: "XDsQueenTitle", rule: "XDsQueenRule", useCardType: true),
             RuleItem(card: .king, title: "XDsKingTitle", rule: "XDsKingRule", useCardType: true)
     ]
+}
+
+private func ruleGenerator(lastRule: String) -> String {
+    let rules: [String] = ["AIsDrinkingBuddyWithB", "ChangeNameWithThePersonOnTheLeft", "AGotToDrink2SipsWheneverBDrinks", "AISOnlyAllowedToSpeakWhenTheyAreDirectlyTalkedTo", "AGotToRaiseTheirHandBeforeTheyAreAllowedToSpeak", "AGotToSayImNotReallyThatThirstyBeforeDrinking", "AIsOnlyAllowedToDrinkWhenTheyStandUp", "AWillSplitAllHisSipsWithB", "AGotToSpeakLikeYoda"]
+    var rule = rules.randomElement()!
+    while true {
+        if rule != lastRule {
+            break
+        }
+        rule = rules.randomElement()!
+    }
+    
+    return rule
+}
+
+private func categoryGenerator(lastCategory: String) -> String {
+    let categorys: [String] = ["ComputerManufactors", "Beers", "Drinks", "Contrys", "Continents", "Capitals", "MakeupBrands", "WaysToHomercide", "DumbWaysToDie", "Numbers0-20", "CarManifactors", "KindsOfSoda", "IphoneModels", "ChampionsLeagueTeams", "LeagueOfLegendsCharacters", "SongsEdSheeranSing", "SongsEminemRap", "WordsInShapeOfYou", "ShoeBrands", "ActiveSports", "KeysOnAKeyboard"]
+    var category = categorys.randomElement()!
+    while true {
+        if category != lastCategory {
+            break
+        }
+        category = categorys.randomElement()!
+    }
+    return category
 }

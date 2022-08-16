@@ -67,11 +67,11 @@
 "sixTitle" = "Tisse- eller rygekortet";
 "sixRule" = "Du må gå på toillet eller ud og ryge. Du kan sælge dette kort til en anden spiller for slurke - dette kort kan gemmes. Hvis man går på toilet eller ud og ryge uden dette kort skal man bunde en genstand";
 "sevenTitle" = "Kategori";
-"sevenRule" = "Nævn en kategori, og start med at sige en ting i den kattegori og lad den gå på tur. Den første der siger noget forkert, eller noget der allerede er sagt, taber, og skal drikke lige så mange slurke, som antallet af runder, I var igennem";
+"sevenRule" = "Nævn en kategori, og start med at sige en ting i den kattegori og lad den gå på tur. Den første der siger noget forkert, eller noget der allerede er sagt, taber, og skal drikke lige så mange slurke, som antallet af runder, I var igennem. (Hvis du har brug for hjælp er der en generator i bunden af dette sheet)";
 "eightTitle" = "Fingeren på næsen";
 "eightRule" = "Den sidste der rører sin næse med fingeren skal drikke - Dette kort kan gemmes";
 "nineTitle" = "Regelkortet";
-"nineRule" = "Du må bestemme en regel som ikke ændre på spillets nuværrende regler eller fjerne en regl";
+"nineRule" = "Du må bestemme en regel som ikke ændre på spillets nuværrende regler eller fjerne en regl. (Hvis du har brug for hjælp er der en generator i bunden af dette sheet)";
 "tenTitle" = "Vandfald";
 "tenRule" = "Den som får kortet, skal du begynde at drikke. De andre skal også begynde at drikke, men må ikke stoppe, før den forrige i rækken stopper med at drikke";
 "knightTitle" = "Knægt";
@@ -121,11 +121,11 @@
 "XDsSixTitle" = "Druk makker";
 "XDsSixRule" = "Alle som har en 6'er skal drikke hver gang en med en 6'er drikker";
 "XDsSevenTitle" = "Kategori";
-"XDsSevenRule" = "Nævn en kategori, og start med at sige en ting i den kattegori og lad den gå på tur. Den første der siger noget forkert, eller noget der allerede er sagt, taber, og skal drikke lige så mange slurke, som antallet af runder, I var igennem";
+"XDsSevenRule" = "Nævn en kategori, og start med at sige en ting i den kattegori og lad den gå på tur. Den første der siger noget forkert, eller noget der allerede er sagt, taber, og skal drikke lige så mange slurke, som antallet af runder, I var igennem. (Hvis du har brug for hjælp er der en generator i bunden af dette sheet)";
 "XDsEightTitle" = "Viking";
 "XDsEightRule" = "Har du kortet må du lave 2 horn på dit hoved med hænderne. Den sidste spiller til at ro skal drikke 2 tåre - Dette kort kan gemmes og bruges så mange gange man vil indtil den næste får en 8'er";
 "XDsNineTitle" = "Regelkortet";
-"XDsNineRule" = "Du må bestemme en regel som ikke ændre på spillets nuværrende regler eller fjerne en regl";
+"XDsNineRule" = "Du må bestemme en regel som ikke ændre på spillets nuværrende regler eller fjerne en regl (Hvis du har brug for hjælp er der en generator i bunden af dette sheet)";
 "XDsTenTitle" = "Vandfald";
 "XDsTenRule" = "Den som får kortet, skal du begynde at drikke. De andre skal også begynde at drikke, men må ikke stoppe, før den forrige i rækken stopper med at drikke";
 "XDsKnightTitle" = "Skål!";
@@ -248,7 +248,7 @@
 "Q72" = "Hvem er mest kræsen";
 "Q72" = "Hvem kunne godt ligge en hel i sin seng en hel dag";
 "Q73" = "Hvem bruger flest penge i byen";
-"Q74" = "Hvem ~~drikker mest~~ samler på flasker";
+"Q74" = "Hvem ~~drikk er mest~~ samler på flasker";
 "Q75" = "Hvem får oftest en sang på hjernen";
 "Q76" = "Hvem quoter oftest et meme";
 "Q77" = "Hvem kunne godt finde på at tage til Australien";
@@ -263,3 +263,39 @@
 "Q86" = "Hvem smadre altid skærmen på sin telefon";
 "Q87" = "Hvem er mest tilbøjelig til at køre galt";
 "Q88" = "Hvem har flest sko";
+
+// Rules in rule generator
+"GenerateRule" = "Generer en regl";
+"AIsDrinkingBuddyWithB" = "Spiller A er drukmakker med spiller B";
+"ChangeNameWithThePersonOnTheLeft" = "Du må kun tiltale folk med fornavne og alle har fornavnet fra den til venstre";
+"AGotToDrink2SipsWheneverBDrinks" = "Spiller A skal drikke 2 tåre når spiller B drikker";
+"AISOnlyAllowedToSpeakWhenTheyAreDirectlyTalkedTo" = "Spiller A er kun tilladt at snakke når de bliver talt direkte til";
+"AGotToRaiseTheirHandBeforeTheyAreAllowedToSpeak" = "Spiller A skal tage hånden op før de har lov til at tale";
+"AGotToSayImNotReallyThatThirstyBeforeDrinking" = "Spiller A skal sige 'Jeg er enlig ikke så tørstig' før de drikker";
+"AIsOnlyAllowedToDrinkWhenTheyStandUp" = "Spiller A må kun drikke mens de står op";
+"AWillSplitAllHisSipsWithB" = "Spiller A splitter deres tåre med spiller B";
+"AGotToSpeakLikeYoda" = "Spiller A taler som yoda 'Reglen forstå du gør'";
+
+// Category generator
+"GenerateCategory" = "Generer en kategori";
+"ComputerManufactors" = "Computer fabrikanter";
+"Beers" = "Øl mærker";
+"Drinks" = "Forskællige drinks";
+"Contrys" = "Lande";
+"Continents" = "kontinenter";
+"Capitals" = "Hovedstader";,
+"MakeupBrands" = "Makeup mærker";
+"WaysToHomercide" = "Måder at [Homercide](https://www.urbandictionary.com/define.php?term=Homercide)";
+"DumbWaysToDie" = "Dumme måder at dø på";
+"Numbers0-20" = "Numrende 0 - 20";
+"CarManifactors" = "Bil fabrikanter";
+"KindsOfSoda" = "Sodavands typer";
+"IphoneModels" = "Iphone modeller";
+"ChampionsLeagueTeams" = "Champions league hold";
+"LeagueOfLegendsCharacters" = "League Of Legends karaktere";
+"SongsEdSheeranSing" = "Sange Ed Sheeran synger";
+"SongsEminemRap" = "Sange Eminem Rapper";
+"WordsInShapeOfYou" = "Ord som er i sangen Shape of you";
+"ShoeBrands" = "Sko mærker";
+"ActiveSports" = "Sports hvor man er aktiv (fx man løber)";
+"KeysOnAKeyboard" = "Taster på et tastertur fra dit land";
