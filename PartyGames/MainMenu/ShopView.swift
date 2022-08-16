@@ -64,10 +64,10 @@ struct ShopView: View {
                                         .padding(.horizontal, 8)
                                         .tint(item == cosmetics.selectedTurnDisplayer ? .yellow : .blue)
                                         .onTapGesture {
-                                            if UserDefaults.standard.bool(forKey: "EveryTurnDisplay") {
+                                            //if UserDefaults.standard.bool(forKey: "EveryTurnDisplay") {
                                                 cosmetics.selectedTurnDisplayer = item
                                                 cosmetics.saveSelectedCosmetics()
-                                            }
+                                            //}
                                         }
                                 }
                             }
@@ -109,7 +109,7 @@ struct ShopView: View {
                                             //if UserDefaults.standard.bool(forKey: "CardBackgrounds") {
                                                 cosmetics.selectedCardBackground = item
                                                 cosmetics.saveSelectedCosmetics()
-                                           // }
+                                            //}
                                         }
                                 }
                             }

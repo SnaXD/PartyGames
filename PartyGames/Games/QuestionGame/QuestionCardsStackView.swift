@@ -67,7 +67,7 @@ struct QuestionCardsStackView: View {
             game.Setup()
         })
         .sheet(isPresented: $openRules) {
-            SlapTheQueenRules()
+            QuestionGameRules()
         }
     }
 }
