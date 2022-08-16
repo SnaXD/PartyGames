@@ -27,8 +27,8 @@ class ShopViewModel {
     func getViewForBackOfCards(backOfCard: backOfCards) -> ShopItem{
         let items = CosmeticViews.shared
         switch backOfCard {
-        case .emojis:
-            return ShopItem(view: items.getViewForBackgroundImage(cardBackground: .emojis), name: "Emojis")
+        case .emoji:
+            return ShopItem(view: items.getViewForBackgroundImage(cardBackground: .emoji, preview: true), name: "Emoji")
         case .gradient:
             return ShopItem(view: items.getViewForBackgroundImage(cardBackground: .gradient), name: "Gradient")
         case .colerFullCircle:
@@ -49,5 +49,5 @@ enum turnDisplay: String, CaseIterable {
 }
 
 enum backOfCards: String, CaseIterable {
-    case standard, emojis, gradient, colerFullCircle, manLookingThroughCard, actionImage
+    case standard, emoji, gradient, colerFullCircle, manLookingThroughCard, actionImage
 }

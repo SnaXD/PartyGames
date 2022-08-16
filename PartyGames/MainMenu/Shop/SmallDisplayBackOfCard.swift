@@ -19,6 +19,7 @@ struct SmallDisplayBackOfCard: View {
                     .overlay(
                         item.view
                             .background(backgroundColor)
+                        
                     )
                     .background(.white)
                     .cornerRadius(16)
@@ -32,6 +33,6 @@ struct SmallDisplayBackOfCard: View {
 
 struct SmallDisplayBackOfCard_Previews: PreviewProvider {
     static var previews: some View {
-        SmallDisplayBackOfCard(item: ShopItem(view: AnyView(GradientBackOfCard()), name: "Gradient"), backgroundColor: .green)
+        SmallDisplayBackOfCard(item: ShopItem(view: AnyView(EmojiBackOfCard(preview: true)), name: "Gradient"), backgroundColor: .green)
     }
 }

@@ -20,8 +20,8 @@ class CosmeticViews: ObservableObject, Cosmetics{
         switch background {
         case .standard:
             return standard
-        case .emojis:
-            return standard
+        case .emoji:
+            return Color(uiColor: .systemPurple)
         case .gradient:
             return Color(uiColor: .systemOrange)
         case .colerFullCircle:
@@ -35,11 +35,11 @@ class CosmeticViews: ObservableObject, Cosmetics{
     func getViewForBackgroundImage() -> AnyView {
         return getViewForBackgroundImage(cardBackground: selectedCardBackground)
     }
-    func getViewForBackgroundImage(cardBackground: backOfCards) -> AnyView {
+    func getViewForBackgroundImage(cardBackground: backOfCards, preview: Bool = false) -> AnyView {
         selectedCardBackgroundsMatchingForgroundColor = getForgroundColor(for: cardBackground)
         switch cardBackground {
-        case .emojis:
-            return AnyView(EmojiBackOfCard())
+        case .emoji:
+            return AnyView(EmojiBackOfCard(preview: preview))
         case .gradient:
             return AnyView(GradientBackOfCard())
         case .colerFullCircle:

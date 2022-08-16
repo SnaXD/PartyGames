@@ -44,8 +44,11 @@ struct DicesGameView: View {
                 
                 VStack{
                     VStack{
-                        Button {
-                        } label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 12)
+                                .frame(width: 300, height: 100, alignment: .center)
+                                .foregroundColor(.green)
+                                .shadow(radius: 4)
                             Text("RollTheDices")
                                 .font(.system(size: 30))
                                 .fontWeight(.semibold)
@@ -65,9 +68,8 @@ struct DicesGameView: View {
                                         .font(.system(size: 12))
                                         .offset(y: 23)
                                 }
-                            
-                        }.buttonStyle(FilledStyle())
-                            .shadow(radius: 4)
+                        }
+                        
                         
                         Button {
                             hideDices.toggle()
