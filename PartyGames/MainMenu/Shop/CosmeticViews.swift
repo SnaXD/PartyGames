@@ -21,7 +21,7 @@ class CosmeticViews: ObservableObject, Cosmetics{
         case .standard:
             return standard
         case .emoji:
-            return Color(uiColor: .systemPurple)
+            return Color(uiColor: .systemOrange)
         case .gradient:
             return Color(uiColor: .systemOrange)
         case .colerFullCircle:

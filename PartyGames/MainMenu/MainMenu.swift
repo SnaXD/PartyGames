@@ -72,6 +72,7 @@ struct MainMenu: View {
                 }
             }.background(.black)
         }
+        .navigationViewStyle(.stack)
         .sheet(isPresented: $openShopSheet) {
             ShopView(storeManager: storeManager)
         }

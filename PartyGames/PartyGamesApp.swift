@@ -20,7 +20,7 @@ struct PartyGamesApp: App {
             MainMenu(storeManager: storeManager)
                 .onAppear(perform: {
                     SKPaymentQueue.default().add(storeManager)
-                    storeManager.getProducts(productIDs: ["EveryTurnDisplay"])
+                    storeManager.getProducts(productIDs: ["EveryTurnDisplay", "CardBackgrounds"])
                 })
             
         }

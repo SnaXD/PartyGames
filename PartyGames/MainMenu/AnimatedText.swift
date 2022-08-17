@@ -9,13 +9,6 @@ import SwiftUI
 
 struct AnimatedText: View {
     @State var animate = false
-    var paddingTop: [CGFloat] = [CGFloat.random(in: 0..<70),
-                                 CGFloat.random(in: 0..<70),
-                                 CGFloat.random(in: 0..<70),
-                                 CGFloat.random(in: 0..<70),
-                                 CGFloat.random(in: 0..<70),
-                                 CGFloat.random(in: 0..<70),
-                                 CGFloat.random(in: 0..<70)]
     
     var start: [CGFloat] = [CGFloat.random(in: -10..<70),
                                  CGFloat.random(in: -30..<70),
@@ -44,7 +37,7 @@ struct AnimatedText: View {
                         .font(.system(size: 42))
                         .offset(x:animate ? proxy.size.width - destination[0] : start[0])
                         .frame(height: 30)
-                        .padding(.top, paddingTop[0])
+                        .padding(.top, getPaddingToTop(geometry: proxy))
                 }
                 HStack{
                     Text("💸")
@@ -52,7 +45,7 @@ struct AnimatedText: View {
                         .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
                         .offset(x:animate ? start[1] : proxy.size.width - destination[1])
                         .frame(height: 30)
-                        .padding(.top, paddingTop[1])
+                        .padding(.top, getPaddingToTop(geometry: proxy))
                 }
                 HStack{
                     Image(systemName: "suit.heart.fill")
@@ -60,7 +53,7 @@ struct AnimatedText: View {
                         .font(.system(size: 42))
                         .offset(x:animate ? proxy.size.width - destination[2] : start[2])
                         .frame(height: 30)
-                        .padding(.top, paddingTop[2])
+                        .padding(.top, getPaddingToTop(geometry: proxy))
                 }
                 HStack{
                     Image(systemName: "suit.spade.fill")
@@ -68,7 +61,7 @@ struct AnimatedText: View {
                         .font(.system(size: 42))
                         .offset(x:animate ? proxy.size.width - destination[3] : start[3])
                         .frame(height: 30)
-                        .padding(.top, paddingTop[3])
+                        .padding(.top, getPaddingToTop(geometry: proxy))
                 }
                 HStack{
                     Text("💸")
@@ -76,25 +69,25 @@ struct AnimatedText: View {
                         .rotationEffect(.degrees(animate ? 0 : 340))
                         .offset(x:animate ? start[4] : proxy.size.width - destination[4])
                         .frame(height: 30)
-                        .padding(.top, paddingTop[4])
+                        .padding(.top, getPaddingToTop(geometry: proxy))
                 }
                 HStack{
                     Text("💸")
                         .font(.system(size: 42))
                         .offset(x:animate ? start[5] : proxy.size.width - destination[5])
                         .frame(height: 30)
-                        .padding(.top, paddingTop[5])
+                        .padding(.top, getPaddingToTop(geometry: proxy))
                 }
                 HStack{
                     Image(systemName: "suit.club.fill")
                         .font(.system(size: 42))
                         .offset(x:animate ? proxy.size.width - destination[6] : start[0])
                         .frame(height: 30)
-                        .padding(.top, paddingTop[0])
+                        .padding(.top, getPaddingToTop(geometry: proxy))
                 }
             }
             .onReceive(timer) { _ in
-                withAnimation(.linear(duration: 3)) {
+                withAnimation(.linear(duration: AnimationTime())) {
                     animate.toggle()
                 }
             }
@@ -103,6 +96,17 @@ struct AnimatedText: View {
             }
         }
     }
+    
+    func getPaddingToTop(geometry: GeometryProxy) -> CGFloat{
+        
+        let amountOfEmojis: CGFloat = 7
+        let maxPadding = geometry.size.height / amountOfEmojis
+        return CGFloat.random(in: 0..<maxPadding)
+    }
+    
+    func AnimationTime() -> Double {
+        return Double(Int.random(in: 3...6))
+    }
 }
 
 struct AnimatedText_Previews: PreviewProvider {
@@ -110,4 +114,5 @@ struct AnimatedText_Previews: PreviewProvider {
         AnimatedText()
     }
 }
+
 
