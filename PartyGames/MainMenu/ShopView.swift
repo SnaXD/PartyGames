@@ -21,6 +21,7 @@ struct ShopView: View {
                             .font(.system(size: 42))
                             .padding(.top, 24)
                             .padding(.leading, 8)
+                            .foregroundColor(Color(uiColor: .systemGray2))
                         
                         Spacer()
                         
@@ -30,15 +31,17 @@ struct ShopView: View {
                             Text("Restore")
                                 .font(.system(size: 12))
                                 .foregroundColor(.blue)
-                                .padding(.trailing, 8)
+                                .padding(.trailing, 10)
                         }
                         
                     }
+                    .padding(.horizontal, 32)
                     Divider()
                     HStack{
                         Text("TurnDisplays")
                             .fontWeight(.semibold)
                             .padding(.leading, 8)
+                            .foregroundColor(Color(uiColor: .systemGray2))
                         Spacer()
                         if UserDefaults.standard.bool(forKey: "EveryTurnDisplay") {
                             Text("Purchased")
@@ -55,6 +58,7 @@ struct ShopView: View {
                             }
                         }
                     }
+                    .padding(.horizontal, 32)
                     VStack(spacing: 0){
                         Rectangle().frame(height: 1)
                         ScrollView(.horizontal, showsIndicators: false){
@@ -73,13 +77,14 @@ struct ShopView: View {
                             }
                         }
                         .padding(.vertical, 8)
-                        .background(Color(uiColor: .systemGray6))
+                        .background(Color(uiColor: .systemGray2))
                         Rectangle().frame(height: 1)
                             .shadow(radius: 2)
                     }
                     HStack{
                         Text("BacksideOfCards")
                             .fontWeight(.semibold)
+                            .foregroundColor(Color(uiColor: .systemGray2))
                         Spacer()
                         if UserDefaults.standard.bool(forKey: "CardBackgrounds") {
                             Text("Purchased")
@@ -94,7 +99,7 @@ struct ShopView: View {
                             }
                         }
                     }
-                    .padding(.horizontal, 8)
+                    .padding(.horizontal, 32)
                     .padding(.top, 32)
                     
                     VStack(spacing: 0){
@@ -115,12 +120,13 @@ struct ShopView: View {
                             }
                         }
                         .padding(.vertical, 8)
-                        .background(Color(uiColor: .systemGray6))
+                        .background(Color(uiColor: .systemGray2))
                         Rectangle().frame(height: 1)
                             .shadow(radius: 2)
                     }
                 }
-            }.background(Color(uiColor: .systemGray5))
+            }.padding(.vertical, 32)
+            .background(Color(uiColor: .darkGray))
             if storeManager.myProducts.count == 0 {
                 Rectangle()
                     .foregroundColor(Color(uiColor: .systemGray))
@@ -141,6 +147,7 @@ struct ShopView: View {
                 .shadow(radius: 1)
             }
         }
+        
     }
 }
 

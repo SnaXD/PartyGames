@@ -37,7 +37,7 @@ class StandardCustomization: ObservableObject{
     func getInspectCard(card: Card, alwaysInFocus: Bool = false) -> AnyView {
         var modifiedCard = card
         if alwaysInFocus {
-        modifiedCard.inFocus = true
+            modifiedCard.inFocus = true
         }
         var height: CGFloat = 0
         var width: CGFloat = 0
