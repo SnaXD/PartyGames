@@ -35,7 +35,7 @@ struct SlapTheQueenGameView: View {
             Spacer()
             ZStack {
                 ForEach(game.displayed) { card in
-                    CardView(card: card, animationTime: game.customizedSettings.animationTime)
+                    game.customizedSettings.getInspectCard(card: card, alwaysInFocus: true)
                         .zIndex(game.zIndex(of: card))
                         .shadow(radius: 1)
                         .offset(y: game.deckOffset(of: card))
@@ -44,19 +44,49 @@ struct SlapTheQueenGameView: View {
             }
             Spacer()
             HStack{
-                Button {
-                    game.displayed[0].revealContent = false
-                        game.getNewCard()
-                    if !game.displayed.isEmpty {
-                        game.displayed[0].revealContent = true
-                    } else {
-                        //If every card has been played
-                        gameOver.toggle()
+                if game.manualMode {
+                    HStack{
+                        Button {
+                            game.displayed[0].revealContent = false
+                            game.getNewCard()
+                            if !game.displayed.isEmpty {
+                                game.displayed[0].revealContent = true
+                            } else {
+                                //If every card has been played
+                                gameOver.toggle()
+                            }
+                        } label: {
+                            Text("New_card")//TODO: STYLE
+                        }
+                        .padding(.horizontal, 32)
+                        
+                        Button {
+                            print($game.manualMode.wrappedValue)
+                            $game.manualMode.wrappedValue.toggle()
+                        } label: {
+                            Text("Switch_to_automatic")//TODO: STYLE & translate
+                        }
+                        .padding(.horizontal, 32)
                     }
-                } label: {
-                    Text("New_card")
+                } else {
+                    HStack{
+                        Button {
+                            if game.timerIsRunning {
+                                game.timerIsRunning = false
+                            } else {
+                                game.timerIsRunning = true
+                            }
+                        } label: {
+                            Text("Stop/Start") //TODO: STYLE
+                        }
+                        Button {
+                            print($game.manualMode.wrappedValue)
+                            $game.manualMode.wrappedValue.toggle()
+                        } label: {
+                            Text("Switch_to_manual") //TODO: STYLE & translate
+                        }
+                    }
                 }
-                .padding(.horizontal, 32)
                 if game.customizedSettings.infinityCards {
                     Button {
                         game.displayed[0].revealContent = false
@@ -68,11 +98,28 @@ struct SlapTheQueenGameView: View {
                 }
             }
             Spacer()
-        }.onAppear(perform: {
+        }.onReceive(game.timer) { _ in
+            if game.timerIsRunning {
+                game.displayed[0].revealContent = false
+                game.getNewCard()
+                
+                if game.displayed.isEmpty {
+                    //If every card has been played
+                    gameOver.toggle()
+                    game.timerIsRunning = false
+                } else {
+                    game.displayed[0].revealContent = true
+                    if game.checkForGestureCard() {
+                        game.timerIsRunning = false
+                    }
+                }
+            }
+        }
+        .onAppear(perform: {
             game.SetupGame()
         })
         .sheet(isPresented: $openSettings) {
-            SettingsView(settings: game.customizedSettings)
+            SlapTheQueenSettingsView(settings: game.customizedSettings)
         }
         .sheet(isPresented: $openRules) {
             SlapTheQueenRules()

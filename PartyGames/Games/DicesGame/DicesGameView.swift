@@ -95,7 +95,6 @@ struct DicesGameView: View {
                             }
                         }
                         .font(.system(size: 90, weight: .bold))
-                    
                 }.padding(.vertical, 50)
             }
         }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SettingsView: View {
+struct SlapTheQueenSettingsView: View {
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var settings: StandardCustomization
     @State var name = ""
@@ -49,11 +49,12 @@ struct SettingsView: View {
                             }
                             .padding(.trailing)
                             Text(player.name)
-                            
                         }
                         .padding(.vertical, 4)
                     }
                 }
+            }
+            LazyVStack{
                 Divider()
                     .padding(.vertical, 8)
                 Slider(value: $settings.animationTime, in: Double(0.0)...2, step: 0.1)
@@ -66,44 +67,61 @@ struct SettingsView: View {
                 }.font(.system(size: 10))
                 Divider()
                     .padding(.vertical, 8)
-                VStack{
+            }
+            LazyVStack{
+                HStack{
+                    Text("Infinity_cards")
+                        .font(.system(size: 14))
+                        .fontWeight(.semibold)
+                        .italic()
+                    Spacer()
+                }
+                .padding(.top, 12)
+                Picker("Infinity_cards", selection: $settings.infinityCards) {
+                    Text("Yes").tag(true)
+                    Text("No").tag(false)
+                }
+                .pickerStyle(.segmented)
+                if $settings.infinityCards.wrappedValue == false {
                     HStack{
-                        Text("Infinity_cards")
+                        Text("Amount_of_decks")
                             .font(.system(size: 14))
                             .fontWeight(.semibold)
                             .italic()
                         Spacer()
+                        TextField("Input", text: $settings.amountOfDecks)
+                            .multilineTextAlignment(.center)
+                            .keyboardType(.decimalPad)
+                            .frame(width: 100, height: 32, alignment: .center)
+                            .background(colorScheme == .dark ? .gray : .black)
+                            .foregroundColor(colorScheme == .dark ? .black : .white)
+                            .cornerRadius(8)
                     }
-                    .padding(.top, 12)
-                    Picker("Infinity_cards", selection: $settings.infinityCards) {
-                        Text("Yes").tag(true)
-                        Text("No").tag(false)
+                    .padding(.top, 24)
+                    
+                    
+                }
+            }
+            LazyVStack{
+                HStack{
+                    Text("Card_size")
+                        .fontWeight(.semibold)
+                        .padding(.trailing, 42)
+                    Spacer()
+                    Picker("", selection: $settings.inspectCardSize) {
+                        ForEach(StandardCustomization.inspectCardSizes.allCases, id: \.self) { value in
+                            Text(LocalizedStringKey(value.rawValue))
+                                .tag(value)
+                        }
                     }
                     .pickerStyle(.segmented)
-                    if $settings.infinityCards.wrappedValue == false {
-                        HStack{
-                            Text("Amount_of_decks")
-                                .font(.system(size: 14))
-                                .fontWeight(.semibold)
-                                .italic()
-                            Spacer()
-                            TextField("Input", text: $settings.amountOfDecks)
-                                .multilineTextAlignment(.center)
-                                .keyboardType(.decimalPad)
-                                .frame(width: 100, height: 32, alignment: .center)
-                                .background(colorScheme == .dark ? .gray : .black)
-                                .foregroundColor(colorScheme == .dark ? .black : .white)
-                                .cornerRadius(8)
-                        }
-                        .padding(.top, 24)
-                        
-                        
-                    }
                 }
                 
                 
-            }.padding(.horizontal)
-        }.background(Color(UIColor.systemGray6))
+            }
+        }
+        .padding(.horizontal)
+        .background(Color(UIColor.systemGray6))
     }
 }
 
@@ -116,7 +134,7 @@ struct SettingsView_Previews: PreviewProvider {
 struct SettingsView_PreviewsWithBinding: View {
     @State var settings = StandardCustomization()
     var body: some View {
-        SettingsView(settings: settings)
+        SlapTheQueenSettingsView(settings: settings)
     }
 }
 

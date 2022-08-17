@@ -147,7 +147,10 @@ struct WaterfallGameView: View {
                 }
             }
         }){
-            vm.getInspectCard()
+            vm.game.customizedSettings.getInspectCard(card: vm.selectedCard!)
+                .onAppear{
+                    vm.selectedCard?.revealContent.toggle()
+                }
             
         }
     }
