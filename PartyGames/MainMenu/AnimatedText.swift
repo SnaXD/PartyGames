@@ -105,7 +105,7 @@ struct AnimatedText: View {
     }
     
     func AnimationTime() -> Double {
-        return Double(Int.random(in: 3...6))
+        return Double(Int.random(in: 3...4))
     }
 }
 
