@@ -58,14 +58,16 @@ struct SlapTheQueenGameView: View {
                         } label: {
                             Text("New_card")//TODO: STYLE
                         }
+                        .buttonStyle(FilledStyle(color: .green))
                         .padding(.horizontal, 32)
                         
                         Button {
                             print($game.manualMode.wrappedValue)
                             $game.manualMode.wrappedValue.toggle()
                         } label: {
-                            Text("Switch_to_automatic")//TODO: STYLE & translate
+                            Text("Switch_to_automatic")
                         }
+                        .buttonStyle(FilledStyle(color: .orange))
                         .padding(.horizontal, 32)
                     }
                 } else {
@@ -77,14 +79,15 @@ struct SlapTheQueenGameView: View {
                                 game.timerIsRunning = true
                             }
                         } label: {
-                            Text("Stop/Start") //TODO: STYLE
+                            Text("Stop/Start")
                         }
+                        .buttonStyle(FilledStyle(color: .pink))
                         Button {
                             print($game.manualMode.wrappedValue)
                             $game.manualMode.wrappedValue.toggle()
                         } label: {
-                            Text("Switch_to_manual") //TODO: STYLE & translate
-                        }
+                            Text("Switch_to_manual")
+                        }.buttonStyle(FilledStyle(color: .orange))
                     }
                 }
                 if game.customizedSettings.infinityCards {

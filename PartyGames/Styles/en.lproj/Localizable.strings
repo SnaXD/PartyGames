@@ -65,7 +65,7 @@
 "fiveTitle" = "5 Sips";
 "fiveRule" = "If the card is black then you got to take 5 sips. If the card is red you can distribute 5 sips";
 "sixTitle" = "Pee or smoke card";
-"sixRule" = "You're allowed to go pee or Smoke for free. - You can save this card for whenever you want. You're allowed to give it away. If somebody leaves to smoke or pee without one of theese cards then they got to finish a new drink or beer";
+"sixRule" = "You're allowed to go pee or Smoke for free. - You can save this card for whenever you want. You're allowed to give it away. If somebody leaves to smoke or pee without one of theese cards then they got to finish a new drink";
 "sevenTitle" = "Category";
 "sevenRule" = "Name a category and start by saying something in that category the first who says something wrong/something already said looses and  got to drink as many sips as the amount of rounds you went. (If you need help theres a generator in the bottom of this sheet)";
 "eightTitle" = "Finger on the nose";
@@ -107,7 +107,7 @@
 "XDsKnightTitle" = "Cheers!";
 "XDsKnightRule" = "Everybody got to say cheers and take a sip together";
 "XDsQueenTitle" = "The bitch!";
-"XDsQueenRule" = "If you got this card nobody are allowed to answer your questions (only if you ask for the purpose of a specific card). If someone answers you they get to have this card. When the game is over everybody with a queen got to drink half a drink/beer for each queen.";
+"XDsQueenRule" = "If you got this card nobody are allowed to answer your questions (only if you ask for the purpose of a specific card). If someone answers you they get to have this card. When the game is over everybody with a queen got to drink half a drink for each queen.";
 "XDsKingTitle" = "King";
 "XDsKingRule" = "You get to be the king and are allowed to do whatever of your liking without changing the core of the game. You will only loose your king if somebody else gets a king or a joker gets picked";
 "XDsJokerTitle" = "Joker";
@@ -124,6 +124,9 @@
 "STQRuleQueenRule" = "Agree on a spot to slap and when this card shows slap that place";
 "STQRuleKing" = "[K]";
 "STQRuleKingRule" = "Put both your hands with seperated fingers on each side of the top of your head";
+"Switch_to_manual" = "Manually";
+"Stop/Start" = "Start/Stop";
+"Switch_to_automatic" = "Automatic";
 
 //Questions game rules
 "QGStepOneTitle" = "Make Teams";
@@ -201,7 +204,7 @@
 "Q25" = "Who goes clubbing the most";
 "Q26" = "Who is the most picky about what they eat";
 "Q27" = "Who is working out the most";
-"Q28" = "Who can finish a beer the fastest";
+"Q28" = "Who can finish a drink the fastest";
 "Q29" = "Who is most likely to ragequit";
 "Q30" = "Who always accept a challange";
 "Q31" = "Who drinks too often";
@@ -299,3 +302,4 @@
 "ShoeBrands" = "Shoe brands";
 "ActiveSports" = "Sports where you're active (Like Running)";
 "KeysOnAKeyboard" = "Keys on a keyboard from the contry you live in";
+

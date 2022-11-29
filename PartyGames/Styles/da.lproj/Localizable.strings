@@ -94,6 +94,9 @@
 "STQRuleQueenRule" = "Bliv enig om et sted i slår. Når dette kort bliver vist slå der";
 "STQRuleKing" = "[K]";
 "STQRuleKingRule" = "Hold begge dine hælder med adskildte fingre på hver sin side af toppen af dit hoved";
+"Switch_to_manual" = "Manuelt";
+"Stop/Start" = "Start/Stop";
+"Switch_to_automatic" = "Automatisk";
 
 //Questions game rules
 "QGStepOneTitle" = "Lav hold";

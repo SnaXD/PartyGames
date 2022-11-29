@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ShopView: View {
+    @Environment(\.presentationMode) var presentationMode
     @StateObject var storeManager: StoreManager
     @State var vm = ShopViewModel()
     @ObservedObject var cosmetics = CosmeticViews.shared
@@ -15,11 +16,20 @@ struct ShopView: View {
         ZStack {
             ScrollView(){
                 LazyVStack(alignment: .leading, spacing: 12){
+                    HStack{
+                        Spacer()
+                        Image(systemName: "x.circle.fill")
+                            .foregroundColor(Color(uiColor: .systemBlue))
+                            .font(.system(size: 20))
+                            .padding(.trailing, 32)
+                            .onTapGesture {
+                                presentationMode.wrappedValue.dismiss()
+                            }
+                    }
                     HStack(alignment: .firstTextBaseline){
                         Text("Cosmetics")
                             .bold()
                             .font(.system(size: 42))
-                            .padding(.top, 24)
                             .padding(.leading, 8)
                             .foregroundColor(Color(uiColor: .systemGray2))
                         
@@ -50,7 +60,7 @@ struct ShopView: View {
                         } else {
                             Button {
                                 //TODO: Check for Wifi connection
-                                storeManager.purchaseProduct(product: storeManager.myProducts[0])
+                                storeManager.purchaseProduct(product: storeManager.myProducts[1])
                             } label: {
                                 Text("Unlock")
                                     .foregroundColor(.blue)
@@ -92,7 +102,7 @@ struct ShopView: View {
                         } else {
                             Button {
                                 //TODO: Check for Wifi connection
-                                storeManager.purchaseProduct(product: storeManager.myProducts[1])
+                                storeManager.purchaseProduct(product: storeManager.myProducts[0])
                             } label: {
                                 Text("Unlock")
                                     .foregroundColor(.blue)
