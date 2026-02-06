@@ -60,8 +60,17 @@ private struct RuleItems_PreviewsWithBinding: View {
     @State var showPopup: Bool = false
     var body: some View {
         RuleItemsView(rule: RuleItem(card: .king, title: "King", rule: "You're allowed to rule everything in the game but not change the game. This line is just to make the view a little longer to make it look like real data and make styling more easely done", useCardType: true), showPopup: $showPopup, textSize: $size)
-            .popup(isPresented: $showPopup, type: .toast, position: .bottom, animation: .easeInOut(duration: 0.2), autohideIn: 1, dragToDismiss: true, closeOnTap: true, closeOnTapOutside: true) {
+            .popup(isPresented: $showPopup) {
                 Text("successfullyCopyed")
+            } customize: {
+                $0
+                    .type(.toast)
+                    .position(.bottom)
+                    .animation(.easeInOut(duration: 0.2))
+                    .autohideIn(1)
+                    .dragToDismiss(true)
+                    .closeOnTap(true)
+                    .closeOnTapOutside(true)
             }
     }
 }

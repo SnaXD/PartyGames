@@ -160,10 +160,25 @@ struct ShopView: View {
         
     }
 }
+struct ShopView_helper: View {
+    @State var openSheet: Bool = false
+    var body: some View {
+        Button {
+            openSheet = true
+        } label: {
+            Rectangle()
+                .background(Color.black)
+                .sheet(isPresented: $openSheet) {
+                    ShopView(storeManager: StoreManager())
+
+                }
+        }
+    }
+}
 
 struct ShopView_Previews: PreviewProvider {
     static var previews: some View {
-        ShopView(storeManager: StoreManager())
+        ShopView_helper()
     }
 }
 

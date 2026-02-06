@@ -99,7 +99,7 @@ struct WaterfallRules: View {
                 }.padding()
             }
         }
-        .popup(isPresented: $showPopupForSuccessfulCopy, type: .toast, position: .bottom, animation: .easeInOut(duration: 0.5), autohideIn: 1.5, dragToDismiss: true, closeOnTap: true, closeOnTapOutside: true) {
+        .popup(isPresented: $showPopupForSuccessfulCopy){
             HStack{
                 Text("successfullyCopyed")
                     .padding()
@@ -108,6 +108,14 @@ struct WaterfallRules: View {
                     )
                     .padding(.bottom, 32)
             }
+        } customize: {
+            $0
+                .type(.toast)
+                .position(.bottom)
+                .animation(.easeInOut(duration: 0.5))
+                .autohideIn(1.5)
+                .dragToDismiss(true)
+                .closeOnTapOutside(true)
         }
     }
 }
